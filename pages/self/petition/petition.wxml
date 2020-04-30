@@ -26,20 +26,22 @@
         </picker>
         <image class="r" src='/images/jt.png'></image>
       </view>
-      <view class="title">选择门店</view>
-      <view class="right row_b">
-        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
-          <view class="" style="color:#777" wx:if='{{region[0]=="未选择"}}'>点击选择门店</view>
-          <view class="row_s" wx:else>
-          <view class="picker" >{{region[0]}}</view>
-          <view class="picker">{{region[1]}}</view>
-          <view class="picker">{{region[2]}}</view>
-          </view>
-        </picker>
-        <image class="r" src='/images/jt.png'></image>
-      </view>
-    </view>
 
+    </view>
+    <view class="box row_s">
+      <view class="title">选择门店</view>
+        <view class="right row_b">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
+            <view class="" style="color:#777" wx:if='{{region[0]=="未选择"}}'>点击选择门店</view>
+            <view class="row_s" wx:else>
+            <view class="picker" >{{region[0]}}</view>
+            <view class="picker">{{region[1]}}</view>
+            <view class="picker">{{region[2]}}</view>
+            </view>
+          </picker>
+          <image class="r" src='/images/jt.png'></image>
+        </view>
+    </view>
     <view class="box row_s">
       <view class="title">申请小区</view>
       <input class="ipt" name='area' placeholder="请输入所在的小区"></input>

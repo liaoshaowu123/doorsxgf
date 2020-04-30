@@ -1,0 +1,48 @@
+<view class="z">
+  <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
+    待结算
+  </view>
+  <view catchtap="setl" data-type='2' class="{{type==2&&'sel'}}">
+    已结算
+  </view>
+</view>
+<view class="l" wx:if="{{type==1}}">
+  <view class="pad bor_b">
+    <image src="http:\/\/placehold.it\/100x100"></image>
+    <view>我就是我</view>
+    <view> 北城阿发送到发送到发送</view>
+  </view>
+  <view class="pad bor_b">
+    <view>我就是我</view>
+    <view>+<text class="red">500.00元</text></view>
+  </view>
+  <view class="pad bor_b">
+    <view>订单编号:a2313213213213213213213123</view>
+    <view>订单米数:a2313213213213213213213123</view>
+    <view>下单时间:2020-4-9</view>
+  </view>
+  <view class="pad">
+    <text>订单状态 :</text> <text> 已下单</text> → <text>已验收</text>
+  </view>
+</view>
+
+<view class="l" wx:if="{{type==2}}">
+  <view class="pad bor_b">
+    <image src="http:\/\/placehold.it\/100x100"></image>
+    <view>我就是我</view>
+    <view> 北城阿发送到发送到发送</view>
+  </view>
+  <view class="pad bor_b">
+    <view>我就是我</view>
+    <view style="color:#999">+<text class="red" style="color:#999">500.00元</text></view>
+  </view>
+  <view class="pad bor_b">
+    <view>订单编号:a2313213213213213213213123</view>
+    <view>订单米数:a2313213213213213213213123</view>
+    <view>下单时间:2020-4-9</view>
+  </view>
+  <view class="pad">
+    <text>订单状态 :</text> <text> 已下单</text> → <text class="red" style="color:red;">已验收</text>
+  </view>
+</view>
+<view style="height:40rpx;"></view>

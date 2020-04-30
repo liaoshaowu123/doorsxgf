@@ -64,7 +64,7 @@ Page({
         avatar_url: res.data.minPhoto,
         money: res.data.rewardMoney,
         lvArr: lvArr,
-        userType:res.data.userType
+        userType: res.data.userLevel
       }
       
       if (!res.data.name) {

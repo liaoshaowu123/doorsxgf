@@ -1,0 +1,60 @@
+/* pages/self/earnings/earnings.wxss */
+page{
+  background: #EEEEEE;
+}
+.s{
+  
+  margin: 0 auto;
+  margin-top:50rpx;
+  width: 90%;
+  background: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 50rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.s>view:first-child{
+  flex: 1;
+  font-weight: bold;
+}
+.s>view:last-child{
+  color: #ccc;
+  text-align: right;
+}
+.z{
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.z>view{
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+  
+}
+.z>view:not(:last-child){
+  border-bottom: 1px dashed #999;
+}
+.z>view>view{
+  padding: 30rpx 50rpx;
+  flex: 1;
+  box-sizing: border-box;
+  
+}
+.z>view>view>view:first-child{
+  font-weight: bold;
+  color:#DB2B36;
+}
+.z>view>view>view:last-child{
+  font-size: 12px;
+  color: #ccc;
+}
+.right{
+  width: 18rpx;
+	height: 34rpx;
+}

@@ -1,5 +1,5 @@
 page{
-  background:#f8f8f8;
+  background:#EEEEEE;
 }
 .head{
   width: 750rpx;
@@ -8,11 +8,13 @@ page{
 }
 .head-img{
   width: 750rpx;
-	height: 304rpx;
+	height: 250rpx;
+  background: #494343;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  border-bottom: 3px solid #D9B189;
 }
 
 .user{
@@ -131,14 +133,14 @@ margin-left: 28rpx;
 
 
 .order{
-  margin: 30rpx 30rpx 40rpx;
+  margin: 60rpx 30rpx 30rpx;
   width: 630rpx;
-	height: 120rpx;
+	height: 100rpx;
 	background-color: #ffffff;
 	box-shadow: 0px 3px 10px 0px 
 		rgba(0, 0, 0, 0.1);
     padding: 0 30rpx;
-  border-radius: 20rpx;
+  border-radius: 10rpx;
 }
 
 .order-box{
@@ -146,14 +148,14 @@ margin-left: 28rpx;
 }
 
 .order-icon{
-  width: 44rpx;
-	height: 44rpx;
+  width: 40rpx;
+	height: 40rpx;
   margin-right: 18rpx;
 }
 
 .order-name{
   font-family: PingFang-SC-Medium;
-	font-size: 30rpx;
+	font-size: 26rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0px;
@@ -167,22 +169,20 @@ margin-left: 28rpx;
 
 .boxs{
   margin: 0 30rpx;
-background-color: #ffffff;
-	box-shadow: 0px 3rpx 10rpx 0px 
-		rgba(0, 0, 0, 0.1);
-	border-radius: 20rpx;
-
+  background-color: #ffffff;
+	border-radius: 10rpx;
+  overflow: hidden;
 }
 .box{
   width: 630rpx;
-	height: 118rpx;
+	height: 100rpx;
 	background-color: #ffffff;
-  margin: 0 30rpx;
-  border-bottom: 1px #d7d7d7 solid;
+  padding: 0 30rpx;
+  border-bottom: 1px #d7d7d7 dashed;
 }
 .box1{
   width: 630rpx;
-	height: 118rpx;
+	height: 100rpx;
 	background-color: #ffffff;
   margin: 0 30rpx;
   /* border-bottom: 1px #d7d7d7 solid; */
@@ -193,14 +193,14 @@ background-color: #ffffff;
 }
 
 .box-icon{
-  width: 44rpx;
-	height: 44rpx;
+  width: 40rpx;
+	height: 40rpx;
   margin-right: 18rpx;
 }
 
 .box-name{
   font-family: PingFang-SC-Medium;
-	font-size: 30rpx;
+	font-size: 26rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0px;
@@ -281,4 +281,34 @@ left: 100rpx;
   /* opacity: 0; */
   color: #fff;
   border-radius: 30rpx;
+}
+.s1{
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.s1>image{
+  margin-left: 120rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.s1>view{
+  margin-left: 30rpx;
+  font-size: 20px;
+  font-weight: bold;
+}
+.s2{
+  width: 100%;
+  
+}
+.s2>view{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 40rpx auto;
+  background: red;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
 }

@@ -2,6 +2,8 @@
   "pages": [
     
     "pages/index/index",
+    "pages/self/order/order",
+    "pages/self/earnings/earnings",
     "pages/self/CaseUpload/CaseUpload",
     "pages/self/ModifyRelations/ModifyRelations",
     "pages/self/StoresOrder/StoresOrder",

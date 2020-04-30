@@ -1,18 +1,21 @@
 
 <!-- 头部 -->
 <view class='head col_c'>
-  <image class='head-img' src='/images/mybg.png'></image>
+  <view class='head-img' src='/images/mybg.png'></view>
   <view class="user row_s" style="display: block;text-align:center">
-    <view><image class='img' src='{{avatar_url}}'></image></view>
-    <view class="user-right col" style="margin-left: 0rpx;">
-      <view class='name'>{{nickname}}</view>
+    <view class="s1"><image class='img' src='{{avatar_url}}'></image><view class='name'>{{nickname}}</view></view>
+    <view class="s2">
+      <view>{{userType==0?'普通用户':userType==1?'量尺师傅':userType==2?'团长':userType==3?'师长':userType==4?'代理商':userType==5?'推广专员':''}}</view>
+    </view>
+    <!-- <view class="user-right col" style="margin-left: 0rpx;">
+      
       <view class="row_s" style="display:none">
         <view class="gh-box row_c" wx:for='{{lvArr}}'>
           <view class="gh"></view>
           <view class="gh-txt nowarp">{{item}}</view>
         </view>
       </view>
-    </view>
+    </view> -->
   </view>
   <button class='infos ' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" wx:if='{{isSq}}'></button>
 
@@ -30,7 +33,7 @@
 
 </view>
 
-<view class="order row_b" catchtap="onOrder">
+<view class="order row_b" style="marign-top:30rpx;" catchtap="onOrder">
   <view class="order-box row_c" >
     <image class="order-icon" src='/images/order.png'></image>
     <view class="order-name">我的订单</view>
@@ -38,8 +41,41 @@
   <image class="right" src='/images/jt1.png'></image>
 </view>
 
+<view class="boxs col" style="margin-top:20rpx;" wx:if='{{userType==0}}'>
+  <view class="box row_b" data-path='petition/petition' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">成为团长</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+</view>
+<!-- 推广专员 -->
+<view class="boxs col" style="margin-top:20rpx;" wx:if='{{userType==5}}'>
+  <view class="box row_b" data-path='earnings/earnings' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">推广收益</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+  <view class="box row_b" data-path='order/order' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">推广订单</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+  <view class="box row_b" data-path='order/order' catchtap="onRouter">
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">推广订单</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </view>
+</view>
 
-<view class="boxs col" style="margin-top:20rpx;">
+<view class="boxs col" style="margin-top:20rpx;display:none">
   <!--<view class="box row_b" data-path='team/team' catchtap="onRouter">
     <view class="box-box row_c" >
       <image class="box-icon" src='/images/icon-2.png'></image>
@@ -48,7 +84,7 @@
     <image class="right" src='/images/jt1.png'></image>
   </view>-->
 
-  <view class="box row_b" data-path='/pages/self/StoresOrder/StoresOrder' catchtap="onRouter">
+  <view class="box row_b" data-path='/pages/self/StoresOrder/StoresOrder' catchtap="onRouter" wx:if='{{userType==4 || userType==3}}'>
     <view class="box-box row_c" >
       <image class="box-icon" src='/images/icon-1.png'></image>
       <view class="box-name">门店订单</view>
@@ -67,7 +103,7 @@
   <view class="box row_b" data-path='petition/petition' catchtap="onRouter">
     <view class="box-box row_c" >
       <image class="box-icon" src='/images/icon-5.png'></image>
-      <view class="box-name">成为店长</view>
+      <view class="box-name">成为团长</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
   </view>
