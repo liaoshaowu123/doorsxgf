@@ -1,0 +1,26 @@
+<view class="header">
+  <view class="fsg">
+    <view class="">{{mcOrder.plotName}}{{mcOrder.houseNo}}</view>
+    <view class="or">{{mcOrder.orderStatus}}</view>
+  </view>
+  <view style="font-size:14px;line-height:30px">
+    <view class="darkgray">订单号：{{mcOrder.orderNo}}</view>
+    <view class="red">总价￥{{mcOrder.money}}</view>
+  </view>
+  <view style="font-size:14px;line-height:30px">
+    <view  class="darkgray">{{mcOrder.createDate}}</view>
+    <view class="gray">已付￥{{mcOrder.paid}}</view>
+  </view>
+</view>
+<view class="step">
+  <view style="padding-bottom:20rpx;">实时进度(订单追踪)</view>
+  <view class="list" wx:for='{{mcOpOrders}}'>
+    <view>{{item.createDate}}</view>
+    <view class="step-item">
+      <view></view>
+      <view></view>
+    </view>
+    <view class="or">{{item.orderStatus}}</view>
+  </view>
+
+</view>

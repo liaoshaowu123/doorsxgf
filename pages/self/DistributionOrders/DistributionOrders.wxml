@@ -1,0 +1,46 @@
+<view class="order-list">
+  <view class="item" wx:for='{{list}}'>
+    <view>
+      <image src="http:\/\/placehold.it\/300x300"></image>
+      <view>{{item.userName}}</view>
+      <view class="gr">{{item.statuss}}</view>
+    </view>
+    <view>
+      <image src="http:\/\/placehold.it\/300x300"></image>
+      <view>
+        <view>
+          <view>{{item.plotName}}{{item.houseNo}}</view>
+          <text class="grou">预计</text>
+        </view>
+        <view>
+          <view class="grou"> </view>
+          <text class="grou">+{{item.yxMoney}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="grou" style="line-height:50rpx;margin-top:10rpx;">
+      <view>
+        订单材料:
+        铝材:{{item.brandName}}
+        系列:{{item.seriesName}}
+        内窗颜色:{{item.colorName}}
+        外窗颜色:{{item.colorName1}}
+        配件:{{item.partsName}}
+        玻璃:{{item.glassName}} 
+        防护栏:{{item.guardName}}
+      </view>
+      <view>
+        订单编号:{{item.orderNo}}
+      </view>
+      <view style="border-bottom:1px solid #EDEDED">
+        下单时间: {{item.createDate}}
+      </view>
+    </view>
+    <view>
+      
+      <navigator url='../../order/orderinfo/orderinfo?id={{item.id}}'>订单详情</navigator>
+    </view>
+  </view>
+    
+
+</view>

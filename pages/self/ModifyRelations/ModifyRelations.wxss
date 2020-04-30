@@ -1,0 +1,52 @@
+/* pages/self/ModifyRelations/ModifyRelations.wxss */
+page{
+  background: #E8E8E8;
+}
+.search{
+  background: #fff;
+}
+.search>view:first-child{
+  width: 95%;
+  margin: 0rpx auto;
+
+  padding: 20rpx 0;
+}
+.search>view:first-child>input{
+    font-size: 12px;
+  text-align: center;
+  background: #F9F9F9;
+  border-radius: 15px;
+}
+.list{
+  padding: 0 3%;
+}
+.list>.item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 1px solid #F1F1F1;
+  box-sizing: border-box;
+}
+.list>.item>image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+
+}
+.list>.item>view{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.list>.item>view>view:first-child{
+  flex: 1;
+  padding-left:20rpx; 
+}
+.list>.item>view>view:last-child{
+  padding:2rpx 10rpx;
+  border:1px solid #000;
+  border-radius: 5rpx;
+
+}

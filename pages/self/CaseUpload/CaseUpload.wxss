@@ -1,0 +1,81 @@
+/* pages/self/CaseUpload/CaseUpload.wxss */
+page{
+  background: #F9F9F9;
+}
+.item{
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 14px;
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.item>view{
+
+}
+.item>input{
+  text-align: right;
+  flex: 1;
+}
+.img_up{
+    width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #fff;
+  line-height: 80rpx;
+  font-size: 14px;
+  margin-top: 30rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.img_up>view>view:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.img_up>view>view:nth-child(2)>view{
+  position: relative;
+}
+.img_up>view>view:nth-child(2)>view>image:first-child{
+  width: 140rpx;
+  height: 140rpx;
+  margin:10rpx; 
+  border-radius: 5px;
+}
+.img_up>view>view:nth-child(2)>view>image:last-child{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  z-index: 99;
+}
+.text{
+  line-height: 30rpx;
+  background: #F6F4F5;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10rpx;
+  font-size: 12px;
+}
+.text>textarea{
+  height: 90rpx;
+}
+.button{
+  background: red;
+  border-radius: 15px;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  width: 300rpx;
+  margin: 80rpx auto;
+  color: #fff;
+  font-size: 14px;
+}

@@ -1,0 +1,72 @@
+/* pages/self/StoresOrder/StoresOrder.wxss */
+.order-list{
+  width: 100%;
+}
+.order-list>.item{
+  width: 100%;
+  border-top: 30rpx solid #E8E8E8;
+}
+.order-list>.item>view{
+  padding: 0 3%;
+}
+.order-list>.item>view:first-child{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 3%;
+}
+.order-list>.item>view:first-child>image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.order-list>.item>view:first-child>view:nth-child(2){
+ font-size: 14px;
+ padding-left: 20rpx; 
+ flex: 1;
+}
+.order-list>.item>view:first-child>view:nth-child(3){
+  font-size: 14px;
+}
+.order-list>.item>view:nth-child(2){
+  display: flex;
+  align-items: center;
+  padding: 20rpx 3%;
+  background: #F5F3F4;
+}
+.order-list>.item>view:nth-child(2)>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.order-list>.item>view:nth-child(2)>view>view{
+  display: flex;
+  font-size: 14px;
+  line-height: 40rpx;
+}
+.order-list>.item>view:nth-child(2)>view>view>view:first-child{
+  flex: 1;
+  width: 500rpx;
+  padding-left: 20rpx;
+}
+.order-list>.item>view:nth-child(4){
+  font-size: 14px;
+  line-height: 80rpx;
+}
+.order-list>.item>view:nth-child(4)>navigator{
+  float: right;
+  height: 38rpx;
+  line-height: 38rpx;
+  width: 140rpx;
+  margin-top: 20rpx;
+  display: inline-block;
+  border:1px solid red;
+  color:red;
+  border-radius: 15px;
+  text-align: center;
+}
+.gr{
+  color: #00C777;
+}
+.grou{
+  color:#999;
+  font-size: 12px;
+}

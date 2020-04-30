@@ -1,0 +1,14 @@
+<view class="search">
+  <view>
+    <input type="search" placeholder="输入需要修改的人员手机号" bindconfirm="search"></input>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{userList}}">
+      <image src="{{imgUrl+item.photo}}"></image>
+      <view>
+        <view>{{item.name}}</view>
+        <view catchtap="modify" data-id="{{item.id}}">修改门店</view>
+      </view>
+    </view>
+  </view>
+</view>

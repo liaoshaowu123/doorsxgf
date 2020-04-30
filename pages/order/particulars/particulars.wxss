@@ -1,0 +1,72 @@
+/* pages/order/particulars /particulars .wxss */
+.header{
+ width: 100%;
+ border-bottom: 30rpx solid #F5F5F5;
+ padding: 30rpx;
+ box-sizing: border-box;
+ line-height: 30px;
+}
+.header>view{
+  display: flex;
+  align-items: center;
+
+}
+.header>view>view:first-child{
+  flex:1;
+}
+.fsg{
+  font-size: 16px; 
+}
+.or{
+  color: #E85D2E;
+}
+.red{
+  color: red;
+}
+.darkgray{
+  color:#616161;
+}
+.gray{
+  color:#999;
+}
+.step{
+  padding: 30rpx;
+  box-sizing: border-box;
+  
+}
+.step>.list{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  font-size: 14px;
+}
+.step>.list>.step-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60rpx;
+  position: relative;
+  top: 6rpx;
+
+}
+.step>.list:not(:last-child)>.step-item>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #E85D2E;
+  border-radius: 50%;
+}
+.step>.list:not(:last-child)>.step-item>view:last-child{
+  width: 2px;
+  height: 60rpx;
+  background: #E85D2E;
+
+}
+.step>.list>view:last-child{
+  flex: 1
+}
+.step>.list:last-child>.step-item>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #E85D2E;
+  border-radius: 50%;
+}

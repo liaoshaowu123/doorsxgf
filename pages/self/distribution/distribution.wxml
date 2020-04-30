@@ -1,0 +1,86 @@
+<view class="head">
+  <image class='head-img' mode="widthFix" src='/images/mybg.png'></image>
+  <view class="cent">
+    <image src="{{avatar_url}}"></image>
+    <view>{{nickname}}</view>
+    <view>推荐人：总店</view>
+    <view>{{userTitle}}</view>
+  </view>
+</view>
+<view class="mon">
+  <view>
+    <view>{{sumOutMoney}}</view>
+    <view>成功提现佣金(元)</view>
+  </view>
+  <view>
+    <view>{{money}}</view>
+    <view>可提现佣金(元)</view>
+    <navigator url="../put/put">佣金提现</navigator>
+  </view>
+</view>
+<view class="non">
+  <!-- <navigator url="/pages/self/StoresOrder/StoresOrder">
+      <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      门店订单
+    </view>
+    <text>></text>
+  </navigator> -->
+  <navigator url="/pages/self/DistributionOrders/DistributionOrders">
+      <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      推广专员订单
+    </view>
+    <text>></text>
+  </navigator>
+  <navigator url="/pages/self/ModifyRelations/ModifyRelations">
+      <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      修改人员关系
+    </view>
+    <text>></text>
+  </navigator>
+</view>
+<view class="longer">
+  <view wx:if="{{userType==3}}">
+    我的团队
+  </view>
+  <view  wx:if="{{userType==4}}" class="types">
+    <view>
+      <view catchtap="types" data-type="0" class="{{type==0&&'type_selects'}}">我的团队</view>
+      <view catchtap="types" data-type="1" class="{{type==1&&'type_selects'}}">店长列表</view>
+    </view>
+  </view>
+  <view class="list" wx:for="{{teamList}}">
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>
+        {{item.userName}} <text>已绑定</text>
+      </view>
+      <view>
+        邀请注册时间：{{item.createDate}}
+      </view>
+    </view>
+    <view class="select" catchtap="sel" data-index="{{item.id}}">
+      推广专员 <text></text>
+      <view wx:if="{{userType==4}}">
+        <view catchtap="sels" data-id="{{item.id}}" data-type="0">推广专员</view>
+        <view catchtap="sels" data-id="{{item.id}}" data-type="1">普通用户</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="list" wx:for="{{storeList}}">
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>
+        {{item.userName}} <text>已绑定</text>
+      </view>
+      <view>
+        邀请注册时间：{{item.createDate}}
+      </view>
+    </view>
+    
+  </view>
+  
+</view>

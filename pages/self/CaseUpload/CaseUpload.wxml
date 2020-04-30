@@ -1,0 +1,13 @@
+<view>
+
+  <view class="img_up">
+  <view wx:for="{{verandas}}">
+    <view>{{item.name}}:</view>
+    <view>
+      <view  wx:for="{{imgList[index]}}" wx:for-index='imindex'><image src="{{item.path}}"></image><image catchtap="del" data-iid="{{index}}" data-id="{{imindex}}"  src="http:\/\/placehold.it\/300x300"></image></view>
+      <view><image catchtap="up" data-id="{{index}}" src="http:\/\/placehold.it\/300x300"></image><text></text></view>
+    </view>
+  </view>
+  </view>
+  <view class="button" catchtap="uploadimage">确认上传</view>
+</view>
