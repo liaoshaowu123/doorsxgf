@@ -14,7 +14,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.0",
+	"libVersion": "2.11.0",
 	"appid": "wxca2afad49ec4e062",
 	"projectname": "doors",
 	"debugOptions": {

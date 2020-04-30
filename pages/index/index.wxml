@@ -7,6 +7,10 @@
       <view class="city">{{city}}</view>
     </view>
     <view class="qh row_c">切换城市</view>
+
+
+
+    
   </navigator>
   
   <!-- 搜索 -->
