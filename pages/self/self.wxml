@@ -107,7 +107,7 @@
   
   <view class="box row_b" data-path='earnings/earnings' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/icon-5.png'></image> 
       <view class="box-name">推广收益</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
