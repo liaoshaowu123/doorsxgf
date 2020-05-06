@@ -1,0 +1,61 @@
+/* pages/self/income/income.wxss */
+page{
+  background: #eee;
+}
+.n{
+  padding: 40rpx 30rpx;
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 60rpx;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.n>view:nth-child(1){
+  font-size: 16px;
+  color: red;
+  flex: 1;
+  font-weight: bold;
+}
+.n>view:nth-child(2){
+  color: #999;
+  font-size: 14px;
+}
+.n>image{
+  width: 21rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
+  }
+.t{
+  background: #fff;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 60rpx;
+  border-radius: 5px;
+}
+.t>view{
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.t>view>view{
+  font-size: 14px;
+  flex: 1;
+}
+.t>view>view>text{
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+.t>view>navigator{
+  background: red;
+  border-radius: 3px;
+  font-size: 13px;
+  color:#fff;
+  padding: 10rpx 40rpx;
+}

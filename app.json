@@ -2,6 +2,11 @@
   "pages": [
     
     "pages/index/index",
+    "pages/self/HeadOfTheOrder/HeadOfTheOrder",
+    "pages/self/deposit/deposit",
+    "pages/self/income/accumulative/accumulative",
+    "pages/self/income/income",
+    "pages/self/people/people",
     "pages/self/order/order",
     "pages/self/earnings/earnings",
     "pages/self/CaseUpload/CaseUpload",

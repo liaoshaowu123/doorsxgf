@@ -1,0 +1,47 @@
+/* pages/self/people/people.wxss */
+page{
+  background: #EEEEEE;
+}
+.t{
+  text-align: center;
+  margin-top: 40rpx;
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+.l{
+  background: #fff;
+  width: 95%;
+  margin: 30rpx auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.l>view{
+  padding: 30rpx 30rpx; 
+  display: flex;
+  align-items: center;
+}
+.l>view:not(:last-child){
+  border-bottom: 1px double #eee;
+}
+.l>view>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.l>view>view:nth-child(2){
+  flex: 1;
+  padding-left: 20rpx;
+}
+.l>view>view:nth-child(2)>view:first-child{ 
+  font-size: 16px;
+}
+.l>view>view:nth-child(2)>view:last-child{
+  font-size: 12px;
+  color: #606060;
+}
+.l>view>view:nth-child(3){
+  font-size: 16px;
+  color:#606060;
+}

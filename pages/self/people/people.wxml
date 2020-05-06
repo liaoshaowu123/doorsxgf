@@ -1,0 +1,37 @@
+<view class="t">
+  已推广 : 39人
+</view>
+<view class="l">
+  <view>
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>我爱张三</view>
+      <view>绑定时间:201231-02-131</view>
+    </view>
+    <view>以下单</view>
+  </view>
+  <view>
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>我爱张三</view>
+      <view>绑定时间:201231-02-131</view>
+    </view>
+    <view>以下单</view>
+  </view>
+  <view>
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>我爱张三</view>
+      <view>绑定时间:201231-02-131</view>
+    </view>
+    <view>以下单</view>
+  </view>
+  <view>
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>我爱张三</view>
+      <view>绑定时间:201231-02-131</view>
+    </view>
+    <view>以下单</view>
+  </view>
+</view>

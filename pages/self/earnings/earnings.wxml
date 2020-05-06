@@ -19,3 +19,10 @@
   </view>
   
 </view>
+<navigator class="box row_b" url='../order/order'>
+    <view class="box-box row_c" >
+      <image class="box-icon" src='/images/icon-5.png'></image>
+      <view class="box-name">订单收益明细</view>
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+</navigator>

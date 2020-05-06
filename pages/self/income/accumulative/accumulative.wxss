@@ -1,0 +1,47 @@
+/* pages/self/income/accumulative/accumulative.wxss */
+page{
+  background: #eee;
+}
+.l{
+  width: 90%;
+  background: #fff;
+  padding: 30rpx; 
+  margin: 30rpx auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.l>.t{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 13px;
+}
+.l>.t>view{
+  flex: 1;
+}
+.l>.t>image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.l>.i{
+    display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 13px;
+}
+.l>.i>view:first-child{
+  flex: 1;
+}
+.l>.i>view:last-child{
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.l>.i>view:last-child>image{
+  width: 12rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}

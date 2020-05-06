@@ -1,0 +1,27 @@
+<view class="l">
+  <view class="t">
+    <view>2016</view>
+    <image src="http:\/\/placehold.it\/300x300"></image>
+  </view>
+  <view class="i">
+    <view>2016-12</view>
+    <view>
+      +1213312.00
+      <image class="right" src='/images/jt1.png'></image>
+    </view>
+  </view>
+  <view class="i">
+    <view>2016-12</view>
+    <view>
+      +1213312.00
+      <image class="right" src='/images/jt1.png'></image>
+    </view>
+  </view>
+  <view class="i">
+    <view>2016-12</view>
+    <view>
+      +1213312.00
+      <image class="right" src='/images/jt1.png'></image>
+    </view>
+  </view>
+</view>

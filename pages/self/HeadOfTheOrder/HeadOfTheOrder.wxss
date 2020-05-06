@@ -1,3 +1,4 @@
+/* pages/self/HeadOfTheOrder/HeadOfTheOrder.wxss */
 /* pages/self/order/order.wxss */
 page{
   background: #eee;
@@ -7,12 +8,12 @@ page{
   margin-top: 60rpx;
   display: flex;
   justify-content: space-around;
-  width: 600rpx;
+  width: 650rpx;
 }
 .z>view{
   font-size: 16px;
   box-sizing: border-box;
-  width: 150rpx;
+  width: 180rpx;
   text-align: center;
   line-height: 8px;
 }
@@ -73,20 +74,79 @@ page{
   height: 120rpx;
 }
 .l>view:nth-child(2)>view:first-child{
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 20px;
   flex: 1;
+  text-align: center;
+}
+.l>view:nth-child(2)>view:first-child>text{
+  font-weight: bold;
+  color: red;
 }
 .l>view:nth-child(2)>view:last-child{
-  font-size: 18px;
-  font-weight:bold;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 5px;
+  border: 1px solid red;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+
+}
+.blo{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+}
+.redb{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 5px;
+  border: 1px solid red;
+  color: #fff;
+  background: red;
+  font-size: 12px;
+  text-align: center;
+}
+.db{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 5px;
+  border: 1px solid #747474;
+  color: #fff;
+  background: #747474;
+  font-size: 12px;
+  text-align: center;
 }
 .l>view:nth-child(3){
+  display: flex;
+}
+.l>view:nth-child(3)>view:first-child{
+  flex: 1;
   padding-top: 30rpx;
   padding-bottom:40rpx;
   color: #999;
   line-height: 60rpx;
   font-size: 12px;
+}
+.l>view:nth-child(3)>view:last-child{
+  width: 170rpx;
+  justify-content: flex-start;
+}
+.l>view:nth-child(3)>view:last-child>navigator:first-child{
+  margin-top: 50rpx;
+  float: right;
+}
+.l>view:nth-child(3)>view:last-child>navigator:last-child{
+  margin-top: 25rpx;
+  float: right;
 }
 .l>view:nth-child(4){
   padding-top: 30rpx;
@@ -108,6 +168,7 @@ page{
 .pad{
   padding-left: 30rpx;
   padding-right: 30rpx;
+  
 }
 .red{
   color: red;

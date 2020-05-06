@@ -1,0 +1,64 @@
+/* pages/self/deposit/deposit.wxss */
+page{
+  background: #F8F8F8;
+}
+.z{
+  width: 95%;
+  margin: 30rpx auto;
+  border-radius: 5px;
+  background: #fff;
+  padding:25rpx 20rpx;
+  box-sizing: border-box;
+}
+.z>view:first-child>text{
+  color:red;
+  margin-left: 20rpx;
+}
+.z>view:nth-child(2){
+  line-height: 120rpx;
+}
+.z>view:nth-child(3){
+  display: flex;
+  border-bottom: 1px solid #f5f5f5;
+  align-items: center;
+  font-size: 16px;
+  padding: 30rpx 0;
+}
+.z>view:nth-child(4){
+  padding: 20rpx 0 0 0;
+  color: #999;
+}
+.z>view:nth-child(4)>text{
+  color: #000;
+  margin-left: 20rpx;
+}
+.b{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  background: red;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  padding:30rpx 0;
+}
+.l{
+  margin-top: 50rpx;
+}
+.l>.i{
+  width: 100%;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  align-items: center;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  color: #666;
+}
+.l>.i>view:first-child{
+  flex: 1;
+  line-height: 40rpx;
+}
+.l>.i>view:first-child>view:nth-child(2){
+  font-size: 12px;
+  margin-top: 10rpx;
+}

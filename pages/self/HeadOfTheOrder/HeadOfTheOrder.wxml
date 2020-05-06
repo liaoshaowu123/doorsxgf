@@ -1,12 +1,12 @@
 <view class="z">
   <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
-    待结算
+    未完工订单
   </view>
   <view catchtap="setl" data-type='2' class="{{type==2&&'sel'}}">
-    已结算
+    已完工订单
   </view>
   <view catchtap="setl" data-type='3' class="{{type==3&&'sel'}}">
-    无效订单
+    区域保护订单
   </view>
 </view>
 <view class="l">
@@ -15,17 +15,28 @@
     <view>我就是我</view>
     <view> 北城阿发送到发送到发送</view>
   </view>
-  <view  style="{{type==3?'display:none':''}}" class="pad bor_b">
-    <view>我就是我</view>
-    <view>+<text class="{{type==1?'red':'c'}}">500.00元</text></view>
+  <view class="pad bor_b">
+    <view>订单状态： <text>已复尺</text></view>
+    <view style="{{type!=1&&'display:none'}}">取消订单</view>
   </view>
   <view class="pad bor_b">
-    <view>订单编号 : a2313213213213213213213123</view>
-    <view>订单米数 : a2313213213213213213213123</view>
-    <view>下单时间 : 2020-4-9</view>
+    <view>
+      <view>订单编号 : a2313213213213213213213123</view>
+      <view>
+      已支付:
+      <text style="font-weight: bold;color: #333;margin-right:20rpx;">100元</text>
+      未支付
+      <text style="font-weight: bold;color: red;">1511312元</text>
+      </view>
+      <view >下单时间 : 123132132  </view>
+    </view>
+    <view>
+      <navigator url="/pages/order/orderinfo/orderinfo" class="blo">订单详情</navigator>
+      <navigator url="/pages/order/particulars/particulars" style="{{type==3&&'display:none'}}" class="{{type==1?'redb':type==2&&'db'}}">订单追踪</navigator>
+    </view>
   </view>
-  <view class="pad">
-    <text>订单状态 :</text> <text> 已下单</text><text></text>
+  <view class="pad" style="display:flex">
+    <text style="font-size:14px;flex:1;color:#999;">待结算收入</text> <text style="color:#000;text-align: right;font-size:18px;font-weight:bold;">+15000.00</text><text></text>
   </view>
 </view>
 

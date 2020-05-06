@@ -1,0 +1,22 @@
+<view class="z">
+  <view>到账账户<text>零钱包</text></view>
+  <view>余额提现</view>
+  <view>
+    <text>￥</text>
+    <input type="number" placeholder="输入金额"></input>
+  </view>
+  <view>
+    可提现余额0
+    <text>全部提现</text>
+  </view>
+</view>
+<view class="b">提现</view>
+<view class="l">
+  <view class="i">
+    <view>
+      <view>待审核</view>
+      <view>2020-15-30</view>
+    </view>
+    <view>+436</view>
+  </view>
+</view>
