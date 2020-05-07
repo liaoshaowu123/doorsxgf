@@ -2,6 +2,13 @@
   "pages": [    
     "pages/index/index",
     "pages/newindex/newindex",
+    "pages/self/ModifyRelations/ModifyRelations",
+    "pages/self/meteam/meteam",
+    "pages/self/HeadOfTheOrder/HeadOfTheOrder",
+    "pages/self/deposit/deposit",
+    "pages/self/income/accumulative/accumulative",
+    "pages/self/income/income",
+    "pages/self/people/people",
     "pages/self/order/order",
     "pages/self/earnings/earnings",
     "pages/self/CaseUpload/CaseUpload",
@@ -34,7 +41,9 @@
     "pages/self/dividends/dividends",
     "pages/self/petition/petition",
     "pages/order/order",
-    "pages/self/DistributionOrders/DistributionOrders"
+    "pages/self/DistributionOrders/DistributionOrders",
+    "pages/self/shop/shop",
+    "pages/goods/goodsdetail"
   ],
   "requiredBackgroundModes": [
     "audio"
