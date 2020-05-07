@@ -1,13 +1,7 @@
 {
-  "pages": [
+  "pages": [    
     "pages/index/index",
-    "pages/self/ModifyRelations/ModifyRelations",
-    "pages/self/meteam/meteam",
-    "pages/self/HeadOfTheOrder/HeadOfTheOrder",
-    "pages/self/deposit/deposit",
-    "pages/self/income/accumulative/accumulative",
-    "pages/self/income/income",
-    "pages/self/people/people",
+    "pages/newindex/newindex",
     "pages/self/order/order",
     "pages/self/earnings/earnings",
     "pages/self/CaseUpload/CaseUpload",
@@ -40,8 +34,7 @@
     "pages/self/dividends/dividends",
     "pages/self/petition/petition",
     "pages/order/order",
-    "pages/self/DistributionOrders/DistributionOrders",
-    "pages/self/shop/shop"
+    "pages/self/DistributionOrders/DistributionOrders"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -57,6 +50,12 @@
     "selectedColor": "#c10000",
     "backgroundColor": "#f1f1f1",
     "list": [
+      {
+        "pagePath": "pages/newindex/newindex",
+        "text": "首页",
+        "iconPath": "images/fa-n.png",
+        "selectedIconPath": "images/fa-s.png"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "方案",

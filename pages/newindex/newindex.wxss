@@ -1,0 +1,127 @@
+/* pages/newindex/newindex.wxss */
+.hbar {
+  display: flex;
+}
+.hbar text {
+  padding: 3rpx 16rpx;
+  font-size: 700;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hactive {
+  color: red;
+}
+.hactive::after {
+  content: '__';
+  position: absolute;
+  margin: 10rpx;
+  
+}
+.tbox {
+  display: flex;
+  justify-content: center;
+}
+.titem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10rpx;
+  padding: 10rpx;
+}
+.titem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  margin: 10rpx 0;
+}
+.titem text{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.tbottom {
+  display: flex;
+  justify-content: center;
+}
+.tbottom>text{
+  background: #b3b3b3;
+  padding: 3px 16px;
+  margin: 0 10rpx;
+}
+.tactive {
+  background: #636363 !important;
+}
+
+image {
+  border-radius: 20rpx;
+  border: 1px solid;
+}
+.textImg {
+  margin: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.textImg image {
+  width: 100%;
+}
+.paragraph {
+  background: #eeeeee;
+  padding: 10rpx;
+  margin: 20rpx;
+
+}
+.sibox,.pbox {
+  padding: 20rpx;
+  margin: 10rpx;
+}
+.sihead,.phead {
+  /* white-space: nowrap; */
+  margin: 20rpx 0;
+  display: flex;
+  align-items: flex-end;
+}
+.sibox image {
+  border-radius: 20rpx;
+  width: 100%;
+}
+.title {
+  font-weight: bolder;
+  font-size: 34rpx;
+  margin: 0 10rpx
+}
+.sitem,.pitem {
+  font-size: 24rpx;
+  margin: 0 2rpx;
+}
+.company {
+  font-size: 24rpx;
+}
+.sitem::before,.pitem::before {
+  content: '|';
+  margin: 0 5rpx;
+}
+.pimg-box {
+  display: flex;
+}
+.pbox image {
+  border-radius: 20rpx;
+  margin: 10rpx;
+  height: 200rpx;
+}
+.more::after {
+  content: '∨';
+  color: #FFFFFF;
+  background: #5e5e5e;
+  padding: 3rpx 10rpx;
+  margin: 5rpx;
+  line-height: 5rpx;
+  font-size: 20rpx;
+}

@@ -1,0 +1,16 @@
+<view class='page'>
+  <view class="head">
+    <view class="title">方案基础信息:</view>
+    <view class="info">
+      <view>铝材:{{goodsInfo.len}}米</view>
+      <view class="area-box">封窗总面积:<rich-text nodes="{{goodsInfo.area}}" class="area"></rich-text></view>
+      <view>配件:{{goodsInfo.parts}}套</view>
+    </view>
+  </view>
+  <view class="contain">
+  
+  </view>
+  <view class="footer">
+
+  </view>
+</view>

@@ -1,0 +1,55 @@
+/* pages/goods/goodsdetail.wxss */
+.page {
+  display: flex;
+  flex-direction: column;
+  background: #fefefe;
+  min-height: 100vh;
+}
+.head {
+  background: #fefefe;
+  padding: 20rpx;
+}
+.contain {
+  flex: auto;
+  background: #eeeeee;
+}
+
+.footer {
+  flex-shrink: 0;
+  background: #b6b6b6;
+  min-height: 120rpx;
+}
+
+.tactive {
+  color: #FFFFFF;
+  background:  #e6212a;
+}
+.cactive {
+  color: #FFFFFF;
+  background: #494343; 
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bolder;
+  
+}
+.info {
+  display: flex;
+}
+.info view {
+  margin-right: 10rpx;
+}
+.area-box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.area-box::before,.area-box::after {
+  content: '▏';
+  color: #e6212a;
+  font-size: 18rpx;  
+  font-weight: bolder;
+  margin: 5rpx;
+}

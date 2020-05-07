@@ -40,57 +40,17 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 7,
+			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "my",
-					"pathName": "pages/my/my",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "pages/self/petition/petition",
-					"pathName": "pages/self/petition/petition",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "reward",
-					"pathName": "pages/my/reward/reward",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "bounty",
-					"pathName": "pages/my/bounty/bounty",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "emoji",
-					"pathName": "pages/emoji/emoji",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "order-evaluation",
-					"pathName": "pages/my/order/order-evaluation/order-evaluation",
-					"query": ""
-				},
-				{
-					"id": 11,
-					"name": "cash",
-					"pathName": "pages/index/cash/cash",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/self/self",
-					"pathName": "pages/self/self",
+					"id": 0,
+					"name": "pages/goods/goodsdetail",
+					"pathName": "pages/goods/goodsdetail",
 					"query": "",
 					"scene": null
 				}

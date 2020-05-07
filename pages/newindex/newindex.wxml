@@ -1,0 +1,56 @@
+<view class='page'>
+  <view class="hbar">
+    <text class="{{hbarId==item.id?'hactive':''}}" wx:for="{{hbar}}" wx:key="{{item.id}}" bindtap="changeHId" data-id="{{item.id}}" >{{item.name}}</text>
+  </view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
+      <swiper-item wx:for='{{bannerList}}'> 
+          <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
+      </swiper-item> 
+  </swiper>
+  <view wx:if="{{false}}">
+    <view class="tbox">
+      <view class="titem" wx:for="{{typeList[tindex-1]}}">
+        <image src="{{imgUrl+item.img}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <view  class="tbottom">
+      <text class="{{(tindex-1)==item?'tactive':''}}" wx:for="{{ttotal}}" bindtap="changetIndex" data-index="{{item}}"></text>
+    </view>
+  </view>
+  <view class="textImg" wx:for="{{messageList}}" wx:for-item="items">
+    <image src="{{imgUrl+textimg}}"></image>
+  </view>
+  <view class="sibox" wx:for="{{lcList}}" wx:for-item="items">
+    <view class="sihead">
+      <text class="title">铝材供应商</text>
+      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}">{{item.name}}</text>
+      <i class="more"></i>
+    </view>
+    <view>
+      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+    </view>
+  </view>
+  <view class="paragraph"></view>
+  <view class="pbox" wx:for="{{pjList}}" wx:for-item="items">
+    <view class="phead">
+      <text class="title">配件供应商</text>
+      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}">{{item.name}}</text>
+    </view>
+    <view class="pimg-box">
+      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+    </view>
+  </view>
+  <view class="paragraph"></view>
+  <view class="sibox" wx:for="{{azList}}" wx:for-item="items">
+    <view class="sihead">
+      <text class="title">专业安装公司</text>
+      <text class="company">{{items.name}}</text>
+    </view>
+    <view>
+      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+    </view>
+  </view>
+</view>
+
