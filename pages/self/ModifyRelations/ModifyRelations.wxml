@@ -1,4 +1,4 @@
-<view class="search">
+<!-- <view class="search">
   <view>
     <input type="search" placeholder="输入需要修改的人员手机号" bindconfirm="search"></input>
   </view>
@@ -9,6 +9,30 @@
         <view>{{item.name}}</view>
         <view catchtap="modify" data-id="{{item.id}}">修改门店</view>
       </view>
+    </view>
+  </view>
+</view> -->
+<view class="s">
+  <view class="z">
+    <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
+      搜索
+    </view>
+    <view catchtap="setl" data-type='2' class="{{type==2&&'sel'}}">
+      修改记录
+    </view>
+  </view>
+  <view class="i">
+    <input bindconfirm="search" type="text" placeholder="请输入需要修改人员的昵称或手机号码"></input>
+    <text class="iconsousuo iconfont"></text>
+  </view>
+  <view class="l">
+    <view class="u">
+      <view>
+        <image src="http:\/\/placehold.it\/300x300"></image>
+        <text>名字</text>
+        <view>修改服务团长</view>
+      </view>
+      <view>所属团长：张三</view>
     </view>
   </view>
 </view>

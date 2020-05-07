@@ -10,8 +10,13 @@ Page({
   data: {
     imgUrl: Config.imgUrl,
     userList:[],
+    type:1
   },
-
+  setl: function (e) {
+    this.setData({
+      type: e.currentTarget.dataset.type
+    })
+  },
   getUserInfo(telPhone){
     let this_=this;
     let data={

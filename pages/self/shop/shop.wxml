@@ -1,0 +1,27 @@
+<view class="z">
+  <!-- <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
+    门店佣金
+  </view> -->
+  <view catchtap="setl" data-type='2' class="{{type==2&&'sel'}}">
+    团长列表
+  </view>
+</view>
+<view class="x"></view>
+<view class="l" wx:if="{{type == 2}}">
+  <view class="item">
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>用户名字</view>
+      <view>注册时间:2020-30-20</view>
+    </view>
+    <view>普通用户</view>
+  </view>
+  <view class="item">
+    <image src="http:\/\/placehold.it\/300x300"></image>
+    <view>
+      <view>用户名字</view>
+      <view>注册时间:2020-30-20</view>
+    </view>
+    <view>普通用户</view>
+  </view>
+</view>

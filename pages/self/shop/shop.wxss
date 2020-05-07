@@ -1,0 +1,93 @@
+/* pages/self/shop/shop.wxss */
+/* pages/self/meteam/meteam.wxss */
+page{
+  background: #EEEEEE;
+}
+.z{
+  margin: 0 auto;
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-around;
+  width: 650rpx;
+}
+.z>view{
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 130rpx;
+  text-align: center;
+  line-height: 8px;
+   
+}
+.sel{
+  color: red;
+}
+.sel:after{
+  content: '';
+  display: inline-block;
+  width: 40rpx;
+  height: 1px;
+  background: red;
+  line-height: 5px;
+}
+.l{
+  background: #fff;
+  border-radius: 5px;
+  width: 95%;
+  margin: 0 auto;
+}
+.l>.item{
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  
+  display: flex;
+  align-items: center;
+}
+.l>.item:not(:last-child){
+border-bottom: 1px dotted #ccc;
+}
+.l>.item>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.l>.item>view:nth-child(2){
+  line-height: 30rpx;
+  flex: 1;
+  margin-left: 20rpx;
+}
+.l>.item>view:nth-child(2)>view:first-child{
+  font-size: 14px;
+}
+.l>.item>view:nth-child(2)>view:last-child{
+  font-size: 10px;
+  color: #ccc;
+}
+.l>.item>view:nth-child(3){
+  font-size: 12px;
+  padding: 5rpx;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.x{
+  height:60rpx;
+  width:95%;
+  margin: 0 auto;
+  padding-top: 40rpx;
+  text-align: right;
+  box-sizing: border-box;
+  font-size:14px;
+  font-weight: bold; 
+}
+.x>view{
+  display: inline-block;
+  font-weight: 100;
+  background: #C8CAC9;
+  margin-left: 10rpx;
+  border-radius: 3px;
+  padding: 0 5rpx;
+  margin-bottom: 20rpx;
+}
+.xelse{
+  background: red !important;
+  color: #fff;
+}
