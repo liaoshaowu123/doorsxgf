@@ -151,7 +151,7 @@
 </view>
 <view class='box' >
   <view class='topbox row_b nowarp'>
-    <view class="blxpr">
+    <!-- <view class="blxpr">
       <view class="blxph">玻璃选配</view>
       <view class="row_s">
         <view class="hbar"></view>
@@ -161,20 +161,21 @@
         <view class="hbar"></view>
         <view class="blxp" >LOW-E玻璃</view>
       </view>
-    </view>
-    <view class="hbar"></view>
-    <view class='botbox-price1'><text class="italic">￥</text>{{(bllist[blIndex].price)}}元/㎡</view>
-  </view>
-  <view class='botbox row_b nowarp'>
-    <view class='botbox-btn row_c' data-type='2' data-id='{{bllist[blIndex].id}}' catchtap='onContent'>产品详情</view>
-    <!-- <view class='botbox-txt'>{{bllist[blIndex].detail}}</view> -->
-    <view class="hbar"></view>
+    </view> -->
+    <!-- <view class="hbar"></view> -->
     <view class='botbox-price'>
       <text class="b">玻璃总价：</text>
       <text class="s">{{info.area}} X {{(bllist[blIndex].price)}} = </text>
       <text class="money">{{blPrice}}</text>
       <text class="b">元</text>
     </view>
+    <view class="hbar"></view>
+    <view class='botbox-price1'><text class="italic">￥</text>{{(bllist[blIndex].price)}}元/㎡</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-btn row_c' data-type='2' data-id='{{bllist[blIndex].id}}' catchtap='onContent'>产品详情</view>
+    <view class="hbar"></view>
+    <view class='botbox-txt'>{{bllist[blIndex].detail}}</view>
   </view>
 </view>
 
@@ -217,7 +218,7 @@
 <view class="htmb">
   <text catchtap="onConta">合同模板</text>
 </view>
-<view style="height:320rpx;"></view>
+<view style="height:160rpx;"></view>
 <view class='submit row_s' wx:if="{{true}}">
   <view class='submit-price row_s'>原价<text class="total_pricesc">{{total_pricesc}}</text></view>
   <view class="buybox">

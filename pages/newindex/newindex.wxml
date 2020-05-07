@@ -1,6 +1,21 @@
 <view class='page'>
+<!-- 地址 -->
+  <navigator url='city/city?city={{city}}' class="address row_b">
+    <view class="left row_s">
+      <image src='/images/address.png' class="add-img"></image>
+      <view class="city">{{city}}</view>
+    </view>
+    <view class="qh row_c">切换城市</view>
+  </navigator>
+
+    <!-- 搜索 -->
+  <navigator url='search/search' class='search row_s'>
+    <image class='search-img' src='/images/search.png'></image>
+    <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索小区</view>
+  </navigator>
+
   <view class="hbar">
-    <text class="{{hbarId==item.id?'hactive':''}}" wx:for="{{hbar}}" wx:key="{{item.id}}" bindtap="changeHId" data-id="{{item.id}}" >{{item.name}}</text>
+  <text class="{{hbarId==item.id?'hactive':''}}" wx:for="{{hbar}}" wx:key="{{item.id}}" bindtap="changeHId" data-id="{{item.id}}" >{{item.name}}</text>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" 
         autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
@@ -20,7 +35,7 @@
     </view>
   </view>
   <view class="textImg" wx:for="{{messageList}}" wx:for-item="items">
-    <image src="{{imgUrl+textimg}}"></image>
+    <image src="{{imgUrl+items.imgUrl}}"></image>
   </view>
   <view class="sibox" wx:for="{{lcList}}" wx:for-item="items">
     <view class="sihead">
@@ -29,7 +44,13 @@
       <i class="more"></i>
     </view>
     <view>
-      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+     <swiper indicator-dots="{{indicatorDots}}" 
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
+        <swiper-item wx:for='{{items.mcAppSupplierImgs}}'> 
+            <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
+        </swiper-item> 
+      </swiper>
+      <!-- <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image> -->
     </view>
   </view>
   <view class="paragraph"></view>

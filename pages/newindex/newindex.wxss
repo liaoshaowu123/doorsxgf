@@ -60,7 +60,6 @@
 
 image {
   border-radius: 20rpx;
-  border: 1px solid;
 }
 .textImg {
   margin: 20rpx;
@@ -71,6 +70,7 @@ image {
 }
 .textImg image {
   width: 100%;
+  max-height: 200rpx;
 }
 .paragraph {
   background: #eeeeee;
@@ -91,6 +91,7 @@ image {
 .sibox image {
   border-radius: 20rpx;
   width: 100%;
+  max-height: 300rpx;
 }
 .title {
   font-weight: bolder;
@@ -125,3 +126,5 @@ image {
   line-height: 5rpx;
   font-size: 20rpx;
 }
+
+@import "/pages/index/index.wxss";

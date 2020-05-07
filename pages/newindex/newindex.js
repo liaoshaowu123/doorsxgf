@@ -43,6 +43,8 @@ Page({
     // 安装公司
     azList:[],
     // company:"湖南蜘蛛人建筑工程安装有限公司",
+
+    areaList: [],
   },
   changeHId:function(e){
     this.setData({
@@ -77,6 +79,7 @@ Page({
         bannerList: list
       })
     })
+    
   },
   changetIndex(e){
     let index = e.currentTarget.dataset.index;

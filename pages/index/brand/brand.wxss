@@ -272,7 +272,7 @@ margin-left: 10rpx;
 	letter-spacing: 0rpx;
 	color: #FFFFFF;
   /* position: absolute; */
-
+  margin-right: 10rpx;
 }
 .topbox{
   width: 640rpx;
