@@ -26,13 +26,13 @@
     <text class="iconsousuo iconfont"></text>
   </view>
   <view class="l">
-    <view class="u">
+    <view class="u" wx:for="{{userList}}">
       <view>
-        <image src="http:\/\/placehold.it\/300x300"></image>
-        <text>名字</text>
-        <view>修改服务团长</view>
+        <image src="{{imgUrl+item.photo}}"></image>
+        <text>{{item.name}}</text>
+        <view catchtap="modify" data-id="{{item.id}}">修改服务团长</view>
       </view>
-      <view>所属团长：张三</view>
+      <view>所属团长：{{item.storeName}}</view>
     </view>
   </view>
 </view>

@@ -1,19 +1,19 @@
 <view class="s">
-  <view>123132.00元</view>
+  <view>{{tgsr.sumMoney}}元</view>
   <view>累计佣金</view>
 </view>
 <view class="z">
   <view>
     <view>
-      <view>10000.00元</view>
+      <view>{{tgsr.rewardMoney}}元</view>
       <view>可提现佣金</view>
     </view>
     <image class="right"src="/images/jt1.png"role="img"></image>
   </view>
   <view>
     <view>
-      <view>10000.00元</view>
-      <view>可提现佣金</view>
+      <view>{{tgsr.sumOutMoney}}元</view>
+      <view>成功提现佣金</view>
     </view>
     <image class="right"src="/images/jt1.png"role="img"></image>
   </view>

@@ -1,6 +1,6 @@
 <navigator url="./accumulative/accumulative" class="n">
   <view>
-    125460.00
+    {{tzsr.sumMoney}}
   </view>
   <view>
     累计收入
@@ -9,10 +9,10 @@
 </navigator>
 <view class="t">
   <view style=" border-bottom: 1px dotted #999;">
-    <view>可提现收入<text> 0.00元</text></view>
-    <navigator url="../deposit/deposit">提现</navigator>
+    <view>可提现收入<text> {{tzsr.rewardMoney}}元</text></view>
+    <navigator url="../put/put?type=tz">提现</navigator>
   </view>
   <view>
-    <view>未结算收入<text> 0.00元</text></view>
+    <view>未结算收入<text> {{tzsr.wjsMoney}}元</text></view>
   </view>
 </view>

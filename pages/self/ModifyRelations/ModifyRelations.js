@@ -21,6 +21,7 @@ Page({
     let this_=this;
     let data={
       mobile:telPhone
+
     };
     ljrqe.post('recommend/listUser',data).then(res=>{
       let data = {

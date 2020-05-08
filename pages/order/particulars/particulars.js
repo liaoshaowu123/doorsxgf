@@ -9,10 +9,17 @@ Page({
    */
   data: {
     mcOrder:'',
-    mcOpOrders:[]
+    date: '2020-09-01',
+    mcOpOrders:[
+      
+    ]
   },
-
-
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
   getMcOpOrder(id){
     let this_ = this;
     let data = { 
@@ -23,10 +30,31 @@ Page({
       let mcOrder=res.data.mcOrder;
       let list=this_.data.mcOpOrders;
       list.push(...mcOpOrders);
+      var x = [
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "上门复尺未量房" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "工厂接单" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "玻璃生产中" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "生产已完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "预约上门安装" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "建材运至现场" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "安装已接单" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "安装完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "验收现场" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "订单完成" }
+      ]
+      
+      for(var i in list){
+        x[i]=list[i];
+      }
       this_.setData({
-        mcOpOrders:list,
-        mcOrder:mcOrder
+        mcOpOrders:x,
+        indexds:list.length-1,
+        mcOrder:mcOrder,
+        date: list[list.length-1].createDate,
+        min: list[list.length - 1].createDate,
+        lv: res.data.userLevel
       })
+      
     })
   },
 

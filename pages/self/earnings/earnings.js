@@ -1,18 +1,31 @@
 // pages/self/earnings/earnings.js
+import { Ljrqe } from '../../../utils/ljrqe.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tgsr:{}
+  },
 
+  getTgsr(){
+    let data = {};
+    var this_ = this;
+    ljrqe.post('sr/tgy', data).then(res => {
+      let tgsr = res.data;
+      this_.setData({
+        tgsr:tgsr
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTgsr()
   },
 
   /**
