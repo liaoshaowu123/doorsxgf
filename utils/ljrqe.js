@@ -25,7 +25,7 @@ class Ljrqe extends Base {
    * post请求
    */
   post(url,data){
-    // data.userId=wx.getStorageSync('userId');
+    data.userId=wx.getStorageSync('userId');
     let this_ = this;
     // wx.showLoading({
     //   title: '加载中...',

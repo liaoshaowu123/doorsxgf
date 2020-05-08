@@ -103,8 +103,10 @@ Page({
    */
   checkUserInfo() {
     let this_ = this;
+    
     wx.getUserInfo({
       success(res) {
+        
         const userInfo = res.userInfo
         const nickName = userInfo.nickName
         const avatarUrl = userInfo.avatarUrl
@@ -120,8 +122,8 @@ Page({
           sex: userInfo.gender,
           image: userInfo.avatarUrl
         };
+        
         ljrqe.post('user/completeUser.do', data).then(res => {
-
           this_.getUserInfo();
           // this_.setData({
           //   isscope: false
