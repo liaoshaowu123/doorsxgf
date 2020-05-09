@@ -1,18 +1,31 @@
 // pages/self/income/income.js
+import { Ljrqe } from '../../../utils/ljrqe.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tzsr:{}
+  },
 
+  getTzsr(){
+    let data = {};
+    var this_ = this;
+    ljrqe.post('sr/tz', data).then(res => {
+      let tzsr = res.data;
+      this_.setData({
+        tzsr:tzsr
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTzsr()
   },
 
   /**

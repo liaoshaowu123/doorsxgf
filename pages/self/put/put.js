@@ -20,7 +20,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData();
+    let type = options.type;
+    this.getData(type);
     pageNo = 1;
     isHava = true;
     this.getList();
@@ -54,9 +55,9 @@ Page({
   /**
   * 获取对象
   */
-  getData() {
+  getData(type) {
     let this_ = this;
-    let data = {};
+    let data = {type};
     ljrqe.post('user/getUserById', data).then(res => {
       console.log(res)
       let data = {
