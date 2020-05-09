@@ -58,8 +58,11 @@ Page({
     })
   },
   getList(){
-    let t = this, d = t.data;
-    ljrqe.post('appIndex/list',{}).then(res => {
+    let t = this, d = t.data, citycode = d.citycode;
+    console.log("citycode:", citycode)
+    ljrqe.post('appIndex/list',{
+      citycode: citycode
+    }).then(res => {
       let list = res.data;
       this.setData(res.data);
     })
@@ -135,6 +138,7 @@ Page({
             wx.setStorageSync('district', data.district);
             citycode = code;
           }
+          this_.getList();
         }
       })
     }, 500)
