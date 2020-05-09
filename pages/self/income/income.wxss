@@ -58,4 +58,56 @@ page{
   font-size: 13px;
   color:#fff;
   padding: 10rpx 40rpx;
+}.right{
+  width: 18rpx;
+	height: 34rpx;
+}
+.boxs{
+  margin: 0 30rpx;
+  background-color: #ffffff;
+	border-radius: 10rpx;
+  overflow: hidden;
+}
+.box{
+  width: 90%;
+	background-color: #ffffff;
+  padding: 40rpx 30rpx;
+  margin: 30rpx auto;
+  border-radius: 5px; 
+  box-sizing: border-box;
+}
+.box1{
+  width: 630rpx;
+	height: 100rpx;
+	background-color: #ffffff;
+  margin: 0 30rpx;
+  /* border-bottom: 1px #d7d7d7 solid; */
+}
+
+.box-box{
+  
+}
+
+.box-icon{
+  width: 50rpx;
+	height: 50rpx;
+  margin-right: 18rpx;
+}
+
+.box-name{
+  font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.infos{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 30rpx;
+  height: 130rpx;
+  z-index: 99;
+  opacity: 0;
 }

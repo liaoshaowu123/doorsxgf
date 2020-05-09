@@ -13,6 +13,11 @@ Page({
     type:1
   },
   setl: function (e) {
+    let type =e.currentTarget.dataset.type
+    if(type == 2){
+      this.updateList()
+    }
+    
     this.setData({
       type: e.currentTarget.dataset.type
     })
@@ -28,6 +33,19 @@ Page({
         userList:res.data
       }
       
+      this_.setData(data)
+    })
+  },
+
+  updateList(){
+    let userId = wx.getStorageInfoSync("userId");
+    let data = {
+      parentId:userId
+    }
+    ljrqe.post('recommend/updaternpRerdList',data).then(res=>{
+      let data = {
+        userList:res.data
+      }
       this_.setData(data)
     })
   },
@@ -67,7 +85,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**

@@ -1,0 +1,22 @@
+/* pages/order/particulars/examine/examine.wxss */
+
+.title{
+  width: 100%;
+  padding:0 3%;
+  border-bottom: 20rpx solid #eee;
+}
+.title>view:first-child{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.title>view:last-child{
+  display: flex;
+  flex-wrap: wrap;
+}
+.title>view:last-child>image{
+  width: 350rpx;
+  height: 350rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  
+}

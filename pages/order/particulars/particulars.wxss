@@ -1,24 +1,42 @@
 /* pages/order/particulars /particulars .wxss */
 .header{
- width: 100%;
- border-bottom: 30rpx solid #F5F5F5;
- padding: 30rpx;
+ width: 90%;
+ margin: 0 auto;
+ background: #E9E8E7;
  box-sizing: border-box;
  line-height: 30px;
+ margin-top: 30rpx;
+ border-radius: 5px;
 }
 .header>view{
   display: flex;
   align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
 
+  padding: 30rpx;
+}
+.header>view:not(:last-child){
+  border-bottom: 1px double #ccc;
+}
+.header>view:not(:first-child){
+  font-size: 24rpx;
+  color: #333;
 }
 .header>view>view:first-child{
   flex:1;
+  
 }
 .fsg{
   font-size: 16px; 
 }
 .or{
-  color: #E85D2E;
+  color: #333;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.or>text{
+  font-weight: normal;
 }
 .red{
   color: red;
@@ -52,21 +70,70 @@
 .step>.list:not(:last-child)>.step-item>view:first-child{
   width: 25rpx;
   height: 25rpx;
-  background: #E85D2E;
+  background: #E5332C;
   border-radius: 50%;
 }
 .step>.list:not(:last-child)>.step-item>view:last-child{
-  width: 2px;
+  width: 1px;
   height: 60rpx;
-  background: #E85D2E;
+  background: #F1F1F0;
 
-}
-.step>.list>view:last-child{
-  flex: 1
 }
 .step>.list:last-child>.step-item>view:first-child{
   width: 25rpx;
   height: 25rpx;
   background: #E85D2E;
   border-radius: 50%;
+}
+.step>.list>.step-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60rpx;
+  position: relative;
+  top: 6rpx;
+
+}
+.step>.list:not(:last-child)>.step-items>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #BEBEBE;
+  border-radius: 50%;
+}
+.step>.list:not(:last-child)>.step-items>view:last-child{
+  width: 1px;
+  height: 60rpx;
+  background: #F1F1F0;
+
+}
+.step>.list:last-child>.step-items>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #BEBEBE;
+  border-radius: 50%;
+}
+.step>.list>view:last-child{
+  flex: 1
+}
+.picker{
+  font-size: 20rpx;
+  border-radius: 3px;
+  border:1px solid #ccc;
+  padding: 0px 5px;
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 20rpx;
+}
+.button>navigator{
+  width: 95%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  background: #E5322C;
+  color:#fff;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  border-radius: 5px;
+  text-align: center;
 }

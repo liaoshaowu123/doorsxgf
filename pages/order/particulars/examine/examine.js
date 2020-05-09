@@ -1,51 +1,18 @@
-// pages/self/shop/shop.js
-import { Ljrqe } from '../../../utils/ljrqe.js';
-var ljrqe = new Ljrqe();
+// pages/order/particulars/examine/examine.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    type: 2,
-    storesr:{},
-    storeList:[]
-  },
-  setl: function (e) {
-    this.setData({
-      type: e.currentTarget.dataset.type
-    })
+
   },
 
-  getStoreList(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('userchildren/getShopownerList', data).then(res => {
-      let storeList = res.data;
-      let list = this_.data.storeList;
-      list.push(...storeList);
-      this_.setData({
-        storeList:list
-      })
-    })
-  },
-
-  getStoresr(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('sr/store', data).then(res => {
-      let storesr = res.data;
-      this_.setData({
-        storesr:storesr
-      })
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getStoresr()
-    this.getStoreList()
+
   },
 
   /**

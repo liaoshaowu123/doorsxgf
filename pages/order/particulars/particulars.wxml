@@ -1,36 +1,39 @@
 <view class="header">
   <view class="fsg">
-    <view class="">{{mcOrder.plotName}}{{mcOrder.houseNo}}</view>
-    <view class="or">{{mcOrder.orderStatus}}</view>
+    <view class="" style="font-weight: bold;">{{mcOrder.plotName}}{{mcOrder.houseNo}}</view>
+    <!-- <view class="or">{{mcOrder.orderStatus}}</view> -->
   </view>
   <view style="font-size:14px;line-height:30px">
-    <view class="darkgray">订单号：{{mcOrder.orderNo}}</view>
-    <view class="red">总价￥{{mcOrder.money}}</view>
+    <view>订单号：{{mcOrder.orderNo}}</view>
+    <!-- <view class="red">总价￥{{mcOrder.money}}</view> -->
   </view>
   <view style="font-size:14px;line-height:30px">
-    <view  class="darkgray">{{mcOrder.createDate}}</view>
-    <view class="gray">已付￥{{mcOrder.paid}}</view>
+    <view >下单时间：{{mcOrder.createDate}}</view>
+    <!-- <view class="gray">已付￥{{mcOrder.paid}}</view> -->
   </view>
 </view>
 <view class="step">
-  <view style="padding-bottom:20rpx;">实时进度(订单追踪)</view>
+  <view style="padding-bottom:20rpx;text-align: center;"><text style="font-weight: bold;">订单进度</text> (订单追踪)</view>
   <view class="list" wx:for='{{mcOpOrders}}'>
-    <view style="width:100rpx;">{{item.createDateF}}</view>
+    <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDateF}}</text><text style="color:red;">-</text>12:20</view>
     <view class="{{index<=indexds?'step-item':'step-items'}}">
       <view></view>
-      <view  style="background:{{index==indexds?'#ccc':''}};display:{{index<9||'none'}}"></view>
+      <view  style="background:{{index==indexds?'#F1F1F0':''}};display:{{index==12&&'none'}}"></view>
     </view>
     <view class="or" style="color:{{index<=indexds?'':'#ccc'}}">{{item.orderStatus}} 
-      <picker wx:if="{{index==indexds&&index==4&&lv=='0'&&!item.pment}}" start="{{min}}" mode="date" value="{{date}}"  bindchange="bindDateChange">
+      <!-- <picker wx:if="{{index==indexds&&index==4&&lv=='0'&&!item.pment}}" start="{{min}}" mode="date" value="{{date}}"  bindchange="bindDateChange">
         <view class="picker" >预约时间</view>
-      </picker>
-      <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view>
-      <navigator class="picker" wx:if="{{index==indexds&&(index==5||index==7||index==8)&&lv!='0'}}" url="up/up">点击上传</navigator>
-      <navigator class="picker" wx:if="{{indexds>index&&(index==5||index==7||index==8)&&lv=='0'}}" url="examine/examine">查看详情</navigator>
+      </picker> -->
+      <!-- <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view> -->
+      <navigator class="picker" wx:if="{{index==indexds&&index==8&&lv=='0'}}" url="up/up">预约安装</navigator>
+      <navigator class="picker" wx:if="{{index==indexds&&(index==10||index==11||index==12)&&lv!='0'}}" url="up/up">点击上传</navigator>
+      <navigator class="picker" wx:if="{{indexds>=index&&index==8&&lv!='0'}}" url="examine/examine">详情查看</navigator>
+      <text style="font-size:20rpx;color:#E5322C"> -<text style="color:#333;"> 李国话</text></text>
   </view>
 
   </view>
-  <view wx:if="{{indexds>=9}}" class="button">
+  <view  class="button">
+    <navigator url="/pages/master/contract/contract">去评价</navigator>
     <navigator url="/pages/self/CaseUpload/CaseUpload">案例上传</navigator>
   </view>
 </view>

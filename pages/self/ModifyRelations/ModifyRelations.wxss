@@ -58,7 +58,7 @@ page{
   width: 650rpx;
 }
 .z>view{
-  font-size: 16px;
+  font-size: 28rpx;
   box-sizing: border-box;
   width: 80rpx;
   text-align: center;
