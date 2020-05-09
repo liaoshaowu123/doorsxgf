@@ -1,7 +1,7 @@
 <view class="z">
-  <!-- <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
+  <view catchtap="setl" data-type='1' class="{{type==1&&'sel'}}">
     门店佣金
-  </view> -->
+  </view>
   <view catchtap="setl" data-type='2' class="{{type==2&&'sel'}}">
     团长列表
   </view>
@@ -24,4 +24,30 @@
     </view>
     <view>普通用户</view>
   </view>
+</view>
+<view wx:if="{{type == 1}}">
+  <navigator url="./accumulative/accumulative" class="n">
+    <view>
+      {{tzsr.sumMoney}}
+    </view>
+    <view>
+      累计收入
+    </view>
+    <image class="right" src='/images/jt1.png'></image>
+  </navigator>
+  <view class="t">
+    <view style=" border-bottom: 1px dotted #999;">
+      <view>可提现收入<text> {{tzsr.rewardMoney}}元</text></view>
+      <navigator url="../put/put?type=tz">提现</navigator>
+    </view>
+    <view>
+      <view>未结算收入<text> {{tzsr.wjsMoney}}元</text></view>
+    </view>
+  </view>
+  <navigator class="box row_b" url='../order/order'>
+      <view class="box-box row_c" >
+        <view class="box-name">门店收益明细</view>
+      </view>
+      <image class="right" src='/images/jt1.png'></image>
+  </navigator>
 </view>

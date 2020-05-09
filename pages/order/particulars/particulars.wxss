@@ -1,18 +1,31 @@
 /* pages/order/particulars /particulars .wxss */
 .header{
- width: 100%;
- border-bottom: 30rpx solid #F5F5F5;
- padding: 30rpx;
+ width: 90%;
+ margin: 0 auto;
+ background: #E9E8E7;
  box-sizing: border-box;
  line-height: 30px;
+ margin-top: 30rpx;
+ border-radius: 5px;
 }
 .header>view{
   display: flex;
   align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
 
+  padding: 30rpx;
+}
+.header>view:not(:last-child){
+  border-bottom: 1px double #ccc;
+}
+.header>view:not(:first-child){
+  font-size: 24rpx;
+  color: #333;
 }
 .header>view>view:first-child{
   flex:1;
+  
 }
 .fsg{
   font-size: 16px; 
@@ -52,13 +65,13 @@
 .step>.list:not(:last-child)>.step-item>view:first-child{
   width: 25rpx;
   height: 25rpx;
-  background: #E85D2E;
+  background: #E5332C;
   border-radius: 50%;
 }
 .step>.list:not(:last-child)>.step-item>view:last-child{
   width: 2px;
   height: 60rpx;
-  background: #E85D2E;
+  background: #F1F1F0;
 
 }
 .step>.list>view:last-child{

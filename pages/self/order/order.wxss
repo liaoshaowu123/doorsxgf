@@ -10,7 +10,7 @@ page{
   width: 600rpx;
 }
 .z>view{
-  font-size: 16px;
+  font-size: 32rpx;
   box-sizing: border-box;
   width: 150rpx;
   text-align: center;

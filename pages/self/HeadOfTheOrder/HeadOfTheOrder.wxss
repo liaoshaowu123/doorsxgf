@@ -134,7 +134,7 @@ page{
   padding-bottom:40rpx;
   color: #999;
   line-height: 60rpx;
-  font-size: 12px;
+  font-size: 22rpx;
 }
 .l>view:nth-child(3)>view:last-child{
   width: 170rpx;
