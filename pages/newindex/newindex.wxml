@@ -23,19 +23,23 @@
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
   </swiper>
-  <view wx:if="{{false}}">
+  <!-- wx:if="{{false}}" -->
+  <view>
     <view class="tbox">
-      <view class="titem" wx:for="{{typeList[tindex-1]}}">
-        <image src="{{imgUrl+item.img}}"></image>
-        <text>{{item.name}}</text>
-      </view>
+      <navigator url='{{item.href}}' wx:for="{{productList}}">
+        <view class="titem" >
+          <image src="{{imgUrl+item.imgUrl}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </navigator>
     </view>
-    <view  class="tbottom">
+    <!-- <view  class="tbottom">
       <text class="{{(tindex-1)==item?'tactive':''}}" wx:for="{{ttotal}}" bindtap="changetIndex" data-index="{{item}}"></text>
-    </view>
+    </view> -->
   </view>
   <view class="textImg" wx:for="{{messageList}}" wx:for-item="items">
-    <image src="{{imgUrl+items.imgUrl}}"></image>
+    <text>{{items.name}}</text>
+    <!-- <image src="{{imgUrl+items.imgUrl}}"></image> -->
   </view>
   <view class="sibox" wx:for="{{lcList}}" wx:for-item="items">
     <view class="sihead">

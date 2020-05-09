@@ -533,3 +533,10 @@ height: 975.542px; */
   font-size: 32rpx;
   color: #000000;
 }
+.lcbot,.lcchose {
+  font-size: 24rpx;
+}
+.lcitem {
+  display: flex;
+  flex-wrap: wrap;
+}

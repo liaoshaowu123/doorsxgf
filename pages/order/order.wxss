@@ -99,8 +99,8 @@ page{
   /* margin-left: 30rpx; */
 }
 .wbar {
-  height: 10rpx;
-  width: 2rpx;
+  height: 16rpx;
+  width: 4rpx;
   margin:0rpx 20rpx;
   background: #e6212a;
 } 

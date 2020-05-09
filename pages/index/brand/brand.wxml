@@ -187,12 +187,23 @@
 <view class='box' >
   <view class='topbox col nowarp'>
     <view class='row_b'>
+      <view class='row_b'>
+        <view class="b lcchose">楼层选择</view>
+        <view class="lcitem">
+          <view class="row_s cb" wx:for='{{lclist[lcIndex].colorsList}}'>
+            <view class="hbar"></view>
+            <view class='{{lcColorIndex==index?"ys-box1 row_c":"ys-box row_c"}}' data-index='{{index}}' catchtap='onChangeLcColor'>
+              <view class='debox-txt1'>{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
       <view class='botbox-price1'><view class="hbar"></view><text class="italic">￥</text> {{azinfo.price}}元/㎡</view>
-      <view class="hbar"></view>
+      <!-- <view class="hbar"></view>
       <view class='botbox-price'>
         <text class="s">{{info.area}} X {{azinfo.price}} = </text>
         <text class="money">{{azPrice}}</text>元
-      </view>
+      </view> -->
     </view>
   </view>
   <view class='topbox col nowarp' wx:if="{{false}}">
@@ -204,7 +215,13 @@
   </view>
   <view class='botbox row_b nowarp'>
     <view class='botbox-btn row_c' data-type='3' data-id='{{azinfo.id}}' catchtap='onContent'>公司详情</view>
-    <view class='botbox-txt'>{{azinfo.detail}}</view>
+    <!-- <view class='botbox-txt'>{{azinfo.detail}}</view> -->
+    <view class="lcbot">
+      <text class="b">安装总价：</text>
+      <text class="s">{{info.area}} X {{azinfo.price}} = </text>
+      <text class="money">{{azPrice}}</text>
+      <text class="b">元</text>
+    </view>
   </view>
 </view>
 <!-- 确认 -->
