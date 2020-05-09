@@ -1,0 +1,7 @@
+<view class="img">
+  <image wx:for="{{image}}" src="{{item.path}}"></image>
+  <image src="http:\/\/placehold.it\/300x300" catchtap="upimg"></image>
+</view>
+<view class="button">
+  <view>确认上传</view>
+</view>

@@ -31,7 +31,12 @@
   font-size: 16px; 
 }
 .or{
-  color: #E85D2E;
+  color: #333;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.or>text{
+  font-weight: normal;
 }
 .red{
   color: red;
@@ -69,17 +74,66 @@
   border-radius: 50%;
 }
 .step>.list:not(:last-child)>.step-item>view:last-child{
-  width: 2px;
+  width: 1px;
   height: 60rpx;
   background: #F1F1F0;
 
-}
-.step>.list>view:last-child{
-  flex: 1
 }
 .step>.list:last-child>.step-item>view:first-child{
   width: 25rpx;
   height: 25rpx;
   background: #E85D2E;
   border-radius: 50%;
+}
+.step>.list>.step-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60rpx;
+  position: relative;
+  top: 6rpx;
+
+}
+.step>.list:not(:last-child)>.step-items>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #BEBEBE;
+  border-radius: 50%;
+}
+.step>.list:not(:last-child)>.step-items>view:last-child{
+  width: 1px;
+  height: 60rpx;
+  background: #F1F1F0;
+
+}
+.step>.list:last-child>.step-items>view:first-child{
+  width: 25rpx;
+  height: 25rpx;
+  background: #BEBEBE;
+  border-radius: 50%;
+}
+.step>.list>view:last-child{
+  flex: 1
+}
+.picker{
+  font-size: 20rpx;
+  border-radius: 3px;
+  border:1px solid #ccc;
+  padding: 0px 5px;
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 20rpx;
+}
+.button>navigator{
+  width: 95%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  background: #E5322C;
+  color:#fff;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  border-radius: 5px;
+  text-align: center;
 }
