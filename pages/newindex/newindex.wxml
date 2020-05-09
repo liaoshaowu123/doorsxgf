@@ -26,12 +26,18 @@
   <!-- wx:if="{{false}}" -->
   <view>
     <view class="tbox">
-      <navigator url='{{item.href}}' wx:for="{{productList}}">
-        <view class="titem" >
+    
+      <view class="titem" wx:for="{{productList}}">
+        <navigator open-type="switchTab" url='{{item.href}}' wx:if="{{item.name=='门窗'}}">
           <image src="{{imgUrl+item.imgUrl}}"></image>
           <text>{{item.name}}</text>
-        </view>
-      </navigator>
+        </navigator>
+        <navigator url='{{item.href}}' wx:else>
+          <image src="{{imgUrl+item.imgUrl}}"></image>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+      
     </view>
     <!-- <view  class="tbottom">
       <text class="{{(tindex-1)==item?'tactive':''}}" wx:for="{{ttotal}}" bindtap="changetIndex" data-index="{{item}}"></text>

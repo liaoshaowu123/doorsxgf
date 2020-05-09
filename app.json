@@ -1,5 +1,5 @@
 {
-  "pages": [    
+  "pages": [
     "pages/index/index",
     "pages/newindex/newindex",
     "pages/self/ModifyRelations/ModifyRelations",
@@ -43,7 +43,9 @@
     "pages/order/order",
     "pages/self/DistributionOrders/DistributionOrders",
     "pages/self/shop/shop",
-    "pages/goods/goodsdetail"
+    "pages/goods/goodsdetail",
+    "pages/broadcast/broadcastList",
+    "pages/broadcast/broadcastDetails"
   ],
   "requiredBackgroundModes": [
     "audio"

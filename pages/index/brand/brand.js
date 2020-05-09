@@ -99,7 +99,7 @@ Page({
       let lists = res.data;
       this_.setData({
         lclist: lists.AluminumBrand,
-        pjlist: lists.Parts,
+        pjlist: lists.AluminumBrand[0].mcPartsList,
         fhllist: lists.GuardRailing,
         bllist: lists.GlassTypes,
         azinfo: lists.InstallationCompany[0],
@@ -189,14 +189,18 @@ Page({
 
   },
   onChangeLc(e){
-
     let index = e.currentTarget.dataset.index;
     if (index != this.data.lcIndex) {
       this.setData({
         lcIndex: index
       })
     }
-        var data={}
+    let pjList = this.data.lclist[index].mcPartsList;
+    this.setData({
+      pjlist: pjList,
+      pjIndex: 0,
+    })
+    var data={}
     // ljrqe.post('houseType/getBrandData', data).then(res => {
     //   let lists = res.data;
     //   this_.setData({

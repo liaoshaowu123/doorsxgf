@@ -1,0 +1,15 @@
+/* pages/broadcast/broadcastList.wxss */
+
+.blist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bitem {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30rpx;
+  border-bottom: 2rpx solid #e6212a;
+  padding: 20rpx;
+}

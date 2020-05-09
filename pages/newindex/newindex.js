@@ -14,8 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hbar: [{ id: "1", name:"首页"}],//[{ name: "定制产品", id: "1" }, { name: "直播频道", id: "2" }, { name: "招商", id: "3" }],
-    hbarId: 1,
+    
     bannerList: [],
     imgUrl: Config.imgUrl,
     indicatorDots: true,
@@ -25,29 +24,6 @@ Page({
     uhide: 0,
     index: 0,
 
-    typeList: [],
-    tindex:1,// 当前页
-    ttotal:2,// 总共有几页
-    // 图片 1
-    textimg:"/menchuang/upload/banner/202004/26/be846aca265a455f94acdc9c96d8fe50.jpg",
-    // 铝材供应商
-    supplierAI:[
-      { id: 1, name: "爱氪佳" },
-      { id: 2, name: "欧米德资" },
-      { id: 3, name: "新河" },
-      { id: 4, name: "华建" },
-      { id: 5, name: "广亚同框" },
-    ],
-    // 配件供应商
-    parts:[
-      { id: 1, name: "深圳HOPO" },
-      { id: 2, name: "派阁" },
-      { id: 3, name: "瑞纳斯" },
-      { id: 4, name: "科鲁克" },
-    ],
-    // 安装公司
-    azList:[],
-    // company:"湖南蜘蛛人建筑工程安装有限公司",
 
     areaList: [],
     userId:"",
@@ -59,33 +35,16 @@ Page({
   },
   getList(){
     let t = this, d = t.data, citycode = d.citycode;
-    console.log("citycode:", citycode)
+    console.log("getList-citycode:", citycode)
     ljrqe.post('appIndex/list',{
-      citycode: citycode
+      cityCode: citycode
     }).then(res => {
       let list = res.data;
       this.setData(res.data);
     })
   },
-  getBannerList() {
-    let data = {
-
-    };
-    /*
-    azList 安装
-    */
-    // console.log(res)
-    ljrqe.post('banner/list', data).then(res => {
-      let list = res.data;
-      this.setData({
-        bannerList: list
-      })
-    })
-    
-  },
   changetIndex(e){
     let index = e.currentTarget.dataset.index;
-    console.log("index:",index)
     this.setData({
       tindex: index+1,
     })
@@ -119,6 +78,7 @@ Page({
           this_.setData({
             city: city,
             district: district,
+            citycode: code,
           })
           //storage!=result
           if (!!citycode && citycode != code) {
@@ -180,7 +140,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getList();
+    // this.getList();
   },
 
   /**
