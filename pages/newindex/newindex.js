@@ -50,6 +50,7 @@ Page({
     // company:"湖南蜘蛛人建筑工程安装有限公司",
 
     areaList: [],
+    userId:"",
   },
   changeHId:function(e){
     this.setData({
@@ -58,10 +59,7 @@ Page({
   },
   getList(){
     let t = this, d = t.data;
-
-    ljrqe.post('appIndex/list').then(res => {
-      console.log(res)
-      console.log(res.data)
+    ljrqe.post('appIndex/list',{}).then(res => {
       let list = res.data;
       this.setData(res.data);
     })
