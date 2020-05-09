@@ -25,7 +25,7 @@ Page({
     let data = { 
       orderId:id
     };
-    ljrqe.post('mcoporder/get', data).then(res => {
+    ljrqe.post('mcoporder/getList', data).then(res => {
       let mcOpOrders=res.data.mcOpOrders;
       let mcOrder=res.data.mcOrder;
       let list=this_.data.mcOpOrders;

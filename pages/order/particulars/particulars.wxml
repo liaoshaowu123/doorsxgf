@@ -15,12 +15,22 @@
 <view class="step">
   <view style="padding-bottom:20rpx;">实时进度(订单追踪)</view>
   <view class="list" wx:for='{{mcOpOrders}}'>
-    <view>{{item.createDate}}</view>
-    <view class="step-item">
+    <view style="width:100rpx;">{{item.createDateF}}</view>
+    <view class="{{index<=indexds?'step-item':'step-items'}}">
       <view></view>
-      <view></view>
+      <view  style="background:{{index==indexds?'#ccc':''}};display:{{index<9||'none'}}"></view>
     </view>
-    <view class="or">{{item.orderStatus}}</view>
+    <view class="or" style="color:{{index<=indexds?'':'#ccc'}}">{{item.orderStatus}} 
+      <picker wx:if="{{index==indexds&&index==4&&lv=='0'&&!item.pment}}" start="{{min}}" mode="date" value="{{date}}"  bindchange="bindDateChange">
+        <view class="picker" >预约时间</view>
+      </picker>
+      <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view>
+      <navigator class="picker" wx:if="{{index==indexds&&(index==5||index==7||index==8)&&lv!='0'}}" url="up/up">点击上传</navigator>
+      <navigator class="picker" wx:if="{{indexds>index&&(index==5||index==7||index==8)&&lv=='0'}}" url="examine/examine">查看详情</navigator>
   </view>
 
+  </view>
+  <view wx:if="{{indexds>=9}}" class="button">
+    <navigator url="/pages/self/CaseUpload/CaseUpload">案例上传</navigator>
+  </view>
 </view>
