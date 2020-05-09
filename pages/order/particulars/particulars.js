@@ -31,16 +31,20 @@ Page({
       let list=this_.data.mcOpOrders;
       list.push(...mcOpOrders);
       var x = [
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "上门复尺未量房" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "工厂接单" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "团长已接单" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "2020-04-23 15:30:29", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "未复尺" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "已量房" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "窗户生产中" },
         { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "玻璃生产中" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "生产已完成" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "预约上门安装" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "建材运至现场" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "配件配货已完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "玻璃生产已完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "窗户生产已完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "业主预约以完成" },
         { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "安装已接单" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "安装完成" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "验收现场" },
-        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "订单完成" }
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "已接货" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "安装已完成" },
+        { "id": "", "isNewRecord": false, "remarks": "", "createDate": "", "updateDate": "", "orderId": "e6b70b5f20c749379c3238a3d460086b", "orderStatus": "验收完成" },
+
       ]
       
       for(var i in list){

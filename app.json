@@ -40,6 +40,8 @@
     "pages/self/share/share",
     "pages/self/dividends/dividends",
     "pages/self/petition/petition",
+    "pages/order/particulars/up/up",
+    "pages/order/particulars/examine/examine",
     "pages/order/order",
     "pages/self/DistributionOrders/DistributionOrders",
     "pages/self/shop/shop",
