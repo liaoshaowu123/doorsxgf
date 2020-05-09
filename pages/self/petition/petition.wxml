@@ -28,7 +28,7 @@
       </view>
 
     </view>
-    <view class="box row_s">
+    <!-- <view class="box row_s">
       <view class="title">选择门店</view>
         <view class="right row_b">
           <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
@@ -41,7 +41,7 @@
           </picker>
           <image class="r" src='/images/jt.png'></image>
         </view>
-    </view>
+    </view> -->
     <view class="box row_s">
       <view class="title">申请小区</view>
       <input class="ipt" name='area' placeholder="请输入所在的小区"></input>
