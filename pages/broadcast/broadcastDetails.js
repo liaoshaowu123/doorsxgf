@@ -1,18 +1,34 @@
+
 // pages/broadcast/broadcastDetails.js
+import { Config } from '../../utils/config.js';
+import { Ljrqe } from '../../utils/ljrqe.js';
+
+var ljrqe = new Ljrqe();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    liveUrl:"",
+    liveList:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log("options",options);
+    this.setData(options);
 
+    ljrqe.post('live/list', options).then(res => {
+      let list = res.data;
+      console.log("live",list)
+      this.setData({
+        liveList: list
+      })
+    })
   },
 
   /**

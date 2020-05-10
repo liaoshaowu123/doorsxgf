@@ -1,0 +1,51 @@
+/* pages/index/housetype/housetype.wxss */
+.item{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 3%;
+  display: flex;
+  margin-top: 30rpx;
+}
+.item>image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+}
+.item>view{
+  flex:1;
+  padding-left:30rpx; 
+  position: relative;
+}
+.item>view>view:first-child{
+  font-size: 16px;
+  line-height: 50rpx;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 500rpx;
+}
+.item>view>view:nth-child(2){
+  font-size: 14px;
+  color: #ccc;
+  line-height: 50rpx;
+
+}
+.item>view>view:nth-child(3){
+  font-size: 14px;
+  color: #ccc;
+  line-height: 50rpx;
+  
+}
+.item>view>view:nth-child(3)>navigator{
+  width: 150rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 25px;
+  border:1px solid #333;
+  color: #333;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 20rpx;
+  text-align: center;
+}

@@ -25,7 +25,7 @@
         <view class="picker" >预约时间</view>
       </picker> -->
       <!-- <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view> -->
-      <navigator class="picker" wx:if="{{index==indexds&&index==8&&lv=='0'}}" url="up/up">预约安装</navigator>
+      <navigator class="picker" wx:if="{{index==indexds&&index==8&&lv=='0'}}" url="subscribe/subscribe">预约安装</navigator>
       <navigator class="picker" wx:if="{{index==indexds&&(index==10||index==11||index==12)&&lv!='0'}}" url="up/up">点击上传</navigator>
       <navigator class="picker" wx:if="{{indexds>=index&&index==8&&lv!='0'}}" url="examine/examine">详情查看</navigator>
       <text style="font-size:20rpx;color:#E5322C"> -<text style="color:#333;"> 李国话</text></text>
@@ -35,5 +35,6 @@
   <view  class="button">
     <navigator url="/pages/master/contract/contract" wx:if="{{index==14&&lv=='0'}}">去评价</navigator>
     <navigator url="/pages/self/CaseUpload/CaseUpload?orderId={{mcOrder.id}}">案例上传</navigator>
+    <navigator url="/pages/self/CaseUpload/CaseUpload" wx:if="{{index==14&&lv!='0'}}">案例上传</navigator>
   </view>
 </view>

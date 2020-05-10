@@ -14,7 +14,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    hbar: [{ id: "1", name: "首页" }],//[{ name: "定制产品", id: "1" }, { name: "直播频道", id: "2" }, { name: "招商", id: "3" }],
+    hbarId: 1, 
     bannerList: [],
     imgUrl: Config.imgUrl,
     indicatorDots: true,

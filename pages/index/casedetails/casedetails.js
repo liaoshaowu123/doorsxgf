@@ -1,44 +1,13 @@
-// pages/broadcast/broadcastList.js
-
-import { Config } from '../../utils/config.js';
-import { Ljrqe } from '../../utils/ljrqe.js';
-
-var ljrqe = new Ljrqe();
- // "plugins":{
-  //   "live-player-plugin":{
-  //     "version": "1.0.3",
-  //   }
-  // },
+// pages/index/casedetails/casedetails.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bannerList:[]
+
   },
 
-  getBannerList() {
-    let data = { };
-
-    ljrqe.post('banner/list', data).then(res => {
-      let list = res.data;
-      this.setData({
-        bannerList: list
-      })
-    })
-  },
-
-  getList() {
-    ljrqe.post('live/list', {}).then(res => {
-      console.log(res)
-      let list = res.room_info;
-      console.log("live", list)
-      this.setData({
-        liveList: list
-      })
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -57,8 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getBannerList();
-    this.getList();
+
   },
 
   /**

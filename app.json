@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/order/particulars/subscribe/subscribe",
     "pages/newindex/newindex",
     "pages/self/ModifyRelations/ModifyRelations",
     "pages/self/meteam/meteam",
@@ -46,6 +47,8 @@
     "pages/self/DistributionOrders/DistributionOrders",
     "pages/self/shop/shop",
     "pages/goods/goodsdetail",
+    "pages/index/housetype/housetype",
+    "pages/index/casedetails/casedetails",
     "pages/broadcast/broadcastList",
     "pages/broadcast/broadcastDetails"
   ],
@@ -100,5 +103,6 @@
       "desc": "你的位置信息将用于我们展示对应城市所拥有的服务社区范围"
     }
   },
+ 
   "sitemapLocation": "sitemap.json"
 }
