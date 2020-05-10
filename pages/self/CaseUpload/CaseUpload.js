@@ -59,7 +59,7 @@ Page({
     return p.then(val => {
         return new Promise(resolve => {
           setTimeout(() => {
-            page.submitCaseFor()
+            page.submitCase()
           }, 2000)
         })
     })
@@ -116,6 +116,7 @@ Page({
         success: function (res) {
           let verandaImg = that.data.verandaImg[j];
           verandaImg = verandaImg+res.data+","
+          debugger
           that.setData({
             upload_picture_list: upload_picture_list,
             ['verandaImg['+j+']']:verandaImg
@@ -206,10 +207,10 @@ Page({
       }
   },
  
-  getOrderVerandaList(){
+  getOrderVerandaList(orderId){
     let this_ = this;
     let data={
-      orderId:this_.data.aorderId
+      orderId:orderId
     }
     ljrqe.post('mcplotcase/list/veranda',data).then(res=>{
       let list=this_.data.verandas;
@@ -229,22 +230,22 @@ Page({
     })
   },
 
-  submitCaseFor(){
-    let imgList = this.data.imgList
-    for(let i = 0; i < imgList.length; i++){
-      if(imgList[i].length > 0)
-        this.submitCase(i)
-    }
-  },
+  // 
 
-  submitCase(j){
+  submitCase(){
     let this_ = this;
+    let verandaId = '';
+    let verandaImg = '';
+    for (let i = 0; i <  this.data.verandaId.length; i++) {
+      verandaId = verandaId + this.data.verandaId[i]+',';
+      verandaImg = verandaImg + this.data.verandaImg[i]+',';
+    }
     var p = new Promise(function (resolve, reject) {
       //做一些异步操作
       let data={
         orderId:this_.data.aorderId, 
-        verandaId:this_.data.verandaId[j], 
-        verandaImg:this_.data.verandaImg[j],
+        verandaId:verandaId, 
+        verandaImg:verandaImg,
       }
       ljrqe.post('mcplotcase/save',data).then(res=>{
         resolve(res)
@@ -261,7 +262,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getOrderVerandaList()
+    this.setData({
+      aorderId:options.orderId
+    })
+    this.getOrderVerandaList(options.orderId)
   },
 
   /**

@@ -34,6 +34,6 @@
   </view>
   <view  class="button">
     <navigator url="/pages/master/contract/contract" wx:if="{{index==14&&lv=='0'}}">去评价</navigator>
-    <navigator url="/pages/self/CaseUpload/CaseUpload" wx:if="{{index==14&&lv!='0'}}">案例上传</navigator>
+    <navigator url="/pages/self/CaseUpload/CaseUpload?orderId={{mcOrder.id}}">案例上传</navigator>
   </view>
 </view>
