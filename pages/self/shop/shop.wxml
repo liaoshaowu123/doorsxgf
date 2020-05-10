@@ -8,27 +8,19 @@
 </view>
 <view class="x"></view>
 <view class="l" wx:if="{{type == 2}}">
-  <view class="item">
-    <image src="http:\/\/placehold.it\/300x300"></image>
+  <view class="item" wx:for="{{storeList}}">
+    <image src="{{imgUrl}}{{item.userPhoto}}"></image>
     <view>
-      <view>用户名字</view>
-      <view>注册时间:2020-30-20</view>
+      <view>{{item.userName}}</view>
+      <view>注册时间:{{item.createDate}}</view>
     </view>
-    <view>普通用户</view>
-  </view>
-  <view class="item">
-    <image src="http:\/\/placehold.it\/300x300"></image>
-    <view>
-      <view>用户名字</view>
-      <view>注册时间:2020-30-20</view>
-    </view>
-    <view>普通用户</view>
+    <view>团长</view>
   </view>
 </view>
 <view wx:if="{{type == 1}}">
   <navigator url="./accumulative/accumulative" class="n">
     <view>
-      {{tzsr.sumMoney}}
+      {{storesr.sumMoney}}
     </view>
     <view>
       累计收入
@@ -37,14 +29,14 @@
   </navigator>
   <view class="t">
     <view style=" border-bottom: 1px dotted #999;">
-      <view>可提现收入<text> {{tzsr.rewardMoney}}元</text></view>
+      <view>可提现收入<text> {{storesr.rewardMoney}}元</text></view>
       <navigator url="../put/put?type=tz">提现</navigator>
     </view>
     <view>
-      <view>未结算收入<text> {{tzsr.wjsMoney}}元</text></view>
+      <view>未结算收入<text> {{storesr.wjsMoney}}元</text></view>
     </view>
   </view>
-  <navigator class="box row_b" url='../order/order'>
+  <navigator class="box row_b" url='../order/order?type=2'>
       <view class="box-box row_c" >
         <view class="box-name">门店收益明细</view>
       </view>

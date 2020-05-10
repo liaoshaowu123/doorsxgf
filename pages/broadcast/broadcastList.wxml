@@ -1,0 +1,19 @@
+<view class='page'>
+  <view class="contain">
+    <view class="blist">
+      
+        <view class="bitem"  wx:for="{{liveList}}" wx:key="id">
+          <navigator url="/pages/broadcast/broadcastDetails?id={{item.roomid}}" wx:if="{{item.is==1}}">
+            <image src="cover_img"></image>
+            <text class="title">{{item.name}}</text>
+            <text class="time">2018-04-09 12:00:24</text>
+          </navigator>
+          <view wx:else>
+            <text class="title">浙江皮革厂倒闭了</text>
+            <text class="time">2018-04-09 12:00:24</text>
+          </view>
+        </view>
+      
+    </view>
+  </view>
+</view>

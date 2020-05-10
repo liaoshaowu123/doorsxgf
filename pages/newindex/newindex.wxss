@@ -1,6 +1,7 @@
 /* pages/newindex/newindex.wxss */
 .hbar {
   display: flex;
+  margin: 10rpx;
 }
 .hbar text {
   padding: 3rpx 16rpx;
@@ -17,8 +18,7 @@
 .hactive::after {
   content: '__';
   position: absolute;
-  margin: 10rpx;
-  
+  margin: 10rpx 0rpx;
 }
 .tbox {
   display: flex;

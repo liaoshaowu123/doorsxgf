@@ -1,0 +1,8 @@
+<view class='page'>
+  <view class="contain">
+    <view class="blist">
+        <text>{{id}}</text>
+        <live-player src="{{liveUrl}}" class="livebox"></live-player>
+    </view>
+  </view>
+</view>

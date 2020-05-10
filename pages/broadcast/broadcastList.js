@@ -1,42 +1,31 @@
-// pages/self/shop/shop.js
-import { Ljrqe } from '../../../utils/ljrqe.js';
+// pages/broadcast/broadcastList.js
+
+import { Config } from '../../utils/config.js';
+import { Ljrqe } from '../../utils/ljrqe.js';
+
 var ljrqe = new Ljrqe();
+
+ // "plugins":{
+  //   "live-player-plugin":{
+  //     "version": "1.0.3",
+  //   }
+  // },
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    type: 2,
-    storesr:{},
-    storeList:[]
-  },
-  setl: function (e) {
-    this.setData({
-      type: e.currentTarget.dataset.type
-    })
+    liveList:[],
   },
 
-  getStoreList(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('userchildren/getShopownerList', data).then(res => {
-      let storeList = res.data;
-      let list = this_.data.storeList;
-      list.push(...storeList);
-      this_.setData({
-        storeList:list
-      })
-    })
-  },
-
-  getStoresr(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('sr/store', data).then(res => {
-      let storesr = res.data;
-      this_.setData({
-        storesr:storesr
+  getList() {
+    ljrqe.post('live/list', {}).then(res => {
+      console.log(res)
+      let list = res.room_info;
+      console.log("live", list)
+      this.setData({
+        liveList: list
       })
     })
   },
@@ -44,8 +33,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getStoresr()
-    this.getStoreList()
+
   },
 
   /**
@@ -59,7 +47,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getList();
   },
 
   /**

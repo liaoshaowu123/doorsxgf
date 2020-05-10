@@ -1,51 +1,32 @@
-// pages/self/shop/shop.js
-import { Ljrqe } from '../../../utils/ljrqe.js';
+import { Config } from '../../utils/config.js';
+import { Ljrqe } from '../../utils/ljrqe.js';
+
 var ljrqe = new Ljrqe();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    type: 2,
-    storesr:{},
-    storeList:[]
-  },
-  setl: function (e) {
-    this.setData({
-      type: e.currentTarget.dataset.type
-    })
+    liveUrl:"",
+    liveList:[],
   },
 
-  getStoreList(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('userchildren/getShopownerList', data).then(res => {
-      let storeList = res.data;
-      let list = this_.data.storeList;
-      list.push(...storeList);
-      this_.setData({
-        storeList:list
-      })
-    })
-  },
-
-  getStoresr(){
-    let data = {};
-    var this_ = this;
-    ljrqe.post('sr/store', data).then(res => {
-      let storesr = res.data;
-      this_.setData({
-        storesr:storesr
-      })
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getStoresr()
-    this.getStoreList()
+    console.log("options",options);
+    this.setData(options);
+
+    ljrqe.post('live/list', options).then(res => {
+      let list = res.data;
+      console.log("live",list)
+      this.setData({
+        liveList: list
+      })
+    })
   },
 
   /**

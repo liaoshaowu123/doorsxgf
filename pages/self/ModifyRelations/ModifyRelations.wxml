@@ -30,7 +30,7 @@
       <view>
         <image src="{{imgUrl+item.photo}}"></image>
         <text>{{item.name}}</text>
-        <view catchtap="modify" data-id="{{item.id}}">修改服务团长</view>
+        <view wx:if="{{type == 1}}" catchtap="modify" data-id="{{item.id}}">修改服务团长</view>
       </view>
       <view>所属团长：{{item.storeName}}</view>
     </view>

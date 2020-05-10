@@ -11,30 +11,24 @@
 </view>
 <view class="x" wx:if="{{type!=1}}"></view>
 <view class="l" wx:if="{{type == 2}}">
-  <view class="item">
-    <image src="http:\/\/placehold.it\/300x300"></image>
+  <view class="item" wx:for="{{userList}}">
+    <image src="{{imgUrl}}{{item.userPhoto}}"></image>
     <view>
-      <view>用户名字</view>
-      <view>注册时间:2020-30-20</view>
+      <view>{{item.userName}}</view>
+      <view>{{item.createDate}}</view>
     </view>
     <view>普通用户</view>
   </view>
-  <view class="item">
-    <image src="http:\/\/placehold.it\/300x300"></image>
-    <view>
-      <view>用户名字</view>
-      <view>注册时间:2020-30-20</view>
-    </view>
-    <view>普通用户</view>
-  </view>
+  
 </view>
-<view class="l" wx:if="{{type == 1}}">
-  <view class="item">
-    <image src="http:\/\/placehold.it\/300x300"></image>
+<view class="l">
+  <view class="item" wx:if="{{type == 1}}" wx:for="{{userList}}">
+    <image src="{{imgUrl}}{{item.userPhoto}}"></image>
     <view>
-      <view>用户名字</view>
-      <view>注册时间:2020-30-20</view>
+      <view>{{item.userName}}</view>
+      <view>{{item.createDate}}</view>
     </view>
-    <view>  <picker bindchange="bindPickerChange" data-id="1" value="{{index}}" range="{{array}}"><view class="picker">{{array[index]}}<text class="iconfont iconjiantou8" style="margin-left:5rpx;"></text></view></picker></view>
+    <view wx:if="{{item.level == 5}}">  <picker bindchange="bindPickerChange" data-id="{{item.childId}}" value="{{item.level}}" range="{{array}}"><view class="picker">推广专员<text class="iconfont iconjiantou8" style="margin-left:5rpx;"></text></view></picker></view>
+    <view wx:if="{{item.level == 0}}">  <picker bindchange="bindPickerChange" data-id="{{item.childId}}" value="{{item.level}}" range="{{array}}"><view class="picker">普通用户<text class="iconfont iconjiantou8" style="margin-left:5rpx;"></text></view></picker></view>
   </view>
 </view>

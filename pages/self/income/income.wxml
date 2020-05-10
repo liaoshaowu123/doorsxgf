@@ -16,9 +16,9 @@
     <view>未结算收入<text> {{tzsr.wjsMoney}}元</text></view>
   </view>
 </view>
-<navigator class="box row_b" url='../order/order'>
+<navigator class="box row_b" url='../order/order?type=0'>
     <view class="box-box row_c" >
-      <view class="box-name">门店收益明细</view>
+      <view class="box-name">团长收益明细</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
 </navigator>

@@ -167,7 +167,7 @@ page{
 .debox-xl2{
   height: 44rpx;
 	background-color: #cccccc;
-	border-radius: 4rpx;
+	border-radius: 40rpx;
   padding: 0 18rpx;
   font-family: PingFang-SC-Medium;
 	font-size: 24rpx;
