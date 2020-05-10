@@ -19,7 +19,7 @@
   </view>
   
 </view>
-<navigator class="box row_b" url='../order/order'>
+<navigator class="box row_b" url='../order/order?type=1'>
     <view class="box-box row_c" >
       <image class="box-icon" src='/images/icon-5.png'></image>
       <view class="box-name">订单收益明细</view>

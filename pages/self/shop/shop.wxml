@@ -36,7 +36,7 @@
       <view>未结算收入<text> {{storesr.wjsMoney}}元</text></view>
     </view>
   </view>
-  <navigator class="box row_b" url='../order/order'>
+  <navigator class="box row_b" url='../order/order?type=2'>
       <view class="box-box row_c" >
         <view class="box-name">门店收益明细</view>
       </view>

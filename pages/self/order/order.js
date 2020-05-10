@@ -12,17 +12,29 @@ Page({
    */
   data: {
     type:1,
+    fromType:0,
     list: [],
-    imgUrl:Config.imgUrl
+    imgUrl:Config.imgUrl,
+    orderStatusArry:Config.orderStatusArry
   },
   setl:function (e){
+    this.reStart()
     this.setData({
       type: e.currentTarget.dataset.type
     })
-    this.onLoad();
+    if(this.data.fromType == 0)
+      this.getOrderListTZ(e.currentTarget.dataset.type)
+    if(this.data.fromType == 1)
+      this.getOrderListTGY(e.currentTarget.dataset.type)
+    if(this.data.fromType == 1)
+      this.getOrderListMD(e.currentTarget.dataset.type)
+
   },
 
-  getOrderList(type){
+  getOrderListTGY(type){
+    this.setData({
+      list:[]
+    })
     if (!isHava){return};
     isHava=false;
     let this_ = this;
@@ -35,7 +47,64 @@ Page({
       }
       
       let lists = res.data;
-      let arr=['未量房','已完成','已派单','已评价']
+      let arr=this_.data.orderStatusArry;
+      lists.map(v=>{
+        v.statuss = arr[parseInt(v.orderStatus)]
+      })
+      
+      let list=this_.data.list;
+      list.push(...lists);
+      this_.setData({
+        list: list
+      })
+    })
+  },
+  getOrderListTZ(type){
+    this.setData({
+      list:[]
+    })
+    if (!isHava){return};
+    isHava=false;
+    let this_ = this;
+    let data = { pageNo, pageSize,type };
+    ljrqe.post('mcOrderV1/storeTz/list', data).then(res => {
+      //console.log(res)
+      if (res.data.length >= pageSize && res.totalPage!=pageNo){
+        pageNo+=1;
+        isHava=true;
+      }
+      
+      let lists = res.data.orderList;
+      let arr=this_.data.orderStatusArry;
+      lists.map(v=>{
+        v.statuss = arr[parseInt(v.orderStatus)]
+      })
+      
+      let list=this_.data.list;
+      list.push(...lists);
+      this_.setData({
+        list: list
+      })
+    })
+  },
+
+  getOrderListMD(type){
+    this.setData({
+      list:[]
+    })
+    if (!isHava){return};
+    isHava=false;
+    let this_ = this;
+    let data = { pageNo, pageSize,type };
+    ljrqe.post('mcOrderV1/storeMd/list', data).then(res => {
+      //console.log(res)
+      if (res.data.length >= pageSize && res.totalPage!=pageNo){
+        pageNo+=1;
+        isHava=true;
+      }
+      
+      let lists = res.data.orderList;
+      let arr=this_.data.orderStatusArry;
       lists.map(v=>{
         v.statuss = arr[parseInt(v.orderStatus)]
       })
@@ -61,7 +130,16 @@ Page({
    */
   onLoad: function (options) {
     this.reStart();
-    this.getOrderList(this.data.type);
+    let type = options.type;
+    this.setData({
+      fromType:type
+    })
+    if(type == 0) //团长
+    this.getOrderListTZ(this.data.type);
+    if(type == 1) //推广员
+    this.getOrderListTGY(this.data.type);
+    if(type == 2) //门店
+    this.getOrderListMD(this.data.type);
   },
 
   /**
