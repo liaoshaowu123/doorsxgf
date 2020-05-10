@@ -1,18 +1,33 @@
 // pages/order/particulars/examine/examine.js
+import { Ljrqe } from '../../../../utils/ljrqe.js';
+import { Config } from '../../../../utils/config.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list:{},
+    imgUrl:Config.imgUrl
   },
 
+
+  getDetail(id){
+    let data = {
+      id:id
+    }
+    ljrqe.post('mcoporder/get', data).then(res => {
+      this.setData({
+        list:res.data
+      })
+    })  
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getDetail(options.id)
   },
 
   /**

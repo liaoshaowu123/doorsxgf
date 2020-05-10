@@ -252,6 +252,9 @@ Page({
         this_.setData({
           caseId: caseId
         })
+        wx.navigateBack({
+          delta: 1,
+          })
       })
     });
     return p;

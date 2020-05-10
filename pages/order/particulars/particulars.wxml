@@ -26,9 +26,10 @@
       </picker> -->
       <!-- <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view> -->
       <navigator class="picker" wx:if="{{index==indexds&&index==8&&lv=='0'}}" url="subscribe/subscribe?orderId={{mcOrder.id}}">预约安装</navigator>
-      <navigator class="picker" wx:if="{{index==indexds&&(index==10||index==11||index==12)&&lv!='0'}}" url="up/up">点击上传</navigator>
-      <navigator class="picker" wx:if="{{indexds>=index&&index==8&&lv!='0'}}" url="examine/examine">详情查看</navigator>
-      <text style="font-size:20rpx;color:#E5322C"> -<text style="color:#333;"> 李国话</text></text>
+      <navigator class="picker" wx:if="{{index==indexds&&index==9}}" url="subscribe/subscribe?orderId={{mcOrder.id}}&type=2">查看详情</navigator>
+      <navigator class="picker" wx:if="{{index==indexds&&(index==10||index==11||index==12)&&lv!='0'}}" url="up/up?orderId={{mcOrder.id}}&orderStatus={{indexds}}&id={{item.id}}">点击上传</navigator>
+      <navigator class="picker" wx:if="{{indexds>=index&&(index==10||index==11||index==12)&&lv!='0'}}" url="examine/examine?id={{item.id}}">详情查看</navigator>
+      <text style="font-size:20rpx;color:#E5322C"> -<text style="color:#333;"> {{item.entpriseName}}</text></text>
   </view>
 
   </view>

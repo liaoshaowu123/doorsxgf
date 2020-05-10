@@ -3,5 +3,5 @@
   <image src="http:\/\/placehold.it\/300x300" catchtap="upimg"></image>
 </view>
 <view class="button">
-  <view>确认上传</view>
+  <view catchtap="submitDate">确认上传</view>
 </view>

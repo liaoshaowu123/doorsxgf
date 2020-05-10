@@ -17,6 +17,7 @@ Page({
     position:'',
     contacts:'',
     contactsNumber:'',
+    detail:{}
   },
   z:function(e){
     var that=this;
@@ -45,6 +46,9 @@ Page({
 
   upimg:function(e){
     var t =this;
+    if(t.type==2){
+      return
+    }
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -88,17 +92,34 @@ Page({
         orderStatus:11
       }
       ljrqe.post('brandOrderV1/saveMOpOrder', data).then(res => {
-        this.setData({
-          list:res.data  
-        })
+        wx.navigateBack({
+          delta: 1,
+          })
       })   
 }, 
+
+getMakmentInfo(orderId){
+  let data = {
+    orderId:orderId
+  }
+  ljrqe.post('brandOrderV1/getMakmentInfo', data).then(res => {
+    this.setData({
+      detail:res.data
+    })
+  })
+},
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let this_ = this;
+    if(options.type == 2){
+      this_.getMakmentInfo(options.orderId)
+    }
     this.setData({
-      orderId:options.orderId
+      orderId:options.orderId,
+      type:options.type||1
     })
   },
 
