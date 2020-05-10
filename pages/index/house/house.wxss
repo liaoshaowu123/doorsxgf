@@ -145,3 +145,32 @@ font-family: PingFang-SC-Bold;
 	color: #000000;
   margin-top: 10rpx;
 }
+.but{
+  position: fixed;
+  bottom: 80rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+.but>view{
+  flex: 1;
+  text-align: center;
+}
+.but>view>navigator{
+  width:70%;
+  line-height: 70rpx;
+  display: inline-block;
+  color: #fff;
+}
+.but>view:first-child>navigator{
+  background: #FE0000;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px #FE0000; 
+  font-size: 14px;
+}
+.but>view:last-child>navigator{
+  background: #0571CB;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px #0571CB; 
+  font-size: 14px;
+}

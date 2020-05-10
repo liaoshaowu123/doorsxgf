@@ -1,6 +1,8 @@
 {
-  "pages": [    
+  "pages": [
+    
     "pages/index/index",
+    "pages/order/particulars/subscribe/subscribe",
     "pages/newindex/newindex",
     "pages/self/ModifyRelations/ModifyRelations",
     "pages/self/meteam/meteam",
@@ -45,7 +47,9 @@
     "pages/order/order",
     "pages/self/DistributionOrders/DistributionOrders",
     "pages/self/shop/shop",
-    "pages/goods/goodsdetail"
+    "pages/goods/goodsdetail",
+    "pages/index/housetype/housetype",
+    "pages/index/casedetails/casedetails"
   ],
   "requiredBackgroundModes": [
     "audio"

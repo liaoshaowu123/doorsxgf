@@ -33,3 +33,11 @@
      </view>
    </view>
  </view>
+<view class="but">
+  <view>
+    <navigator url="../housetype/housetype?id={{houserId}}">户型案例</navigator>
+  </view>
+  <view>
+    <navigator>业主群</navigator>
+  </view>
+</view>

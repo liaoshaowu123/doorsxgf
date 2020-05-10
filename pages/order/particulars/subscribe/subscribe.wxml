@@ -1,0 +1,29 @@
+<view class="subscribe">
+  <view class="inputs">
+    <view>钥匙存放位置：</view>
+    <input type="text"  bindinput="z" data-type="location" placeholder="请输入"></input>
+  </view>
+  <view class="inputs">
+    <view>现场联系人：</view>
+    <input type="text"  bindinput="z" data-type="name" placeholder="请输入联系人姓名"></input>
+  </view>
+  <view class="inputs">
+    <view>联系电话：</view>
+    <input type="number" bindinput="z" data-type="phone" placeholder="请输入联系人电话号码"></input>
+  </view>
+  <view class="img" style="border-bottom: 1px dotted #ccc;">
+    <view>上传钥匙存放位置图片</view>
+    <view>
+      <image src="{{img[0]?img[0]:'http://placehold.it/300x300'}}" catchtap="upimg"></image>
+    </view>
+  </view>
+  <view class="tiem">
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="picker">
+        <text>预约时间: </text> {{date}}
+      </view>
+    </picker>
+    <view style="color:#999;float: right;font-size:24rpx;">备注:早上8:00</view>
+  </view>
+</view>
+<view style="  width: 95%;height: 80rpx;line-height:80rpx;background: #E6202A;color: #fff;border-radius: 3px;font-weight: bold;text-align: center;margin: 0 auto;">提交</view>

@@ -1,0 +1,44 @@
+/* pages/order/particulars/subscribe/subscribe.wxss */
+page{
+  background:#EEEEEE; 
+}
+.subscribe{
+  width: 95%;
+  margin: 30rpx auto;
+  background: #fff;
+}
+.subscribe>.inputs{
+  padding: 30rpx;
+  display: flex;
+  font-size: 28rpx;
+  border-bottom: 1px dotted #ccc;
+  align-items: center;
+}
+.subscribe>.inputs>view{
+  color: #999;
+}
+.img{
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.img>view:first-child{
+  line-height: 80rpx;
+}
+.img>view>image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 20rpx;
+}
+.tiem{
+  padding: 40rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.tiem .picker>text{
+ color: #999;
+}
+.s{
+  
+}
