@@ -116,7 +116,6 @@ Page({
         success: function (res) {
           let verandaImg = that.data.verandaImg[j];
           verandaImg = verandaImg+res.data+","
-          debugger
           that.setData({
             upload_picture_list: upload_picture_list,
             ['verandaImg['+j+']']:verandaImg

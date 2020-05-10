@@ -1,18 +1,33 @@
 // pages/self/income/accumulative/accumulative.js
+import { Ljrqe } from '../../../../utils/ljrqe.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list:[]
   },
 
+  getList(){
+    var myDate = new Date();
+    var tYear = myDate.getFullYear();
+    let data = {
+       type:1, //团长1 推广2 门店3
+       year:tYear
+    }
+    ljrqe.post('account/getIncomeList', data).then(res => {
+      this.setData({
+        list:res.data  
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getList()
   },
 
   /**

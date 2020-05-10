@@ -1,4 +1,7 @@
 // pages/order/particulars/subscribe/subscribe.js
+import { Ljrqe } from '../../../../utils/ljrqe.js';
+import { Config } from '../../../../utils/config.js'
+var ljrqe = new Ljrqe();
 Page({
 
   /**
@@ -6,8 +9,14 @@ Page({
    */
   data: {
     date: '2016-09-01',
-    img:{}
-    
+    img:'',
+    imgUl:'',
+    depositUrl:'',
+    imgUrl:Config.imgUrl,
+    orderId:'',
+    position:'',
+    contacts:'',
+    contactsNumber:'',
   },
   z:function(e){
     var that=this;
@@ -27,12 +36,13 @@ Page({
       })
     }
   },
+
   bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
     })
   },
+
   upimg:function(e){
     var t =this;
     wx.chooseImage({
@@ -42,17 +52,54 @@ Page({
       success(res) {
         // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths;
-        t.setData({
-          img: tempFilePaths
+        wx.uploadFile({
+          url: Config.resUrl+'mcplotcase/uploadImg',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          header: {
+            "Content-Type": "multipart/form-data"
+          },
+          success: function (res) {
+            let imgUl = res.data;
+            let img = t.data.imgUrl+res.data;
+            t.setData({
+              img:img,
+              imgUl:imgUl
+            })
+          }     
         })
-      }
+     }
     })
   },
+
+  formSubmit: function (e) {  
+      console.log('form发生了submit事件，携带数据为：', e.detail.value);
+      let depositUrl = this.data.imgUl;
+      let makmentTime = this.data.date;
+      let orderId = this.data.orderId;
+      let {position, contacts, contactsNumber} = e.detail.value;
+      let data = {
+        position:position,
+        contacts:contacts,
+        contactsNumber:contactsNumber,
+        depositUrl:depositUrl,
+        makmentTime:makmentTime,
+        orderId:orderId,
+        orderStatus:11
+      }
+      ljrqe.post('brandOrderV1/saveMOpOrder', data).then(res => {
+        this.setData({
+          list:res.data  
+        })
+      })   
+}, 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      orderId:options.orderId
+    })
   },
 
   /**

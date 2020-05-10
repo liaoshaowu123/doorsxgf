@@ -3,25 +3,12 @@
     <view>2016</view>
     <image src="http:\/\/placehold.it\/300x300"></image>
   </view>
-  <view class="i">
-    <view>2016-12</view>
+  <view class="i" wx:for="{{list}}">
+    <view>{{item.month}}</view>
     <view>
-      +1213312.00
+      +{{item.monthMoneySum}}
       <image class="right" src='/images/jt1.png'></image>
     </view>
   </view>
-  <view class="i">
-    <view>2016-12</view>
-    <view>
-      +1213312.00
-      <image class="right" src='/images/jt1.png'></image>
-    </view>
-  </view>
-  <view class="i">
-    <view>2016-12</view>
-    <view>
-      +1213312.00
-      <image class="right" src='/images/jt1.png'></image>
-    </view>
-  </view>
+  
 </view>
