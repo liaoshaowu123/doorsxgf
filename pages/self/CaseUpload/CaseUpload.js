@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aorderId:'0020659700464c6a9d6fbeac015c51c2',
+    aorderId:'',
     addVerandas:[],
     upload_picture_list: [],
     verandas:[],

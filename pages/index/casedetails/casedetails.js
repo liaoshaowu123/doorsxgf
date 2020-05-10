@@ -1,18 +1,35 @@
 // pages/index/casedetails/casedetails.js
+import { Ljrqe } from '../../../utils/ljrqe.js';
+import { Config } from '../../../utils/config.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    imgUrl:Config.imgUrl,
+    caseDetail:{}
+  },
 
+
+  getDetail(id){
+    let data = {
+      id:id
+    }
+    let this_ = this;
+    ljrqe.post('mcplotcase/detail', data).then(res => {
+      this_.setData({
+        caseDetail:res.data
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getDetail(options.id)
   },
 
   /**

@@ -1,11 +1,11 @@
 
 <view class="list">
-  <view class="item">
-      <image src="http://placehold.it/300x300"></image>
+  <view class="item" wx:for="{{list}}">
+      <image src="{{imgUrl}}{{item.verandaImg}}"></image>
     <view>
-      <view>天心区是的发送到发送到发送到发送到发</view>
-      <view>发布时间：123132</view>
-      <view>发布人: 12313132 <navigator url="../casedetails/casedetails">点击查看</navigator></view>
+      <view>{{item.plotName}}</view>
+      <view>发布时间：{{item.createTime}}</view>
+      <view>发布人: {{item.userName}} <navigator url="../casedetails/casedetails?id={{item.id}}">点击查看</navigator></view>
     </view>
   </view>
 </view>

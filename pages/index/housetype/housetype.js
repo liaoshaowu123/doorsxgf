@@ -1,18 +1,53 @@
 // pages/index/housetype/housetype.js
+import { Ljrqe } from '../../../utils/ljrqe.js';
+import { Config } from '../../../utils/config.js';
+var ljrqe = new Ljrqe();
+var pageNo = 1;
+var pageSize = 10;
+var isHava = true;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    list:[],
+    imgUrl:Config.imgUrl
+  },
 
+  getList(plotId){
+    if (!isHava){return};
+    isHava=false;
+    let this_ = this;
+    let data = { pageNo, pageSize ,plotId};
+    ljrqe.post('mcplotcase/list', data).then(res => {
+      //console.log(res)
+      if (res.data.length >= pageSize && res.totalPage!=pageNo){
+        pageNo+=1;
+        isHava=true;
+      }
+      let lists = res.data;
+      let list=this_.data.list;
+      list.push(...lists);
+      this_.setData({
+        list: list
+      })
+    })
+  },
+  reStart() {
+    pageNo = 1;
+    pageSize = 10;
+    isHava = true;
+    this.setData({
+      list: [],
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.reStart()
+    this.getList(options.id)
   },
 
   /**

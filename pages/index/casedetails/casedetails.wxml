@@ -1,14 +1,11 @@
 <view class="header">
-  <view>撒旦法师打发斯蒂芬</view>
-  <view>发布时间:阿打算的地方a</view>
-  <view>发布人:大沙发斯蒂芬</view>
+  <view>{{caseDetail.plotName}}</view>
+  <view>发布时间:{{caseDetail.createTime}}</view>
+  <view>发布人:{{caseDetail.userName}}</view>
 </view>
-<view class="title">
-  <view>客厅阳台</view>
+<view class="title" wx:for="{{caseDetail.caseVerandaList}}">
+  <view>{{item.verandaName}}</view>
   <view>
-    <image src="http://placehold.it/300x300"></image>
-    <image src="http://placehold.it/300x300"></image>
-    <image src="http://placehold.it/300x300"></image>
-    <image src="http://placehold.it/300x300"></image>
+    <image wx:for="{{item.imgList}}" src="{{imgUrl}}{{item}}"></image>
   </view>
 </view>
