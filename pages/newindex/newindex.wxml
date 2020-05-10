@@ -23,30 +23,12 @@
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
   </swiper>
-  <!-- wx:if="{{false}}" -->
   <view>
     <view class="tbox">
-      <view class="titem" wx:for="{{productList}}">
-        <navigator open-type="switchTab" url='{{item.href}}' wx:if="{{item.name=='门窗'}}">
-          <image src="{{imgUrl+item.imgUrl}}"></image>
-          <text>{{item.name}}</text>
-        </navigator>
-        <navigator url='{{item.href}}' wx:else>
-          <image src="{{imgUrl+item.imgUrl}}"></image>
-          <text>{{item.name}}</text>
-        </navigator>
-      </view>
     <navigator open-type="{{item.name=='门窗'?'switchTab':'navigate'}}" url='{{item.href}}' wx:for="{{productList}}">
       <view class="titem" >
-       <!-- wx:if="{{item.name=='门窗'}}" -->
-        
           <image src="{{imgUrl+item.imgUrl}}"></image>
           <text>{{item.name}}</text>
-        <!-- </navigator>
-        <navigator url='{{item.href}}' wx:else>
-          <image src="{{imgUrl+item.imgUrl}}"></image>
-          <text>{{item.name}}</text> -->
-        
       </view>
       </navigator>
     </view>
@@ -71,7 +53,6 @@
             <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
         </swiper-item> 
       </swiper>
-      <!-- <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image> -->
     </view>
   </view>
   <view class="paragraph"></view>

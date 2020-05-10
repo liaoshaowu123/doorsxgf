@@ -1,0 +1,39 @@
+
+var dateTimeFormat = "";
+var bar = function (d) {
+  return d;
+}
+//*
+var dateTimeFormat = function (val){
+  if (!val) { return ''; }
+  var now = getDate(parseInt(val) * 1000);
+  var y = now.getFullYear();
+  var m = now.getMonth() + 1;
+  var d = now.getDate();
+  var hour = now.getHours();
+  var min = now.getMinutes();
+  var sec = now.getSeconds();
+  return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + (hour < 10 ? "0" + hour : hour) + ":" + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+}
+var getYearMonth = function (val) {
+  if (!val) { return ''; }
+  var now = getDate(parseInt(val) * 1000);
+  var y = now.getFullYear();
+  var m = now.getMonth() + 1;
+  var d = now.getDate();
+  return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) ;
+}
+var getHoursTime = function (val) { 
+  if (!val) { return ''; }
+  var now = getDate(parseInt(val));
+  var hour = now.getHours();
+  var min = now.getMinutes();
+  var sec = now.getSeconds();
+  return (hour < 10 ? "0" + hour : hour) + ":" + (min < 10 ? "0" + min : min);
+}
+
+module.exports = {
+  dateTimeFormat: dateTimeFormat,
+  getYearMonth: getYearMonth,
+  getHoursTime: getHoursTime,
+}
