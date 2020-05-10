@@ -50,7 +50,7 @@
           <view class="hbar"></view>
           <view class='{{lcColorIndex==index?"ys-box1 row_c":"ys-box row_c"}}' data-index='{{index}}' catchtap='onChangeLcColor'>
           <!-- <view class='color' style='background:{{item.code}}'></view> -->
-          <view class='debox-txt1'>￥{{item.name}}</view>
+          <view class='debox-txt1'>{{item.name}}</view>
           </view>
         </view>
       </view>
@@ -82,7 +82,7 @@
 </view>
 <view class='box' >
   <view class='topbox row_b nowarp'>
-    <view class='debox-title'>色彩选择</view>
+    <!-- <view class='debox-title'>色彩选择</view>
       <view class='r-box row_s'>
         <view class="row_s cb" wx:for='{{lclist[lcIndex].colorsList}}'>
           <view class="hbar"></view>
@@ -90,19 +90,28 @@
             <view class='debox-txt1'>{{item.name}}</view>
           </view>
         </view>
-      </view>
-    <view class='botbox-price1'><text class="italic">￥</text>{{pjlist[pjIndex].price}}元/套</view>
-  </view>
-  <view class='botbox row_b nowarp'>
-    <view class='botbox-btn row_c' data-type='1' data-id='{{pjlist[pjIndex].id}}' catchtap='onContent'>产品详情</view>
-    <!-- <view class='botbox-txt nowarp'>{{pjlist[pjIndex].detail}}</view> -->
-    <view class="hbar"></view>
+      </view> -->
+      
     <view class='botbox-price'>
       <text class="b">配件总价：</text>
       <text class="s">{{info.pei}} X {{pjlist[pjIndex].price}} = </text>
       <text class="money">{{pjPrice}}</text>
       <text class="b">元</text>
     </view>
+    <view class="hbar"></view>
+    <view class='botbox-price1'><text class="italic">￥</text>{{pjlist[pjIndex].price}}元/套</view>
+  </view>
+  <view class='botbox row_b nowarp'>
+    <view class='botbox-btn row_c' data-type='1' data-id='{{pjlist[pjIndex].id}}' catchtap='onContent'>产品详情</view>
+    <view class="hbar"></view>
+    <view class='botbox-txt nowarp'>{{pjlist[pjIndex].detail}}</view>
+    <!-- <view class="hbar"></view>
+    <view class='botbox-price'>
+      <text class="b">配件总价：</text>
+      <text class="s">{{info.pei}} X {{pjlist[pjIndex].price}} = </text>
+      <text class="money">{{pjPrice}}</text>
+      <text class="b">元</text>
+    </view> -->
   </view>
 </view>
 <!-- 防护栏 -->
