@@ -47,7 +47,7 @@ page{
 	color: #333333;
   display: flex;
   align-items: flex-end;
-  margin-top: 40rpx;
+  /* margin-top: 40rpx; */
 }
 .box-title text{
   color: #999999;
@@ -522,7 +522,7 @@ height: 975.542px; */
   color: #999;
 }
 .cbox {
-  width: 25%;
+  /* width: 25%; */
   display: flex;
   align-items: center;
 }
