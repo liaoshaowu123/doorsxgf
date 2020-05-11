@@ -22,7 +22,7 @@
     </view>
   </view>
   <view class="i">
-    <input bindconfirm="search" type="text" placeholder="请输入需要修改人员的昵称或手机号码"></input>
+    <input bindconfirm="search" type="text" confirm-type='search' placeholder="请输入需要修改人员的昵称或手机号码"></input>
     <text class="iconsousuo iconfont"></text>
   </view>
   <view class="l">
