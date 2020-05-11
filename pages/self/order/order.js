@@ -103,7 +103,7 @@ Page({
         isHava=true;
       }
       
-      let lists = res.data.orderList;
+      let lists = res.data;
       let arr=this_.data.orderStatusArry;
       lists.map(v=>{
         v.statuss = arr[parseInt(v.orderStatus)]

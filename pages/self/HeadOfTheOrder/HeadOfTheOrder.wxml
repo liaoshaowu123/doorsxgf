@@ -17,7 +17,7 @@
   </view>
   <view class="pad bor_b">
     <view>订单状态： <text>{{item.statuss}}</text></view>
-    <view style="{{type!=1&&'display:none'}}">取消订单</view>
+    <view style="{{type!=1&&'display:none'}}" wx:if="{{!isQx}}">取消订单</view>
   </view>
   <view class="pad bor_b">
     <view>

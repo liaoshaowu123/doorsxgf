@@ -89,7 +89,7 @@ Page({
         depositUrl:depositUrl,
         makmentTime:makmentTime,
         orderId:orderId,
-        orderStatus:11
+        orderStatus:10
       }
       ljrqe.post('brandOrderV1/saveMOpOrder', data).then(res => {
         wx.navigateBack({
@@ -99,12 +99,16 @@ Page({
 }, 
 
 getMakmentInfo(orderId){
+  let this_ = this;
   let data = {
     orderId:orderId
   }
   ljrqe.post('brandOrderV1/getMakmentInfo', data).then(res => {
+    let imgUrl = this_.data.imgUrl;
+    imgUrl = imgUrl + res.data.depositUrl;
     this.setData({
-      detail:res.data
+      detail:res.data,
+      img:imgUrl
     })
   })
 },

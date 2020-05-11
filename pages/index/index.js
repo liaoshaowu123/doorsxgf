@@ -153,7 +153,7 @@ Page({
           }
         }
       })
-    })
+    })  
     updateManager.onUpdateFailed(function () {
       // 新版本下载失败
     })
@@ -317,6 +317,43 @@ Page({
     }
     this.checkUserInfo();
     this.getList();
+    this.getRelatList();
+  },
+
+  getRelatList(){
+    let this_ = this;
+    let data = {};
+    ljrqe.post('recommend/getUserRelationshipRecordList', data).then(res => {
+      if(res.data.length > 0){
+        this_.showNessage()
+      }
+    })
+  },
+
+  showNessage(){
+    let this_ = this;
+    let userId = wx.getStorageSync('userId');
+    wx.showModal({
+      title: '提示',
+      content: 'xx团长邀请您',
+      success (res) {
+        if (res.confirm) {
+          this_.updateMessage(0,userId);
+        } else if (res.cancel) {
+          this_.updateMessage(1,userId);
+        }
+      }
+    })
+  },
+
+  updateMessage(type,userId){
+    let data = {
+      type:type,
+      childId:userId
+    }
+    ljrqe.post('recommend/updateUserRelationshipRecord', data).then(res => {
+      
+    })
   },
 
   getInfo() {
@@ -337,7 +374,7 @@ Page({
         }).then(r=>{
           wx.setStorageSync('userId', r.data.id);
           wx.setStorageSync('userType', r.data.userLevel);
-          if (r.data.userLevel == 1) {
+          if (r.data.userLevel == 1 || r.data.userLevel == 2 || r.data.userLevel == 3) {
             this_.setData({
               isMaster: true
             })
