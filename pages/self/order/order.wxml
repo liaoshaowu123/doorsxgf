@@ -22,7 +22,7 @@
   <!-- <text wx:if="{{item.fromTZ}}" style="border-left:1px solid #ccc;height:30rpx;color:#ccc;padding-left:20rpx;margin-left:20rpx;"> 来源：<text style="color:#000;" >{{item.fromTZ}}</text></text> -->
   <view class="pad bor_b">
     <view>订单编号 : {{item.orderNo}}</view>
-    <view>订单米数 : {{item.lvcaiSize}}</view>
+    <view>订单米数 : {{item.lvcaiLenth}}</view>
     <view>下单时间 : {{item.createDate}}</view>
     <view  wx:if="{{item.fromTZ}}">来源 : {{item.fromTZ}}</view>
   </view>
