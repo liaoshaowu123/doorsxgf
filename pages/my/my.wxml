@@ -1,4 +1,4 @@
-<view class='title'>☆如想了解更多产品信息，请您光临新功夫团体验店。</view>
+<!-- <view class='title'>☆如想了解更多产品信息，请您光临新功夫团体验店。</view>
 <view class='box col' wx:for='{{list}}' data-index='{{index}}' catchtap='onClick'>
   <view class='box-title'>
     {{item.name}}
@@ -7,4 +7,20 @@
   <image class='box-img' src='/images/dw.png'></image>
   <view class='box-address'>{{item.address}}</view>
   <view class='arrow'></view>
+</view> -->
+<view class="list">
+  <!-- <view class="item" wx:for='{{list}}' data-index='{{index}}' catchtap='onClick'>
+    <view>{{item.name}}</view>
+    <view>
+    <image src='/images/dw.png'></image>
+    </view>
+    <view data-id='{{item.id}}' catchtap='onDetails'>查看门店</view>
+  </view> -->
+  <view class="item" wx:for='{{list}}' data-index='{{index}}' catchtap='onClick'>
+    <view>{{item.name}}</view>
+    <view>
+    <image src='/images/address.png'></image>
+    </view>
+    <view data-id='{{item.id}}' catchtap='onDetails'>查看门店</view>
+  </view>
 </view>
