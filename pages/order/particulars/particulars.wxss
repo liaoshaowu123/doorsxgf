@@ -54,7 +54,7 @@
 }
 .step>.list{
   width: 100%;
-  height: 80rpx;
+  height: 100rpx;
   display: flex;
   font-size: 14px;
 }
@@ -75,7 +75,7 @@
 }
 .step>.list:not(:last-child)>.step-item>view:last-child{
   width: 1px;
-  height: 60rpx;
+  height: 80rpx;
   background: #F1F1F0;
 
 }

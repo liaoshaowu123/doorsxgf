@@ -7,9 +7,27 @@ Page({
    */
   data: {
     xxIndex: 0,
+    Index0: 0,
+    Index1: 0,
+    Index2: 0,
     info: {},
-    str: '',
+    strs: ['很差','一般','满意','非常满意','无可挑剔'],
     id: 0,
+  },
+  onSelect1:function(e){
+    this.setData({
+      Index0: e.currentTarget.dataset.index
+    })
+  },
+  onSelect2: function (e) {
+    this.setData({
+      Index1: e.currentTarget.dataset.index
+    })
+  },
+  onSelect3: function (e) {
+    this.setData({
+      Index2: e.currentTarget.dataset.index
+    })
   },
 
   /**

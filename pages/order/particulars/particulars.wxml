@@ -3,17 +3,17 @@
     <view class="" style="font-weight: bold;">{{mcOrder.plotName}}{{mcOrder.houseNo}}</view>
     <!-- <view class="or">{{mcOrder.orderStatus}}</view> -->
   </view>
-  <view style="font-size:14px;line-height:30px">
+  <view style="font-size:24rpx;line-height:30px">
     <view>订单号：{{mcOrder.orderNo}}</view>
     <!-- <view class="red">总价￥{{mcOrder.money}}</view> -->
   </view>
-  <view style="font-size:14px;line-height:30px">
+  <view style="font-size:24rpx;line-height:30px">
     <view >下单时间：{{mcOrder.createDate}}</view>
     <!-- <view class="gray">已付￥{{mcOrder.paid}}</view> -->
   </view>
 </view>
 <view class="step">
-  <view style="padding-bottom:20rpx;text-align: center;"><text style="font-weight: bold;">订单进度</text> (订单追踪)</view>
+  <view style="padding-bottom:30rpx;padding-top:30rpx;text-align: center;"><text style="font-weight: bold;">订单进度</text> (订单追踪)</view>
   <view class="list" wx:for='{{mcOpOrders}}'>
     <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDate}}</text><!--<text style="color:red;">-</text>12:20--></view>
     <view class="{{index<=indexds?'step-item':'step-items'}}">
