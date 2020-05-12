@@ -1,37 +1,14 @@
 <view class="t">
-  已推广 : 39人
+  已推广 : {{sumPeople}}人
 </view>
 <view class="l">
-  <view>
-    <image src="http:\/\/placehold.it\/300x300"></image>
+  <view wx:for="{{userList}}">
+    <image src="{{imgUrl}}{{item.userPhoto}}"></image>
     <view>
-      <view>我爱张三</view>
-      <view>绑定时间:201231-02-131</view>
+      <view>{{item.userName}}</view> 
+      <view>绑定时间:{{item.createDate}}</view>
     </view>
-    <view>以下单</view>
+    <view>已下单</view>
   </view>
-  <view>
-    <image src="http:\/\/placehold.it\/300x300"></image>
-    <view>
-      <view>我爱张三</view>
-      <view>绑定时间:201231-02-131</view>
-    </view>
-    <view>以下单</view>
-  </view>
-  <view>
-    <image src="http:\/\/placehold.it\/300x300"></image>
-    <view>
-      <view>我爱张三</view>
-      <view>绑定时间:201231-02-131</view>
-    </view>
-    <view>以下单</view>
-  </view>
-  <view>
-    <image src="http:\/\/placehold.it\/300x300"></image>
-    <view>
-      <view>我爱张三</view>
-      <view>绑定时间:201231-02-131</view>
-    </view>
-    <view>以下单</view>
-  </view>
+
 </view>

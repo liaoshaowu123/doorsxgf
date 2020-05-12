@@ -15,7 +15,7 @@
 <view class="step">
   <view style="padding-bottom:20rpx;text-align: center;"><text style="font-weight: bold;">订单进度</text> (订单追踪)</view>
   <view class="list" wx:for='{{mcOpOrders}}'>
-    <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDateF}}</text><!--<text style="color:red;">-</text>12:20--></view>
+    <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDate}}</text><!--<text style="color:red;">-</text>12:20--></view>
     <view class="{{index<=indexds?'step-item':'step-items'}}">
       <view></view>
       <view  style="background:{{index==indexds?'#F1F1F0':''}};display:{{index==12&&'none'}}"></view>

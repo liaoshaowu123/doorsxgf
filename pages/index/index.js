@@ -322,7 +322,10 @@ Page({
 
   getRelatList(){
     let this_ = this;
-    let data = {};
+    let userId = wx.getStorageSync("userId")
+    let data = {
+      childId:userId
+    };
     ljrqe.post('recommend/getUserRelationshipRecordList', data).then(res => {
       if(res.data.length > 0){
         this_.showNessage()
