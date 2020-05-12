@@ -1,16 +1,18 @@
 <view class='page'>
 <!-- 地址 -->
-  <navigator url='city/city?city={{city}}' class="address row_b">
+  <view class="address row_b">
     <view class="left row_s">
       <image src='/images/address.png' class="add-img"></image>
       <view class="city">{{city}}</view>
     </view>
-    <navigator url='search/search' class='search row_s'>
+    <navigator url='/pages/index/search/search' class='search row_s'>
       <image class='search-img' src='/images/search.png'></image>
-      <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索项目</view>
+      <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索城市</view>
     </navigator>
-    <view class="qh row_c">切换城市</view>
-  </navigator>
+    <navigator url='/pages/index/city/city?city={{city}}' class='row_s'>
+      <view class="qh row_c">切换城市</view>
+    </navigator>
+  </view>
 
     <!-- 搜索 -->
   
@@ -21,7 +23,7 @@
   <text class="htext {{hbarId==index?'hactive':''}}" wx:for="{{hbar}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" data-index="{{index}}" >{{item.name}}</text>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
-        style="padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
+        style="height: 375rpx;padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
       <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
@@ -35,7 +37,7 @@
     <view class="sihead">
       <text class="title">铝材供应商</text>
       <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text>
-      <i class="more"></i>
+      <!-- <i class="more"></i> -->
     </view>
     <view>
      <swiper indicator-dots="{{indicatorDots}}" 

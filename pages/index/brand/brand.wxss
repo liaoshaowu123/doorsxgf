@@ -34,7 +34,7 @@ page{
   /* width: 690rpx; */
   /* padding:50rpx 30rpx; */
   background: #fff;
-  margin: 16rpx 0;
+  /* margin: 16rpx 0; */
   border-radius: 10rpx;
 }
 
@@ -118,7 +118,8 @@ page{
   padding: 0 12rpx;
   /* margin:0 18rpx 18rpx 0; */
   margin: 0 9rpx 18rpx 9rpx;
-  background: #c9cbca;
+  background: rgba(201, 203, 202,.8);
+  /* opacity: 0.8; */
 }
 .pjlist,.fhllist {
   /* width: 50%; */
@@ -146,7 +147,8 @@ page{
   display: flex;
   align-self: flex-start; 
   justify-content: flex-start;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
+  /* opacity: 0.8 */
 }
 .debox-xl1{
   height: 34rpx;
@@ -172,7 +174,7 @@ page{
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
-	color: #333333;
+	color: #666666;
   margin: 10rpx 0rpx;
 }
 .debox-txt{
@@ -192,9 +194,10 @@ white-space: pre-wrap;
 }
 .r-box{
   flex-wrap: wrap;
-white-space: pre-wrap;
-flex: 1;
-margin-left: 10rpx;
+  white-space: pre-wrap;
+  flex: 1;
+  margin-left: 10rpx;
+  opacity: 0.8
 }
 .ys-box1{
   width: 25%;
@@ -475,6 +478,7 @@ height: 975.542px; */
   height: 2rpx;
   width: 20rpx;
   background: #c10000;
+  margin: 0 5rpx;
   /* display: inherit; */
 }
 .contain {
