@@ -62,4 +62,40 @@
 	letter-spacing: 0rpx;
 	color: #333333;
 }
-
+page{
+  background: #EEEEEE;
+}
+.list{
+  width: 95%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 30rpx;
+}
+.list>.item{
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 30rpx;
+}
+.list>.item:not(:last-child){
+  border-bottom:1px dotted #ccc;
+}
+.list>.item>view:first-child{
+  font-size: 28rpx;
+}
+.list>.item>view:nth-child(2){
+  flex: 1;
+  text-align: center;
+}
+.list>.item>view:nth-child(2)>image{
+    width: 24rpx;
+	height: 30rpx;
+}
+.list>.item>view:last-child{
+  padding: 5rpx 10rpx;
+  font-size: 28rpx;
+  border:1px solid #686565;
+  border-radius: 5px;
+  color: #686565;
+}
