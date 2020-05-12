@@ -26,7 +26,7 @@ Page({
       this.getOrderListTZ(e.currentTarget.dataset.type)
     if(this.data.fromType == 1)
       this.getOrderListTGY(e.currentTarget.dataset.type)
-    if(this.data.fromType == 1)
+    if(this.data.fromType == 2)
       this.getOrderListMD(e.currentTarget.dataset.type)
 
   },

@@ -36,12 +36,13 @@ Page({
     let type = e.currentTarget.dataset.type
     let this_ = this;
     if(type == 1){
-      this_.getUserListz(1)
+      this_.getUserListz(0)
     }else{
       this_.getUserListj()
     }
     this.setData({
-      type: e.currentTarget.dataset.type
+      type: e.currentTarget.dataset.type,
+      state:0
     })
   },
 
@@ -86,7 +87,8 @@ Page({
   getUserListj(){
     let this_ = this;
     this.setData({
-      userList:[]
+      userList:[],
+      state:0
     })
     let parentId = wx.getStorageSync('userId');
     let data = {

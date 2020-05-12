@@ -28,8 +28,8 @@
   <view class="l">
     <view class="u" wx:for="{{userList}}">
       <view>
-        <image src="{{imgUrl+item.photo}}"></image>
-        <text>{{item.name}}</text>
+        <image src="{{imgUrl}}{{item.photo}}"></image>
+        <text>{{item.themodifierNme}}</text>
         <view wx:if="{{type == 1}}" catchtap="modify" data-id="{{item.id}}">修改服务团长</view>
       </view>
       <view>所属团长：{{item.storeName}}</view>

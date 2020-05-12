@@ -19,7 +19,7 @@
       </view>
     </view>
     <view class="tiem" wx:if="{{type!=2}}">
-      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
         <view class="picker">
           <text>预约时间: </text> {{date}}
         </view>

@@ -12,17 +12,19 @@
 <view class="l" wx:for="{{list}}">
   <view class="pad bor_b">
     <image src="{{imgUrl}}{{item.userPhoto}}"></image>
-    <view>{{item.userName}}</view>
+    <view style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">{{item.userName}}</view>
     <view> {{item.plotName}}{{item.houseNo}}</view>
   </view>
   <view  style="{{type==3?'display:none':''}}" class="pad bor_b">
-    <view>待结算佣金 <text wx:if="{{item.fromTZ}}" style="border-left:1px solid #ccc;height:30rpx;color:#ccc;padding-left:20rpx;margin-left:20rpx;"> 来源：<text style="color:#000;" >{{item.fromTZ}}</text></text></view>
+    <view>待结算佣金 </view>
     <view>+<text class="{{type==1?'red':'c'}}">{{item.yxMoney}}元</text></view>
   </view>
+  <!-- <text wx:if="{{item.fromTZ}}" style="border-left:1px solid #ccc;height:30rpx;color:#ccc;padding-left:20rpx;margin-left:20rpx;"> 来源：<text style="color:#000;" >{{item.fromTZ}}</text></text> -->
   <view class="pad bor_b">
     <view>订单编号 : {{item.orderNo}}</view>
     <view>订单米数 : {{item.lvcaiSize}}</view>
     <view>下单时间 : {{item.createDate}}</view>
+    <view  wx:if="{{item.fromTZ}}">来源 : {{item.fromTZ}}</view>
   </view>
   <view class="pad">
     <text>订单状态 :</text> <text> {{item.statuss}}</text><text></text>

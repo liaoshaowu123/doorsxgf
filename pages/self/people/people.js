@@ -1,18 +1,53 @@
 // pages/self/people/people.js
+import { Ljrqe } from '../../../utils/ljrqe.js';
+import { Config } from '../../../utils/config.js';
+var ljrqe = new Ljrqe();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userList:[],
+    imgUrl:Config.imgUrl,
+    sumPeople:0
   },
 
+  getUserList(){
+    let this_ = this;
+    let parentId = wx.getStorageSync('userId');
+    let data = {
+      memberId:parentId
+    }
+    ljrqe.post('userchildren/getGroupList', data).then(res => {
+      let list=this_.data.userList;
+      let rlist = res.data;
+      list.push(...rlist);
+      this_.setData({
+        userList:list
+      })
+    })
+  },
+
+  sumPeople(){
+    let this_ = this;
+    let memberId = wx.getStorageSync('userId');
+    let data = {
+      memberId:memberId
+    }
+    ljrqe.post('userchildren/count', data).then(res => {
+      let sumPeople = res.data;
+      this_.setData({
+        sumPeople:sumPeople
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserList();
+    this.sumPeople();
   },
 
   /**
