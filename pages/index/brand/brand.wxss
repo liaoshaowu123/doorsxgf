@@ -331,6 +331,7 @@ margin-left: 10rpx;
   bottom: 0;
   display: flex;
   padding: 20rpx 0;
+  border-top: 1px solid #ccc
 }
 
 .submit-price{
@@ -354,7 +355,7 @@ margin-left: 10rpx;
   margin: 0rpx;
   font-family: PingFang-SC-Regular;
 	font-size: 24rpx;
-	font-weight: normal;
+	font-weight: bold;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #ffffff;
@@ -564,4 +565,28 @@ height: 975.542px; */
 }
 .f20 {
   font-size: 40rpx;
+}
+.lclist:nth-child(3n)>view{
+  margin-right: 0;
+}
+.lclist:nth-child(3n-2)>view{
+  margin-left: 0;
+}
+.pjlist:nth-child(2n)>view{
+  margin-right: 0;
+}
+.pjlist:nth-child(2n-1)>view{
+  margin-left: 0;
+}
+.fhllist:nth-child(2n)>view{
+  margin-right: 0;
+}
+.fhllist:nth-child(2n-1)>view{
+  margin-left: 0;
+}
+.bllist:nth-child(3n)>view{
+  margin-right: 0;
+}
+.bllist:nth-child(3n-2)>view{
+  margin-left: 0;
 }

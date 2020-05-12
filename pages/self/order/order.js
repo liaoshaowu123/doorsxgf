@@ -135,11 +135,13 @@ Page({
       fromType:type
     })
     if(type == 0) //团长
-    this.getOrderListTZ(this.data.type);
+    {this.getOrderListTZ(this.data.type);
+    wx.setNavigationBarTitle({ title: '团长订单' })}
     if(type == 1) //推广员
     this.getOrderListTGY(this.data.type);
     if(type == 2) //门店
-    this.getOrderListMD(this.data.type);
+    {this.getOrderListMD(this.data.type);
+    wx.setNavigationBarTitle({ title: '门店订单' })}
   },
 
   /**

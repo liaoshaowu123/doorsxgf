@@ -10,7 +10,7 @@
 <view class="t">
   <view style=" border-bottom: 1px dotted #999;">
     <view>可提现收入<text> {{tzsr.rewardMoney}}元</text></view>
-    <navigator url="../put/put?type=tz">提现</navigator>
+    <navigator url="../put/put?type=7" >提现</navigator>
   </view>
   <view>
     <view>未结算收入<text> {{tzsr.wjsMoney}}元</text></view>

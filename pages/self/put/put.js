@@ -21,6 +21,9 @@ Page({
    */
   onLoad: function (options) {
     let type = options.type;
+    this.setData({
+      types:type
+    })
     this.getData(type);
     pageNo = 1;
     isHava = true;
@@ -93,6 +96,7 @@ Page({
     let data = {
       // formid: formId,
       money: r.money,
+      outType: this.data.types
       // wx:r.wx
     };
     this.setData({
@@ -116,7 +120,7 @@ Page({
     if (!isHava) { return };
     isHava = false;
     let this_ = this;
-    let data = { pageNo: pageNo, pageSize: pageSize };
+    let data = { pageNo: pageNo, pageSize: pageSize, outType:this.data.types};
     ljrqe.post('out/getOutMoneyList', data).then(res => {
       if (res.data.length == pageSize) {
         isHava = true;

@@ -7,8 +7,9 @@
     <view>
       <view>{{tgsr.rewardMoney}}元</view>
       <view>可提现佣金</view>
+      
     </view>
-    <image class="right"src="/images/jt1.png"role="img"></image>
+    <navigator url="../put/put?type=8" style="background: red;border-radius: 3px;font-size: 13px;color: #fff;padding: 10rpx 40rpx;">提现</navigator>
   </view>
   <view>
     <view>
