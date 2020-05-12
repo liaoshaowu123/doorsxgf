@@ -5,23 +5,23 @@
       <image src='/images/address.png' class="add-img"></image>
       <view class="city">{{city}}</view>
     </view>
+    <navigator url='search/search' class='search row_s'>
+      <image class='search-img' src='/images/search.png'></image>
+      <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索项目</view>
+    </navigator>
     <view class="qh row_c">切换城市</view>
   </navigator>
 
     <!-- 搜索 -->
-  <navigator url='search/search' class='search row_s'>
-    <image class='search-img' src='/images/search.png'></image>
-    <view  class='search-ipt' placeholder='搜索' bindinput='onInput'>搜索小区</view>
-  </navigator>
+  
 
   <view class="hbar">
   <!-- wx:for="{{productList}}" wx:key="id" -->
   <!-- productList hbar -->
-  <text class="{{hbarId==index?'hactive':''}}" wx:for="{{productList}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" 
-    data-index="{{index}}" >{{item.name}}</text>
+  <text class="htext {{hbarId==index?'hactive':''}}" wx:for="{{hbar}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" data-index="{{index}}" >{{item.name}}</text>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
-        style="padding: 20rpx 0;margin: 10rpx 0;text-align: center;"> 
+        style="padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
       <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
