@@ -33,6 +33,7 @@
      </view>
    </view>
  </view>
+ <view style="height:120rpx;"></view>
 <view class="but">
   <view>
     <navigator url="../housetype/housetype?id={{houserId}}">户型案例</navigator>

@@ -103,7 +103,7 @@ padding-bottom: 120rpx;
   margin:15rpx 13rpx;
   white-space:pre-wrap;
   padding:0 20rpx;
-
+  border-radius: 5px;
 
 }
 
@@ -229,9 +229,20 @@ text-decoration-line:underline;
 .lists .items{
   display: block;
   white-space: nowrap;
+  height: 90rpx;
+  margin-top: 10rpx;
 }
 .types{
-  border-bottom: 3px solid red;
   box-sizing: border-box;
   color: red;
+  font-weight: bold;
+}
+.types:after{
+  content: '';
+  display: block;
+  width: 65rpx;
+  height: 1px;
+  background: red;
+  line-height: 5px;
+  margin: 0 auto;
 }
