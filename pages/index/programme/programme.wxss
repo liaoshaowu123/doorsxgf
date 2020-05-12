@@ -64,6 +64,7 @@ padding-bottom: 20rpx;
 	letter-spacing: 0rpx;
 	color: #ffffff;
   margin: 0 20rpx;
+  border-radius: 5px;
 }
 .b-btn1{
   height: 46rpx;
@@ -78,12 +79,15 @@ padding-bottom: 20rpx;
 	letter-spacing: 0rpx;
 	color: #ffffff;
    margin: 0 20rpx;
+   border-radius: 5px;
+
 }
 .hp-box{
-  border: solid 1rpx #c8c8c8;
+  border: 1rpx solid  #c8c8c8;
   width:690rpx;
   margin:50rpx 30rpx 0rpx;
-
+  border-radius: 5px;
+  overflow: hidden;
 }
 .img-boxs{
   width: 690rpx;

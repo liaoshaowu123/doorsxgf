@@ -33,7 +33,6 @@ Page({
 
   uploadImage(images){
     let t = this;
-    debugger
     wx.uploadFile({
       url: Config.resUrl+'mcplotcase/uploadImg',
       filePath: images.path,
@@ -87,7 +86,10 @@ Page({
     }
     ljrqe.post('mcoporder/add', data).then(res => {
       if(res.code == 0){
-        this_.addMcOp()
+       // this_.addMcOp()
+       wx.navigateBack({
+        delta: 1,
+        })
       }
     })   
   },

@@ -58,7 +58,7 @@
 	border: solid 1rpx #c10000;
   margin: 25rpx 15rpx;
   color: #c10000;
-
+  border-radius: 5px;
 }
 .box-box1{
   width: 325rpx;
@@ -67,7 +67,7 @@
 	border: solid 1rpx #999999;
   margin: 25rpx 15rpx;
   color: #333333;
-
+  border-radius: 5px;
 }
 .box-l1{
   width: 138rpx;
@@ -147,10 +147,13 @@ font-family: PingFang-SC-Bold;
 }
 .but{
   position: fixed;
-  bottom: 80rpx;
+  bottom: 0rpx;
   left: 0;
   width: 100%;
   display: flex;
+  background: #EEEEEE;
+  height: 120rpx;
+  align-items: center;
 }
 .but>view{
   flex: 1;
@@ -162,15 +165,14 @@ font-family: PingFang-SC-Bold;
   display: inline-block;
   color: #fff;
 }
-.but>view:first-child>navigator{
-  background: #FE0000;
-  border-radius: 30px;
-  box-shadow: 1px 1px 3px #FE0000; 
+.but>view>navigator{
+  background: #737373;
   font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px
 }
-.but>view:last-child>navigator{
+/* .but>view:last-child>navigator{
   background: #0571CB;
-  border-radius: 30px;
   box-shadow: 1px 1px 3px #0571CB; 
   font-size: 14px;
-}
+} */

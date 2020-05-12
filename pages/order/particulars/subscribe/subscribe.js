@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: '2016-09-01',
+    date: '2020-09-01',
+    start:'2018-09-01',
+    end:'2018-09-04',
     img:'',
     imgUl:'',
     depositUrl:'',
@@ -89,7 +91,7 @@ Page({
         depositUrl:depositUrl,
         makmentTime:makmentTime,
         orderId:orderId,
-        orderStatus:11
+        orderStatus:10
       }
       ljrqe.post('brandOrderV1/saveMOpOrder', data).then(res => {
         wx.navigateBack({
@@ -99,12 +101,16 @@ Page({
 }, 
 
 getMakmentInfo(orderId){
+  let this_ = this;
   let data = {
     orderId:orderId
   }
   ljrqe.post('brandOrderV1/getMakmentInfo', data).then(res => {
+    let imgUrl = this_.data.imgUrl;
+    imgUrl = imgUrl + res.data.depositUrl;
     this.setData({
-      detail:res.data
+      detail:res.data,
+      img:imgUrl
     })
   })
 },

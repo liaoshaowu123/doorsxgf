@@ -15,7 +15,7 @@
 <view class="step">
   <view style="padding-bottom:20rpx;text-align: center;"><text style="font-weight: bold;">订单进度</text> (订单追踪)</view>
   <view class="list" wx:for='{{mcOpOrders}}'>
-    <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDateF}}</text><!--<text style="color:red;">-</text>12:20--></view>
+    <view style="width:120rpx;font-size:20rpx;"><text style="font-weight: bold;">{{item.createDate}}</text><!--<text style="color:red;">-</text>12:20--></view>
     <view class="{{index<=indexds?'step-item':'step-items'}}">
       <view></view>
       <view  style="background:{{index==indexds?'#F1F1F0':''}};display:{{index==12&&'none'}}"></view>
@@ -25,10 +25,10 @@
         <view class="picker" >预约时间</view>
       </picker> -->
       <!-- <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view> -->
-      <navigator class="picker" wx:if="{{index==indexds&&index==8&&lv=='0'}}" url="subscribe/subscribe?orderId={{mcOrder.id}}">预约安装</navigator>
-      <navigator class="picker" wx:if="{{index==indexds&&index==9}}" url="subscribe/subscribe?orderId={{mcOrder.id}}&type=2">查看详情</navigator>
-      <navigator class="picker" wx:if="{{index==indexds&&(index==10||index==11||index==12)&&lv!='0'}}" url="up/up?orderId={{mcOrder.id}}&orderStatus={{indexds}}&id={{item.id}}">点击上传</navigator>
-      <navigator class="picker" wx:if="{{indexds>=index&&(index==10||index==11||index==12)&&lv!='0'}}" url="examine/examine?id={{item.id}}">详情查看</navigator>
+      <navigator class="picker" wx:if="{{index==indexds&&index==7&&lv=='0'}}" url="subscribe/subscribe?orderId={{mcOrder.id}}">预约安装</navigator>
+      <navigator class="picker" wx:if="{{indexds>=index&&index==8}}" url="subscribe/subscribe?orderId={{mcOrder.id}}&type=2">查看详情</navigator>
+      <navigator class="picker" wx:if="{{index==(indexds+1)&&(index==10||index==11||index==12)&&lv!='0'&&!item.imgUrl}}" url="up/up?orderId={{mcOrder.id}}&orderStatus={{mcOrder.orderStatus}}&id={{item.id}}">点击上传</navigator>
+      <navigator class="picker" wx:if="{{indexds==index&&(index==10||index==11||index==12)&&lv!='0'&&item.imgUrl}}" url="examine/examine?id={{item.id}}">详情查看</navigator>
       <text style="font-size:20rpx;color:#E5322C"> -<text style="color:#333;"> {{item.entpriseName}}</text></text>
   </view>
 

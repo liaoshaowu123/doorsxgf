@@ -38,7 +38,8 @@ Page({
   },
 
   updateList(){
-    let userId = wx.getStorageInfoSync("userId");
+    let this_ = this;
+    let userId = wx.getStorageSync("userId");
     let data = {
       parentId:userId
     }

@@ -2,15 +2,15 @@
   <view class="subscribe">
     <view class="inputs">
       <view>钥匙存放位置：</view>
-      <input type="text" name="position" disabled="{{type==2}}"  bindinput="z" data-type="location" placeholder="请输入"></input>
+      <input type="text" name="position" value="{{detail.position}}" disabled="{{type==2}}"  bindinput="z" data-type="location" placeholder="请输入"></input>
     </view>
     <view class="inputs">
       <view>现场联系人：</view>
-      <input type="text" name="contacts"  disabled="{{type==2}}"  bindinput="z" data-type="name" placeholder="请输入联系人姓名"></input>
+      <input type="text" name="contacts" value="{{detail.contacts}}" disabled="{{type==2}}"  bindinput="z" data-type="name" placeholder="请输入联系人姓名"></input>
     </view>
     <view class="inputs">
       <view>联系电话：</view>
-      <input type="number" name="contactsNumber" bindinput="z" disabled="{{type==2}}" data-type="phone" placeholder="请输入联系人电话号码" ></input>
+      <input type="number" value="{{detail.contactsNumber}}" name="contactsNumber" bindinput="z" disabled="{{type==2}}" data-type="phone" placeholder="请输入联系人电话号码" ></input>
     </view>
     <view class="img" style="border-bottom: 1px dotted #ccc;">
       <view>上传钥匙存放位置图片</view>
@@ -19,7 +19,7 @@
       </view>
     </view>
     <view class="tiem" wx:if="{{type!=2}}">
-      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
         <view class="picker">
           <text>预约时间: </text> {{date}}
         </view>
@@ -28,7 +28,7 @@
     </view>
   <view class="tiem" wx:if="{{type==2}}">
         <view class="picker">
-          <text>预约时间: </text> {{date}}
+          <text>预约时间: </text> {{detail.makmentTime}}
         </view>
       <view style="color:#999;float: right;font-size:24rpx;">备注:早上8:00</view>
     </view>

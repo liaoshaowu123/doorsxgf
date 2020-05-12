@@ -1,4 +1,5 @@
 import { Ljrqe } from '../../utils/ljrqe.js';
+import { Config } from '../../utils/config.js';
 var ljrqe = new Ljrqe();
 var pageNo = 1;
 var pageSize = 10;
@@ -9,7 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    orderStatusArry:Config.orderStatusArry
   },
 
   /**
@@ -44,7 +46,7 @@ Page({
         isHava=true;
       }
       let lists = res.data;
-      let arr=['未量房','已完成','已派单','已评价']
+      let arr=this_.data.orderStatusArry;
       lists.map(v=>{
         v.statuss = arr[parseInt(v.orderStatus)]
       })

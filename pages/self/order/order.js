@@ -26,7 +26,7 @@ Page({
       this.getOrderListTZ(e.currentTarget.dataset.type)
     if(this.data.fromType == 1)
       this.getOrderListTGY(e.currentTarget.dataset.type)
-    if(this.data.fromType == 1)
+    if(this.data.fromType == 2)
       this.getOrderListMD(e.currentTarget.dataset.type)
 
   },
@@ -103,7 +103,7 @@ Page({
         isHava=true;
       }
       
-      let lists = res.data.orderList;
+      let lists = res.data;
       let arr=this_.data.orderStatusArry;
       lists.map(v=>{
         v.statuss = arr[parseInt(v.orderStatus)]

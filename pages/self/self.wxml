@@ -54,7 +54,7 @@
 <view class="boxs col" style="margin-top:20rpx;" wx:if='{{userType==5}}'>
   <view class="box row_b" data-path='earnings/earnings' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/tgsy.png'></image>
       <view class="box-name">推广收益</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
@@ -82,7 +82,7 @@
   </view>
   <view class="box row_b" style="border-bottom: 0" data-path='share/share' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/tuighb.png'></image>
       <view class="box-name">推广海报</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
@@ -92,7 +92,7 @@
 <view class="boxs col" style="margin-top:20rpx;" wx:if='{{userType==3}}'>
   <view class="box1 row_b" data-path='shop/shop' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/store.png'></image>
       <view class="box-name">门店管理中心</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
@@ -101,7 +101,7 @@
 <view class="boxs col" style="margin-top:20rpx;" wx:if='{{userType==2||userType==3}}'>
   <view class="box row_b" data-path='income/income' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/tuanz.png'></image>
       <view class="box-name">团长收入</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
@@ -116,28 +116,28 @@
   
   <view class="box row_b" data-path='earnings/earnings' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image> 
+      <image class="box-icon" src='/images/tgsy.png'></image> 
       <view class="box-name">推广收益</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
   </view>
   <view class="box row_b" data-path='meteam/meteam' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image> 
+      <image class="box-icon" src='/images/myteam.png'></image> 
       <view class="box-name">我的团队</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
   </view>
   <view class="box row_b" data-path='ModifyRelations/ModifyRelations' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image> 
+      <image class="box-icon" src='/images/xgrygx.png'></image> 
       <view class="box-name">修改人员关系</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
   </view>
   <view class="box row_b" style="border-bottom: 0" data-path='share/share' catchtap="onRouter">
     <view class="box-box row_c" >
-      <image class="box-icon" src='/images/icon-5.png'></image>
+      <image class="box-icon" src='/images/tuighb.png'></image>
       <view class="box-name">推广海报</view>
     </view>
     <image class="right" src='/images/jt1.png'></image>
