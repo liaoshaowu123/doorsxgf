@@ -34,7 +34,7 @@ page{
   width: 690rpx;
   /* padding:50rpx 30rpx; */
   background: #fff;
-  margin-bottom: 40rpx;
+  margin: 16rpx 0;
   border-radius: 10rpx;
 }
 
@@ -75,7 +75,7 @@ page{
   -webkit-line-clamp: 1;
 }
 .list{
-  min-height: 120rpx;
+  /* min-height: 120rpx; */
   width: 100%;
   flex-wrap: wrap;
   padding-top: 25rpx;
@@ -83,7 +83,7 @@ page{
 .list-box1{
   /* height: 68rpx; */
 	border-radius: 8rpx;
-	border: solid 1rpx #e6212a;
+	/* border: solid 1rpx #e6212a; */
   font-family: PingFang-SC-Regular;
 	font-size: 32rpx;
 	font-weight: normal;
@@ -93,6 +93,8 @@ page{
   padding: 0 24rpx;
   margin:0 15rpx 25rpx 0;
   background: #e6212a;
+}
+.azbox {
   width: 50%;
 }
 
@@ -108,7 +110,7 @@ page{
 	letter-spacing: 2rpx;
 	color: #fff;
   padding: 0 24rpx;
-  margin:0 15rpx 25rpx 0;
+  margin:0 18rpx 18rpx 0;
   font-weight: bold;
 }
 
@@ -116,13 +118,13 @@ page{
   height: 68rpx;
 	border-radius: 8rpx;
   font-family: PingFang-SC-Regular;
-	font-size: 24rpx;
+	font-size: 26rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 2rpx;
 	color: #333;
   padding: 0 12rpx;
-  margin:0 15rpx 25rpx 0;
+  margin:0 18rpx 18rpx 0;
   background: #c9cbca;
 }
 .pjlist,.fhllist {
@@ -130,7 +132,7 @@ page{
 }
 .debox{
   width: 640rpx;
-	min-height: 100rpx;
+	/* min-height: 100rpx; */
 	border-bottom: dashed 1rpx #cccccc;
   align-items:flex-start;
   padding:15rpx 24rpx;
@@ -143,39 +145,42 @@ page{
 
 .debox-title{
   font-family: PingFang-SC-Regular;
-	font-size: 28rpx;
+	font-size: 22rpx;
 	font-weight: bold;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #333333;
-  
+  display: flex;
+  align-self: flex-start; 
+  justify-content: flex-start;
+  margin-top: 20rpx;
 }
 .debox-xl1{
   height: 44rpx;
 	background-color: #494343;
 	border-radius: 40rpx;
-  padding: 0 18rpx;
+  padding: 0 48rpx;
   font-family: PingFang-SC-Medium;
 	font-size: 24rpx;
-	font-weight: normal;
+	font-weight: bold;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #ffffff;
-  margin: 11rpx;
+  margin: 10rpx 0rpx;
   
 }
 .debox-xl2{
   height: 44rpx;
 	background-color: #cccccc;
 	border-radius: 40rpx;
-  padding: 0 18rpx;
+  padding: 0 48rpx;
   font-family: PingFang-SC-Medium;
 	font-size: 24rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #333333;
-  margin: 11rpx;
+  margin: 10rpx 0rpx;
 }
 .debox-txt{
   font-family: PingFang-SC-Medium;
@@ -207,6 +212,7 @@ margin-left: 10rpx;
   position: absolute;
 } */
 .ys-box1{
+  width: 25%;
   min-width: 104rpx;
 	height: 44rpx;
 	border: solid 1rpx #494343;
@@ -214,13 +220,18 @@ margin-left: 10rpx;
   color: #fff;
   /* margin: 11rpx; */
   border-radius: 80rpx;
+  margin: 10rpx 0;
+}
+.ys-box1 view {
+  font-weight: bold;
 }
 .ys-box{
+  width: 25%;
   min-width: 104rpx;
 	height: 44rpx;
 	border-radius: 60rpx;
 	border: solid 1rpx #eeeeee;
-  /* margin: 11rpx; */
+  margin: 10rpx 0;
   color: #333;
   background: #eeeeee
 }
@@ -239,13 +250,14 @@ margin-left: 10rpx;
 }
 .botbox{
   width: 640rpx;
-  padding: 20rpx 24rpx;
+  /* min-height: 100rpx; */
+  padding: 15rpx 24rpx;
 	/* height: 86rpx; */
 	/* border: solid 1rpx #999999; */
   border-top: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .money {
   font-weight: bold;
@@ -272,12 +284,13 @@ margin-left: 10rpx;
 	letter-spacing: 0rpx;
 	color: #FFFFFF;
   /* position: absolute; */
-  margin-right: 10rpx;
+  margin: 10rpx 10rpx 10rpx 0rpx;
 }
 .topbox{
+  /* min-height: 100rpx; */
   width: 640rpx;
   padding: 24rpx;
-	min-height: 46rpx;
+	/* min-height: 46rpx; */
 	border-bottom: 1rpx dashed #cccccc;
 }
 .botbox-price{
@@ -496,7 +509,7 @@ height: 975.542px; */
   /* display: inherit; */
 }
 .contain {
-  padding: 20rpx;
+  padding: 50rpx 20rpx;
 }
 .b {
   font-weight:bold;
@@ -539,4 +552,10 @@ height: 975.542px; */
 .lcitem {
   display: flex;
   flex-wrap: wrap;
+}
+.row_a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }

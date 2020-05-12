@@ -15,64 +15,54 @@
   </navigator>
 
   <view class="hbar">
-  <text class="{{hbarId==item.id?'hactive':''}}" wx:for="{{hbar}}" wx:key="{{item.id}}" bindtap="changeHId" data-id="{{item.id}}" >{{item.name}}</text>
+  <!-- wx:for="{{productList}}" wx:key="id" -->
+  <text class="{{hbarId==index?'hactive':''}}" wx:for="{{productList}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" 
+    data-index="{{index}}" >{{item.name}}</text>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" 
         autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
-      <swiper-item wx:for='{{bannerList}}'> 
+      <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
   </swiper>
-  <view>
-    <view class="tbox">
-    <navigator open-type="{{item.name=='门窗'?'switchTab':'navigate'}}" url='{{item.href}}' wx:for="{{productList}}">
-      <view class="titem" >
-          <image src="{{imgUrl+item.imgUrl}}"></image>
-          <text>{{item.name}}</text>
-      </view>
-      </navigator>
-    </view>
-    <!-- <view  class="tbottom">
-      <text class="{{(tindex-1)==item?'tactive':''}}" wx:for="{{ttotal}}" bindtap="changetIndex" data-index="{{item}}"></text>
-    </view> -->
-  </view>
-  <view class="textImg" wx:for="{{messageList}}" wx:for-item="items">
+  
+  <view class="textImg" wx:for="{{messageList}}" wx:for-item="items" wx:key="id">
     <text>{{items.name}}</text>
     <!-- <image src="{{imgUrl+items.imgUrl}}"></image> -->
   </view>
-  <view class="sibox" wx:for="{{lcList}}" wx:for-item="items">
+  <view class="sibox" wx:for="{{lcList}}" wx:for-item="items" wx:key="id">
     <view class="sihead">
       <text class="title">铝材供应商</text>
-      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}">{{item.name}}</text>
+      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text>
       <i class="more"></i>
     </view>
     <view>
      <swiper indicator-dots="{{indicatorDots}}" 
         autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
-        <swiper-item wx:for='{{items.mcAppSupplierImgs}}'> 
+        <swiper-item wx:for='{{items.mcAppSupplierImgs}}' wx:key="id"> 
             <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
         </swiper-item> 
       </swiper>
     </view>
   </view>
   <view class="paragraph"></view>
-  <view class="pbox" wx:for="{{pjList}}" wx:for-item="items">
+  <view class="pbox" wx:for="{{pjList}}" wx:for-item="items" wx:key="id">
     <view class="phead">
       <text class="title">配件供应商</text>
-      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}">{{item.name}}</text>
+      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text>
     </view>
     <view class="pimg-box">
-      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}" wx:key="id"></image>
     </view>
   </view>
   <view class="paragraph"></view>
-  <view class="sibox" wx:for="{{azList}}" wx:for-item="items">
+  <view class="sibox" wx:for="{{azList}}" wx:for-item="items" wx:key="id">
     <view class="sihead">
       <text class="title">专业安装公司</text>
       <text class="company">{{items.name}}</text>
     </view>
     <view>
-      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}"></image>
+      <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}" wx:key="id"></image>
     </view>
   </view>
 </view>

@@ -199,6 +199,8 @@ Page({
     this.setData({
       pjlist: pjList,
       pjIndex: 0,
+      lcIndex1: 0,
+      lcColorIndex: 0,
     })
     var data={}
     // ljrqe.post('houseType/getBrandData', data).then(res => {
