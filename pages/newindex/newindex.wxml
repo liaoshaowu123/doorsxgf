@@ -39,7 +39,7 @@
     </view>
     <view>
      <swiper indicator-dots="{{indicatorDots}}" 
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
+        autoplay="false"  circular="true" style="margin-top:20rpx;text-align: center;"> 
         <swiper-item wx:for='{{items.mcAppSupplierImgs}}' wx:key="id"> 
             <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
         </swiper-item> 
