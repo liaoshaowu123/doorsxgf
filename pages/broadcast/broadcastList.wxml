@@ -3,13 +3,20 @@
   <view class="contain">
     <view class="bitem" bindtap="gotoRoom" data-id="{{item.roomid}}" wx:for="{{liveList}}" wx:key="id">
       <view class="live_box">
-        <view class="live_img"><image src="{{item.cover_img}}"></image></view>
-          <view  class="live_info">
-            <view class="title">{{item.anchor_name}}</view>
-            <view class="live_bot">
-              <view class="time">{{tools.dateTimeFormat(item.end_time)}}</view>
-              <view>{{statusArr[item.live_status]}}</view>  
+        <view class="status row_c">{{statusArr[item.live_status]}}</view>  
+        <view class="live_img" style="background:url({{item.cover_img}})">
+          <!-- <image src="{{item.cover_img}}"></image> -->
+          <image class="" src="../../images/live_suspend.png"></image>
+          <view class="name">
+            <view style="font-size:28rpx">{{item.anchor_name}}</view>
           </view>
+          <view class="mask"></view>
+        </view>
+        <view  class="live_info">
+          <view class="title">{{item.name}}</view>
+          <!-- <view class="live_bot"> </view> -->
+          <!-- <view class="time">开播时间：</view> -->
+          <view class="time">{{tools.dateTimeFormat(item.start_time)}}</view>
         </view>
       </view>
     </view>
