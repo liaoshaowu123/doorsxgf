@@ -16,6 +16,7 @@
 
   <view class="hbar">
   <!-- wx:for="{{productList}}" wx:key="id" -->
+  <!-- productList hbar -->
   <text class="{{hbarId==index?'hactive':''}}" wx:for="{{productList}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" 
     data-index="{{index}}" >{{item.name}}</text>
   </view>
