@@ -18,7 +18,7 @@
   </view>
 </view>
 <view wx:if="{{type == 1}}">
-  <navigator url="./accumulative/accumulative" class="n">
+  <navigator url="../income/accumulative/accumulative" class="n">
     <view>
       {{storesr.sumMoney}}
     </view>
