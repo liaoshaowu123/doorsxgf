@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/newindex/newindex",
     "pages/index/index",
     "pages/order/particulars/subscribe/subscribe",
-    "pages/newindex/newindex",
+    
     "pages/self/ModifyRelations/ModifyRelations",
     "pages/self/meteam/meteam",
     "pages/self/HeadOfTheOrder/HeadOfTheOrder",
@@ -78,12 +79,7 @@
         "iconPath": "images/fa-n.png",
         "selectedIconPath": "images/fa-s.png"
       },
-      {
-        "pagePath": "pages/order/order",
-        "text": "订单",
-        "iconPath": "images/dd-n.png",
-        "selectedIconPath": "images/dd-s.png"
-      },
+
       {
         "pagePath": "pages/my/my",
         "text": "体验店",

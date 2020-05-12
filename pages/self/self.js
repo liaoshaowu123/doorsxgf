@@ -29,9 +29,15 @@ Page({
    * onOrder
    */
     onOrder(e){
-      wx.switchTab({
+      wx.navigateTo({
         url: '/pages/order/order',
       })
+      // {
+      //   "pagePath": "pages/order/order",
+      //     "text": "订单",
+      //       "iconPath": "images/dd-n.png",
+      //         "selectedIconPath": "images/dd-s.png"
+      // },
     },
 
   /**

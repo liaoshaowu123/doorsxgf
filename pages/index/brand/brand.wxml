@@ -12,7 +12,10 @@
 <view class="contain">
 <!-- 铝材 -->
 <view class='box-title '>选择铝材品牌
-  <view class="row_s"><view class="hbar"></view><text>系列</text><view class="hbar"></view><text>色彩</text></view>
+  <view class="row_s" style="flex: auto;padding-left: 5px;">
+    <view class="hbar"></view><text>系列</text>
+    <view class="hbar"></view><text>色彩</text>
+  </view>
 </view>
 <view class='list row_s'>
   <view class="lclist" wx:for='{{lclist}}'>
@@ -31,8 +34,12 @@
             <view style="font-size:20rpx;" class='{{lcIndex1==i?"debox-xl1 row_c":"debox-xl2 row_c"}}'
             data-index='{{i}}' catchtap='onChangeLcXl'>{{v.name}}</view>
           </view>
-          <view class="hbar"></view>
-          <view style="font-size:20rpx;" class='debox-txt'>￥{{(v.price)}}元/米</view>
+          <view class="row_c" style="flex:auto"><view class="hbar"></view></view>
+          <view style="font-size:24rpx;width:150rpx;" class='debox-txt row_c'>
+            <text class="italic">￥</text>
+            <text class="b">{{(v.price)}}</text>
+            <text>元/米</text>
+          </view>
           <!-- <view style="font-size:20rpx;" class='debox-txt'>市场价:￥{{(v.price)}}元/米</view>
           <view style="font-size:20rpx;" class='debox-txt'>团购价:￥{{(v.pricesc)}}元/米</view> -->
         </view>
@@ -43,9 +50,9 @@
 
 <!-- botbox -->
   <view class='debox col_c'>
-    <view class='row_s '>
-      <view class='debox-title'>色彩选择</view>
-      <view class='r-box row_s'>
+    <view class='debox-xl row_s warp'>
+      <view class='r-box row_a' style="margin: 0;">
+        <view class='debox-title' style="margin:0rpx;align-self: center;">色彩选择</view>
         <view class="cbox" wx:for='{{lclist[lcIndex].colorsList}}'>
           <view class="hbar"></view>
           <view class='{{lcColorIndex==index?"ys-box1 row_c":"ys-box row_c"}}' data-index='{{index}}' catchtap='onChangeLcColor'>
@@ -74,7 +81,7 @@
   </view>
 </view>
 <!-- 配件 -->
-<view class='box-title '>选择配件品牌</view>
+<view class='box-title mar-t90'>选择配件品牌</view>
   <view class='list row_s'>
   <view class="pjlist" wx:for='{{pjlist}}' >
   <view class='{{index==pjIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangePj'>{{item.name}}</view>
@@ -115,7 +122,7 @@
   </view>
 </view>
 <!-- 防护栏 -->
-<view class='box-title '>选择防护栏</view>
+<view class='box-title mar-t90'>选择防护栏</view>
 <view class='list row_s'>
   <view class="fhllist" wx:for='{{fhllist}}' >
   <view class='{{index==fhlIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeFhl'>{{item.name}}</view>
@@ -152,7 +159,7 @@
   </view> -->
 </view>
 <!-- 玻璃 -->
-<view class='box-title '>选择玻璃</view>
+<view class='box-title mar-t90'>选择玻璃</view>
 <view class='list row_s'>
   <view class="bllist" wx:for='{{bllist}}'>
     <view class='{{index==blIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeBl'>{{item.name}}</view>
@@ -189,9 +196,11 @@
 </view>
 
 <!-- 安装公司 -->
-<view class='box-title '>选择安装公司</view>
+<view class='box-title mar-t90'>选择安装公司</view>
 <view class='list row_s'>
-  <view class='list-box1 row_c'>{{azinfo.name}}</view>
+  <view class="azbox"> 
+    <view class='list-box1 row_c'>{{azinfo.name}}</view>
+  </view>
 </view>
 <view class='box' >
   <view class='topbox col nowarp'>
