@@ -74,9 +74,8 @@ page{
   height: 120rpx;
 }
 .l>view:nth-child(2)>view:first-child{
-  font-size: 20px;
+  font-size: 28rpx;
   flex: 1;
-  text-align: center;
 }
 .l>view:nth-child(2)>view:first-child>text{
   font-weight: bold;
