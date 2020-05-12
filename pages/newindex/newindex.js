@@ -36,7 +36,7 @@ Page({
       hbarId: index
     })
     console.log(productList[index]);
-    if (productList[index].name == "门窗") {
+    if (productList[index].name == "首页" || productList[index].name.indexOf("门窗")) {
       wx.switchTab({
         url: productList[index].href,
       })
