@@ -10,8 +10,7 @@
 .address{
   height: 42rpx;
   padding-left: 30rpx;
-  padding-top: 10rpx;
-
+  padding-top: 20rpx;
 }
 
 .add-img{
@@ -31,7 +30,7 @@
 .qh{
   min-width: 60rpx;
   padding: 0 15rpx;
-	height: 40rpx;
+	height: 30rpx;
 	background-color: #999;
 	border-radius: 20rpx;
 	font-size: 24rpx;

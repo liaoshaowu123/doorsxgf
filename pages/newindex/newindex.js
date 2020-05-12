@@ -27,7 +27,6 @@ Page({
     uhide: 0,
     index: 0,
 
-
     areaList: [],
     userId:"",
   },
@@ -156,7 +155,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // this.getList();
+    this.getList();
   },
 
   /**

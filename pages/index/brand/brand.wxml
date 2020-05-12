@@ -17,7 +17,7 @@
     <view class="hbar"></view><text>色彩</text>
   </view>
 </view>
-<view class='list row_s'>
+<view class='list row_s list3'>
   <view class="lclist" wx:for='{{lclist}}'>
     <view class='{{index==lcIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeLc'>{{item.name}}</view>
   </view>
@@ -70,7 +70,7 @@
     <view class="hbar"></view>
     <view>
       <view class='botbox-title'>
-        <text class="b">铝材总价：</text>
+        <text class="b f11">铝材总价：</text>
         <text class="s">{{info.lvcai}} X {{lcdjPrice}} = </text>
         <text class="money">{{lcPrice}}</text>
         <text class="b">元</text>
@@ -82,7 +82,7 @@
 </view>
 <!-- 配件 -->
 <view class='box-title mar-t90'>选择配件品牌</view>
-  <view class='list row_s'>
+  <view class='list row_s list2'>
   <view class="pjlist" wx:for='{{pjlist}}' >
   <view class='{{index==pjIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangePj'>{{item.name}}</view>
   </view>
@@ -100,7 +100,7 @@
       </view> -->
       
     <view class='botbox-price'>
-      <text class="b">配件总价：</text>
+      <text class="b f11">配件总价：</text>
       <text class="s">{{info.pei}} X {{pjlist[pjIndex].price}} = </text>
       <text class="money">{{pjPrice}}</text>
       <text class="b">元</text>
@@ -123,7 +123,7 @@
 </view>
 <!-- 防护栏 -->
 <view class='box-title mar-t90'>选择防护栏</view>
-<view class='list row_s'>
+<view class='list row_s list2'>
   <view class="fhllist" wx:for='{{fhllist}}' >
   <view class='{{index==fhlIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeFhl'>{{item.name}}</view>
   </view>
@@ -135,13 +135,13 @@
     <view class='botbox-price1'>{{(lclist[lcIndex].price)}}元/个</view>
     <view class="hbar"></view>
     <view class='botbox-price' wx:if='{{fhlIndex==1}}'>
-      <text class="b">护栏总价：</text>
+      <text class="b f11">护栏总价：</text>
       <text class="s">{{info.pei}} X {{(lclist[lcIndex].price)}} = </text>
       <text class="money">{{fhlPrice}}</text>
       <text class="b">元</text>
     </view>
     <view class='botbox-price' wx:else>
-      <text class="b">护栏总价：</text>
+      <text class="b f11">护栏总价：</text>
       <text class="s">{{info.pei}} X 0 = </text>
       <text class="money">0</text>
       <text class="b">元</text>
@@ -160,7 +160,7 @@
 </view>
 <!-- 玻璃 -->
 <view class='box-title mar-t90'>选择玻璃</view>
-<view class='list row_s'>
+<view class='list row_s list3'>
   <view class="bllist" wx:for='{{bllist}}'>
     <view class='{{index==blIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeBl'>{{item.name}}</view>
   </view>
@@ -180,7 +180,7 @@
     </view> -->
     <!-- <view class="hbar"></view> -->
     <view class='botbox-price'>
-      <text class="b">玻璃总价：</text>
+      <text class="b f11">玻璃总价：</text>
       <text class="s">{{info.area}} X {{(bllist[blIndex].price)}} = </text>
       <text class="money">{{blPrice}}</text>
       <text class="b">元</text>
@@ -197,7 +197,7 @@
 
 <!-- 安装公司 -->
 <view class='box-title mar-t90'>选择安装公司</view>
-<view class='list row_s'>
+<view class='list row_s list2'>
   <view class="azbox"> 
     <view class='list-box1 row_c'>{{azinfo.name}}</view>
   </view>
