@@ -20,8 +20,8 @@
   <text class="{{hbarId==index?'hactive':''}}" wx:for="{{productList}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" 
     data-index="{{index}}" >{{item.name}}</text>
   </view>
-  <swiper indicator-dots="{{indicatorDots}}" 
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="margin-top:20rpx;text-align: center;"> 
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
+        style="padding: 20rpx 0;margin: 10rpx 0;text-align: center;"> 
       <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
@@ -39,7 +39,7 @@
     </view>
     <view>
      <swiper indicator-dots="{{indicatorDots}}" 
-        autoplay="false"  circular="true" style="margin-top:20rpx;text-align: center;"> 
+        autoplay="{{false}}"  circular="true" style="margin-top:20rpx;text-align: center;"> 
         <swiper-item wx:for='{{items.mcAppSupplierImgs}}' wx:key="id"> 
             <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
         </swiper-item> 
