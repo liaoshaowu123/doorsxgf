@@ -118,8 +118,8 @@ page{
   padding: 0 12rpx;
   /* margin:0 18rpx 18rpx 0; */
   margin: 0 9rpx 18rpx 9rpx;
-  background: #c9cbce;
-  opacity: 0.8;
+  background: rgba(201, 203, 202,.8);
+  /* opacity: 0.8; */
 }
 .pjlist,.fhllist {
   /* width: 50%; */
@@ -147,8 +147,8 @@ page{
   display: flex;
   align-self: flex-start; 
   justify-content: flex-start;
-  margin-top: 20rpx;
-  opacity: 0.8
+  margin-top: 10rpx;
+  /* opacity: 0.8 */
 }
 .debox-xl1{
   height: 34rpx;
@@ -477,6 +477,7 @@ height: 975.542px; */
   height: 2rpx;
   width: 20rpx;
   background: #c10000;
+  margin: 0 5rpx;
   /* display: inherit; */
 }
 .contain {
