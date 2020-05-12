@@ -17,6 +17,11 @@ Page({
     if(type == 2){
       this.updateList()
     }
+    if(type == 1){
+      this.setData({
+        userList:[]
+      })
+    }
     
     this.setData({
       type: e.currentTarget.dataset.type

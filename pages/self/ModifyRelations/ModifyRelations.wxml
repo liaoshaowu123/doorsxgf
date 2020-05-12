@@ -29,10 +29,12 @@
     <view class="u" wx:for="{{userList}}">
       <view>
         <image src="{{imgUrl}}{{item.photo}}"></image>
-        <text>{{item.themodifierNme}}</text>
+        <text wx:if="{{type==2}}">{{item.themodifierNme}}</text>
+        <text wx:if="{{type==1}}">{{item.name}}</text>
         <view wx:if="{{type == 1}}" catchtap="modify" data-id="{{item.id}}">修改服务团长</view>
       </view>
-      <view>所属团长：{{item.storeName}}</view>
+      <view wx:if="{{type==1}}">所属团长：{{item.storeName}}</view>
+      <view wx:if="{{type==2}}">所属团长：{{item.submissionName}}</view>
     </view>
   </view>
 </view>

@@ -1,5 +1,6 @@
 import { Ljrqe } from '../../utils/ljrqe.js';
 import { SnapData } from '../../utils/snapData.js';
+import { Config } from '../../utils/config.js';
 var ljrqe = new Ljrqe();
 
 Page({
@@ -16,12 +17,40 @@ Page({
     isscope:false,
     userType:''
   },
+  x:function(){
+    if(this.data.nickname=='点击授权'){
+      this.setData({
+        isscope:true
+      })
+    }
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+                wx.login({
+              success: function (ress) {
+                wx.request({
+                  header: { 'content-type': 'application/x-www-form-urlencoded' },
+                  url: Config.resUrl + 'user/wxLoginCode.do',
+                  method: 'post',
+                  data: {
+                    Code: ress.code,
+                  },
+                  success: function (re) {
+                    console.log(re)
+                    if (re.data.code == 1) {
+                      wx.showToast({
+                        title: re.data.msg,
+                        icon: 'none'
+                      })
+                    }
+                    wx.setStorageSync('userId', re.data.data.id)
+                  }
+                })
+              }
+            })
   },
 
   
