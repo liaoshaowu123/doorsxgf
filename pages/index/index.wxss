@@ -10,7 +10,7 @@
 .address{
   height: 42rpx;
   padding-left: 30rpx;
-  padding-top: 20rpx;
+  padding-top: 50rpx;
 }
 
 .add-img{

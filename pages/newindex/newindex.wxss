@@ -2,9 +2,10 @@
 .hbar {
   display: flex;
   margin: 20rpx 20rpx 0rpx 20rpx;
+  justify-content: space-around;
 }
 .htext {
-  width: 25%;
+  /* width: 25%; */
   padding: 3rpx 16rpx;
   font-size: 32rpx;
   font-weight: normal;
@@ -138,7 +139,7 @@ image {
 .search {
   flex: auto;
   width: auto;
-  height: 40rpx;
+  height: 50rpx;
   background-color: #dcdedd;
   border: none;
   border-radius: 40rpx;
@@ -154,3 +155,18 @@ image {
   font-size: 28rpx;
 }
 
+.swiper-box .wx-swiper-dot{
+  display: inline-flex;
+  justify-content:space-between;
+  border-radius: 50%;
+}
+.swiper-box .wx-swiper-dot::before{
+  content: '';
+  flex-grow: 1;  
+  background: gray;
+  border-radius: 50%;
+}
+.swiper-box .wx-swiper-dot-active::before{
+  background:white;  
+  border-radius: 50%;  
+}

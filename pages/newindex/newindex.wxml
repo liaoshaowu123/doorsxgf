@@ -21,7 +21,7 @@
   <text class="htext {{hbarId==index?'hactive':''}}" wx:for="{{hbar}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" data-index="{{index}}" >{{item.name}}</text>
   </view>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
-        style="padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
+        style="height: 375rpx;padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
       <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
