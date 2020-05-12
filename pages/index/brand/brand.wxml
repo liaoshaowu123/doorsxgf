@@ -31,7 +31,8 @@
           wx:for-item='v' wx:for-index='i' >
           <view class="row_s">
             <view class="hbar"></view>
-            <view style="font-size:20rpx;" class='{{lcIndex1==i?"debox-xl1 row_c":"debox-xl2 row_c"}}'
+            <!-- style="font-size:20rpx;" -->
+            <view  class='{{lcIndex1==i?"debox-xl1 row_c":"debox-xl2 row_c"}}'
             data-index='{{i}}' catchtap='onChangeLcXl'>{{v.name}}</view>
           </view>
           <view class="row_c" style="flex:auto"><view class="hbar"></view></view>

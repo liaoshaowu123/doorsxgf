@@ -503,7 +503,7 @@ height: 975.542px; */
   font-size: 22rpx;
 }
 .italic {
-  font-style: italic;
+  /* font-style: italic; */
   font-size:22rpx;
   color: #999;
 }
