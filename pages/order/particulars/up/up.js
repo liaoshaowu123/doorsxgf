@@ -53,6 +53,10 @@ Page({
   },
 
   submitDate(){
+    wx.showLoading({
+      title: '上传中',
+      mask: true
+    })
     let this_ = this;
     var p = new Promise(function (resolve, reject) {
     for(let i=0;i<this_.data.image.length; i++){
@@ -87,6 +91,7 @@ Page({
     ljrqe.post('mcoporder/add', data).then(res => {
       if(res.code == 0){
        // this_.addMcOp()
+
        wx.navigateBack({
         delta: 1,
         })

@@ -234,7 +234,7 @@ text-decoration-line:underline;
 }
 .types{
   box-sizing: border-box;
-  color: red;
+  color: #C10000;
   font-weight: bold;
 }
 .types:after{
@@ -242,7 +242,7 @@ text-decoration-line:underline;
   display: block;
   width: 65rpx;
   height: 1px;
-  background: red;
+  background: #C10000;
   line-height: 5px;
   margin: 0 auto;
 }

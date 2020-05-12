@@ -79,6 +79,10 @@ Page({
   },
 
   formSubmit: function (e) {  
+    wx.showLoading({
+      title: '上传中',
+      mask: true
+    })
       console.log('form发生了submit事件，携带数据为：', e.detail.value);
       let depositUrl = this.data.imgUl;
       let makmentTime = this.data.date;
