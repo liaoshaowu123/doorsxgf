@@ -1,39 +1,116 @@
 /* pages/broadcast/broadcastList.wxss */
+.page {
+  background: #f8f8f8;
+  height: 100vh;
+}
 
 .contain {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #f8f8f8;
+  padding: 40rpx 10rpx;
+
 }
 
 .bitem {
-  display: flex;
-  justify-content: space-between;
   line-height: 30rpx;
-  border-bottom: 2rpx solid #e6212a;
-  padding: 20rpx;
+  width: 50%;
 }
 
 .live_box {
   flex: auto;
-  margin: 20rpx;
+  margin: 14rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+}
+
+.status {
+  background: #e53132;
+  color: #FFFFFF;
+  width: 15%;
+  padding: 12rpx 10rpx;
+  position: absolute;
+  border-radius: 20rpx 40rpx 40rpx 0rpx;
+  z-index: 1;
+}
+
+.live_img {
+  height: 360rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
 }
 
 .live_img image {
-  border-radius: 20rpx;
-  width: 100%;
-  max-height: 360rpx;
+  /* border-radius: 20rpx; */
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 240rpx;
+  height: 240rpx;
+  z-index: 1;
 }
 
 .live_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 20rpx;
+  padding: 20rpx;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 36rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.name {
+  color: #FFFFFF;
+  padding: 10rpx 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 
 .live_bot {
   display: flex;
   justify-content: space-between;
   margin: 20rpx 0;
+  color: #969696;
+}
+
+.time {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+.ball {
+  padding: 20rpx;
+  border-radius: 100%;
+  background: #e53132;
+  margin-right: 20rpx;
+}
+
+.row_c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
 }
