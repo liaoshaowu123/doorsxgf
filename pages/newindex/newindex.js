@@ -14,8 +14,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hbar: [{ id: "1", name: "首页" }],//[{ name: "定制产品", id: "1" }, { name: "直播频道", id: "2" }, { name: "招商", id: "3" }],
-    hbarId: 1, 
+    hbar: //[{ id: "1", name: "首页" }],//
+      [{ name: "首页", id: "1" }, { name: "门窗定制", id: "2" }, { name: "直播频道", id: "3" }, { name: "招商", id: "4" }],
+      // , { name: "招商", id: "4" }
+    hbarId: 0, 
     bannerList: [],
     imgUrl: Config.imgUrl,
     indicatorDots: true,
@@ -30,9 +32,22 @@ Page({
     userId:"",
   },
   changeHId:function(e){
+    let t = this, d = t.data, productList = d.productList, index = e.currentTarget.dataset.index;
     this.setData({
-      hbarId: e.currentTarget.dataset.id
+      hbarId: index
     })
+    console.log(productList[index]);
+    if (productList[index].name == "门窗") {
+      wx.switchTab({
+        url: productList[index].href,
+      })
+    }else {
+      wx.navigateTo({
+        url: productList[index].href
+      })  
+    }
+    
+    
   },
   getList(){
     let t = this, d = t.data, citycode = d.citycode;
