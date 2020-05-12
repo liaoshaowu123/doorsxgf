@@ -32,7 +32,7 @@ Page({
     let data = { pageNo, pageSize ,type};
     ljrqe.post('mcOrderV1/store/list', data).then(res => {
       //console.log(res)
-      if (res.data.length >= pageSize && res.totalPage!=pageNo){
+      if (res.totalPage!=pageNo){
         pageNo+=1;
         isHava=true;
       }
@@ -108,7 +108,31 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    var this_=this;
 
+    let data = { pageNo, pageSize, type: this.data.type };
+    ljrqe.post('mcOrderV1/store/list', data).then(res => {
+      //console.log(res)
+      // res.data.length >= pageSize &&
+      if ( res.totalPage != pageNo) {
+        pageNo ++;
+        isHava = true;
+      }
+      let storeName = res.data.storeName;
+      let lists = res.data.orderList;
+      let arr = this_.data.orderStatusArry;
+      lists.map(v => {
+        console.log(v.orderStatus)
+        v.statuss = arr[parseInt(v.orderStatus)]
+      })
+
+      let list = this_.data.list;
+      list.push(...lists);
+      this_.setData({
+        list: list,
+        storeName: storeName
+      })
+    })
   },
 
   /**
