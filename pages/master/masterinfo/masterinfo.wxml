@@ -27,7 +27,7 @@
     </view>
     <view class='fa col_c'>
       <view class='fa-btn'>尺寸核实</view>
-      <view class='fa-box row_c'>
+      <!-- <view class='fa-box row_c'>
         <view class='fa-title'>宽:</view>
         <input class='fa-ipt' placeholder='{{item.mcOrderVeranda.width}}' data-index='{{index}}' bindblur='onIputWidth'></input>
       </view>
@@ -38,10 +38,11 @@
       <view class='fa-box row_c'>
         <view class='fa-title'>面积:</view>
         <view class='fa-ipt' >{{item.mcOrderVeranda.width*item.mcOrderVeranda.length/1000000}}m2</view>
-      </view>
+      </view> -->
+        <textarea class='fa-bz' placeholder='输入备注' data-index='{{index}}' bindblur='onIputRemaker' value='{{item.mcOrderVeranda.detail}}'></textarea>
     </view>
   </view>
-  <textarea class='fa-bz' placeholder='输入备注' data-index='{{index}}' bindblur='onIputRemaker' value='{{item.mcOrderVeranda.detail}}'></textarea>
+
   <view class='box-title row_c'>{{item.name}}</view>
 </view>
 

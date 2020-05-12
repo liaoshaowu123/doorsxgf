@@ -1,7 +1,9 @@
 {
   "pages": [
+    
     "pages/newindex/newindex",
     "pages/index/index",
+    "pages/master/contract/contract",
     "pages/order/particulars/subscribe/subscribe",
     
     "pages/self/ModifyRelations/ModifyRelations",
@@ -29,7 +31,7 @@
     "pages/my/detail/detail",
     "pages/master/master",
     "pages/master/masterinfo/masterinfo",
-    "pages/master/contract/contract",
+    
     "pages/order/orderinfo/orderinfo",
     "pages/order/contract/contract",
     "pages/order/comment/comment",

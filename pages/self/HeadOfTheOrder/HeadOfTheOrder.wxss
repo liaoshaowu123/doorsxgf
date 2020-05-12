@@ -143,7 +143,11 @@ page{
   margin-top: 50rpx;
   float: right;
 }
-.l>view:nth-child(3)>view:last-child>navigator:last-child{
+.l>view:nth-child(3)>view:last-child>navigator:nth-child(2){
+  margin-top: 25rpx;
+  float: right;
+}
+.l>view:nth-child(3)>view:last-child>navigator:nth-child(3){
   margin-top: 25rpx;
   float: right;
 }

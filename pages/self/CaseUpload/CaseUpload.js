@@ -39,6 +39,10 @@ Page({
   
   //点击上传事件
   uploadimage: function () {
+    wx.showLoading({
+      title: '上传中',
+      mask:true
+    })
      var page = this;
      let imgList = page.data.imgList
      var p = new Promise(function (resolve, reject) {
@@ -60,6 +64,7 @@ Page({
         return new Promise(resolve => {
           setTimeout(() => {
             page.submitCase()
+          
           }, 2000)
         })
     })
@@ -252,6 +257,7 @@ Page({
         this_.setData({
           caseId: caseId
         })
+        wx.hideLoading()
         wx.navigateBack({
           delta: 1,
           })
