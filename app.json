@@ -78,12 +78,7 @@
         "iconPath": "images/fa-n.png",
         "selectedIconPath": "images/fa-s.png"
       },
-      {
-        "pagePath": "pages/order/order",
-        "text": "订单",
-        "iconPath": "images/dd-n.png",
-        "selectedIconPath": "images/dd-s.png"
-      },
+
       {
         "pagePath": "pages/my/my",
         "text": "体验店",
