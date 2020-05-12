@@ -1,5 +1,6 @@
 // pages/self/shop/shop.js
 import { Ljrqe } from '../../../utils/ljrqe.js';
+import { Config } from '../../../utils/config.js';
 var ljrqe = new Ljrqe();
 Page({
 
@@ -9,7 +10,8 @@ Page({
   data: {
     type: 2,
     storesr:{},
-    storeList:[]
+    storeList:[],
+    imgUrl:Config.imgUrl
   },
   setl: function (e) {
     this.setData({
