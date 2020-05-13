@@ -59,7 +59,7 @@ page{
 
 
 .lclist,.bllist {
-  /* width: 33.33333%; */
+  width: 33.33333%;
   overflow: hidden;
   text-overflow: ellipsis; 
   display: -webkit-box; 
@@ -86,7 +86,7 @@ page{
   background: #c10000;
 }
 .azbox {
-  /* width: 50%; */
+  width: 50%;
 }
 
 .list-box2{
@@ -115,17 +115,17 @@ page{
 	font-stretch: normal;
 	letter-spacing: 2rpx;
 	color: #333;
-  padding: 0 12rpx;
+  padding: 1rpx 12rpx;
   /* margin:0 18rpx 18rpx 0; */
   margin: 0 9rpx 18rpx 9rpx;
   background: rgba(201, 203, 202,.8);
   /* opacity: 0.8; */
 }
 .pjlist,.fhllist {
-  /* width: 50%; */
+  width: 50%;
 }
 .debox{
-  width: 640rpx;
+  /* width: 640rpx; */
 	/* min-height: 100rpx; */
 	border-bottom: dashed 1rpx #cccccc;
   align-items:flex-start;
@@ -237,7 +237,7 @@ white-space: pre-wrap;
   /* margin-left: 10rpx; */
 }
 .botbox{
-  width: 640rpx;
+  /* width: 640rpx; */
   /* min-height: 100rpx; */
   padding: 15rpx 24rpx;
 	/* height: 86rpx; */
@@ -246,6 +246,7 @@ white-space: pre-wrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1rpx solid transparent;
 }
 .money {
   font-weight: bold;
@@ -276,8 +277,8 @@ white-space: pre-wrap;
 }
 .topbox{
   /* min-height: 100rpx; */
-  width: 640rpx;
-  padding: 24rpx;
+  /* width: 640rpx; */
+  padding: 15rpx 24rpx;
 	/* min-height: 46rpx; */
 	border-bottom: 1rpx dashed #cccccc;
 }
@@ -290,6 +291,8 @@ white-space: pre-wrap;
 	color: #333333;
   display: flex;
   align-items: center;
+  height: 34rpx;
+  margin: 10rpx 0rpx;
 }
 .botbox-price1{
   font-family: PingFang-SC-Regular;
@@ -308,8 +311,8 @@ white-space: pre-wrap;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #666666;
-  width: 500rpx;
-  margin: 20rpx;
+  /* width: 500rpx; */
+  /* margin: 20rpx; */
 }
 .topbox-txt{
   font-family: PingFang-SC-Regular;
@@ -506,6 +509,8 @@ height: 975.542px; */
   /* font-style: italic; */
   font-size:22rpx;
   color: #999;
+  display: flex;
+  align-self: flex-start;
 }
 .cbox {
   /* width: 25%; */
@@ -532,14 +537,12 @@ height: 975.542px; */
   align-items: center;
   justify-content: space-around;
 }
+/* 
 .list2 {
-  display: grid;
-  grid: 1fr/ 1fr 1fr;
 }
 .list3 {
-  display: grid;
-  grid: 1fr/ 1fr 1fr 1fr;
-}
+} 
+*/
 .f11 {
   font-size: 22rpx;
 }
