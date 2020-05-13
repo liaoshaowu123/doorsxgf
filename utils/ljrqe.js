@@ -47,28 +47,28 @@ class Ljrqe extends Base {
               showCancel:false
             })
             wx.hideLoading()
-            wx.login({
-              success: function (ress) {
-                wx.request({
-                  header: { 'content-type': 'application/x-www-form-urlencoded' },
-                  url: Config.resUrl + 'user/wxLoginCode.do',
-                  method: 'post',
-                  data: {
-                    Code: ress.code,
-                  },
-                  success: function (re) {
-                    console.log(re)
-                    if (re.data.code == 1) {
-                      wx.showToast({
-                        title: re.data.msg,
-                        icon: 'none'
-                      })
-                    }
-                    wx.setStorageSync('userId', re.data.data.id)
-                  }
-                })
-              }
-            })
+            // wx.login({
+            //   success: function (ress) {
+            //     wx.request({
+            //       header: { 'content-type': 'application/x-www-form-urlencoded' },
+            //       url: Config.resUrl + 'user/wxLoginCode.do',
+            //       method: 'post',
+            //       data: {
+            //         Code: ress.code,
+            //       },
+            //       success: function (re) {
+            //         console.log(re)
+            //         if (re.data.code == 1) {
+            //           wx.showToast({
+            //             title: re.data.msg,
+            //             icon: 'none'
+            //           })
+            //         }
+            //         wx.setStorageSync('userId', re.data.data.id)
+            //       }
+            //     })
+            //   }
+            // })
             reject(res)
           }
           resolve(res);
