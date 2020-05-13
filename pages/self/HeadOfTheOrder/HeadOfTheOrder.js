@@ -26,8 +26,8 @@ Page({
 
 
   getOrderList(type){
-    if (!isHava){return};
-    isHava=false;
+    // if (!isHava){return};
+    // isHava=false;
     let this_ = this;
     let data = { pageNo, pageSize ,type};
     ljrqe.post('mcOrderV1/store/list', data).then(res => {
@@ -35,7 +35,11 @@ Page({
       if (res.totalPage!=pageNo){
         pageNo+=1;
         isHava=true;
+      }else{
+        isHava=false;
+
       }
+      
       let storeName = res.data.storeName;
       let lists = res.data.orderList;
       let arr=this_.data.orderStatusArry;
@@ -50,6 +54,20 @@ Page({
         list: list,
         storeName:storeName
       })
+    })
+  },
+
+  qxOrder(e){
+    let this_ = this;
+    let id = e.target.dataset.id;
+    let data = {
+      id:id,
+      orderStatus:14
+    }
+    ljrqe.post('mcOrderV1/qxOrder', data).then(res => {
+      if(res.code == 0){
+        this_.onLoad()
+      }
     })
   },
 
@@ -108,6 +126,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    if(!isHava){return}
     var this_=this;
 
     let data = { pageNo, pageSize, type: this.data.type };

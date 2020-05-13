@@ -18,7 +18,7 @@
   </view>
   <view class="pad bor_b">
     <view>订单状态： <text>{{item.statuss}}</text></view>
-    <view style="{{type!=1&&'display:none'}}" wx:if="{{!isQx}}">取消订单</view>
+    <view catchtap="qxOrder" data-id="{{item.id}}" style="{{type!=1&&'display:none'}}" wx:if="{{item.qx && item.orderStatus != 14}}">取消订单</view>
   </view>
   <view class="pad bor_b">
     <view>
@@ -30,7 +30,7 @@
       <text style="font-weight: bold;color: red;">{{ filters.toFix(item.money - item.paid)}}元</text>
       </view>
       <view >下单时间 : {{item.createDate}}  </view>
-      <view >复尺时间 : {{item.createDate}}  </view>
+      <view >复尺时间 : {{item.amountTime}}  </view>
     </view>
     <view>
       <navigator url="/pages/order/orderinfo/orderinfo?id={{item.id}}" class="blo">订单详情</navigator>
