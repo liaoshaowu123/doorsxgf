@@ -43,7 +43,7 @@
 </view>
 
 <!-- btn -->
-<view class='submit row_b' wx:if='{{info.paid<info.money}}'>
+<view class='submit row_b' style="display:{{tyes==10?'none':''}}" wx:if='{{info.paid<info.money}}'>
    <button class='btn row_c' catchtap='onClick'>{{txt}}</button>
    <button class='btn row_c' catchtap='onPayend'>支付尾款</button>
 </view>

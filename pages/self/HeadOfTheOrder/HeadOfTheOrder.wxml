@@ -33,7 +33,7 @@
       <view >复尺时间 : {{item.amountTime}}  </view>
     </view>
     <view>
-      <navigator url="/pages/order/orderinfo/orderinfo?id={{item.id}}" class="blo">订单详情</navigator>
+      <navigator url="/pages/order/orderinfo/orderinfo?id={{item.id}}&type=10" class="blo">订单详情</navigator>
       <navigator url="/pages/order/particulars/particulars?id={{item.id}}" style="{{type==3&&'display:none'}}" class="{{type==1?'redb':type==2&&'db'}}">订单进度</navigator>
       <navigator url="/pages/master/masterinfo/masterinfo?id={{item.id}}&type=2" style="{{type==3&&'display:none'}}" class="blo">复尺详情</navigator>
     </view>

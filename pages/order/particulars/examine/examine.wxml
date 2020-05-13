@@ -1,6 +1,6 @@
 <view class="title">
   <view></view>
   <view>
-    <image wx:for="{{list.images}}" src="{{imgUrl}}{{item}}"></image>
+    <image wx:for="{{list}}" src="{{imgUrl}}{{item}}"></image>
   </view>
 </view>
