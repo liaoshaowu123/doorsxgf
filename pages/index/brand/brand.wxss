@@ -3,7 +3,7 @@ page{
 }
 .title-box{
   width: 690rpx;
-  padding: 32rpx;
+  padding: 40rpx 30rpx 30rpx 30rpx;
   background: #fff;
 }
 .title{

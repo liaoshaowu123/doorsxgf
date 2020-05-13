@@ -101,7 +101,7 @@
       </view> -->
       
     
-    <view class='botbox-price1'><view class="hbar"></view><text class="italic">￥</text>{{pjlist[pjIndex].price}}元/套</view>
+    <view class='botbox-price1'><text class="italic">￥</text>{{pjlist[pjIndex].price}}元/套</view>
     <view class="hbar"></view>
     <view class='botbox-price'>
       <text class="b f11">配件总价：</text>
@@ -182,7 +182,7 @@
     </view> -->
     <!-- <view class="hbar"></view> -->
     
-    <view class='botbox-price1'><view class="hbar"></view><text class="italic">￥</text>{{(bllist[blIndex].price)}}元/㎡</view>
+    <view class='botbox-price1'><text class="italic">￥</text>{{(bllist[blIndex].price)}}元/㎡</view>
     <view class="hbar"></view>
     <view class='botbox-price'>
       <text class="b f11">玻璃总价：</text>
@@ -222,7 +222,7 @@
         </view> 
       </view>
       -->
-      <view class='botbox-price1'><view class="hbar"></view><text class="italic">￥</text> {{azinfo.price}}元/㎡</view>
+      <view class='botbox-price1'><text class="italic">￥</text> {{azinfo.price}}元/㎡</view>
       
       <view class="hbar"></view>
       <view class='botbox-price'>
