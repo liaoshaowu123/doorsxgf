@@ -3,7 +3,7 @@ page{
 }
 .title-box{
   width: 690rpx;
-  padding: 30rpx;
+  padding: 32rpx;
   background: #fff;
 }
 .title{
@@ -129,7 +129,7 @@ page{
 	/* min-height: 100rpx; */
 	border-bottom: dashed 1rpx #cccccc;
   align-items:flex-start;
-  padding:15rpx 24rpx;
+  padding:26rpx 24rpx;
 }
 .debox-xl{
   flex-wrap: wrap;
@@ -237,11 +237,7 @@ white-space: pre-wrap;
   /* margin-left: 10rpx; */
 }
 .botbox{
-  /* width: 640rpx; */
-  /* min-height: 100rpx; */
-  padding: 15rpx 24rpx;
-	/* height: 86rpx; */
-	/* border: solid 1rpx #999999; */
+  padding: 26rpx 24rpx;
   border-top: none;
   display: flex;
   align-items: center;
@@ -260,6 +256,8 @@ white-space: pre-wrap;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
 	color: #333333;
+  display: flex;
+  align-items: center;
 }
 .botbox-btn{
   height: 34rpx;
@@ -276,10 +274,7 @@ white-space: pre-wrap;
   margin: 10rpx 10rpx 10rpx 0rpx;
 }
 .topbox{
-  /* min-height: 100rpx; */
-  /* width: 640rpx; */
-  padding: 15rpx 24rpx;
-	/* min-height: 46rpx; */
+  padding: 26rpx 24rpx;
 	border-bottom: 1rpx dashed #cccccc;
 }
 .botbox-price{
@@ -350,17 +345,17 @@ white-space: pre-wrap;
   flex-grow: 1;
   border: 1px solid #6c6c6c;
   border-radius: 60rpx;
-  height: 86rpx;
+  height: 60rpx;
   justify-content: center;
 }
 .btn{
   width: 40%;
-	height: 88rpx;
+	height: 70rpx;
 	background-color: #c10000;
 	border-radius: 60rpx;
   margin: 0rpx;
   font-family: PingFang-SC-Regular;
-	font-size: 24rpx;
+	font-size: 30rpx;
 	font-weight: bold;
 	font-stretch: normal;
 	letter-spacing: 0rpx;
@@ -475,7 +470,7 @@ height: 975.542px; */
   font-size: 22rpx;
   color: #999;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .hbar {
   height: 2rpx;
@@ -572,6 +567,9 @@ height: 975.542px; */
 }
 .f20 {
   font-size: 40rpx;
+}
+.mar-t88 {
+  margin-top: 88rpx;
 }
 .lclist:nth-child(3n)>view{
   margin-right: 0;
