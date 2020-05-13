@@ -15,7 +15,8 @@ Page({
     lvArr:[],
     lvArrStr:['普通','量尺师父','团长','师长'],
     isscope:false,
-    userType:''
+    userType:'',
+    plotName:''
   },
   x:function(){
     if(this.data.nickname=='点击授权'){
@@ -99,7 +100,8 @@ Page({
         avatar_url: res.data.minPhoto,
         money: res.data.rewardMoney,
         lvArr: lvArr,
-        userType: res.data.userLevel
+        userType: res.data.userLevel,
+        plotName:res.data.plotName
       }
       
       if (!res.data.name) {
