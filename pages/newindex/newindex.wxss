@@ -1,7 +1,7 @@
 @import "/pages/index/index.wxss";
 .hbar {
   display: flex;
-  margin: 0rpx 20rpx;
+  margin: 0rpx 20rpx 12rpx;
   justify-content: space-around;
 }
 .htext {
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #434343;
+  color: #999999;
 }
 .hactive {
   color: #c10000 !important;
@@ -67,7 +67,7 @@ image {
   border-radius: 20rpx;
 }
 .textImg {
-  margin: 20rpx;
+  margin: 12rpx 20rpx 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,13 +84,13 @@ image {
 }
 .paragraph {
   background: #eeeeee;
-  padding: 10rpx;
-  margin: 20rpx;
+  padding: 6rpx;
+  margin: 30rpx;
 
 }
 .sibox,.pbox {
-  padding: 20rpx;
-  margin: 10rpx;
+  padding: 0rpx 20rpx;
+  margin: 10rpx 0rpx;
 }
 .sihead,.phead {
   /* white-space: nowrap; */
@@ -104,20 +104,22 @@ image {
   max-height: 300rpx;
 }
 .title {
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 34rpx;
-  margin: 0 10rpx
+  margin: 0 10rpx;
+  color: #2b2525;
 }
-.sitem,.pitem {
+.sitem,.pitem,.company {
   font-size: 24rpx;
   margin: 0 2rpx;
+  color: #999999;
 }
-.company {
+/* .company {
   font-size: 24rpx;
-}
+} */
 .sitem::before,.pitem::before {
   content: '|';
-  margin: 0 5rpx;
+  margin: 0 10rpx;
 }
 .pimg-box {
   display: flex;
@@ -155,18 +157,39 @@ image {
   font-size: 28rpx;
 }
 
-.swiper-box .wx-swiper-dot{
-  display: inline-flex;
-  justify-content:space-between;
-  border-radius: 50%;
+.row_a {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.swiper-box .wx-swiper-dot::before{
-  content: '';
-  flex-grow: 1;  
-  background: gray;
-  border-radius: 50%;
-}
-.swiper-box .wx-swiper-dot-active::before{
-  background:white;  
-  border-radius: 50%;  
-}
+
+    .swiper-container{
+      position: relative;
+    }
+    .swiper-container .swiper{
+      height: 300rpx;
+    }
+    .swiper-container .swiper .slide-image{
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-container .dots{
+      position: absolute;
+      left: 0;
+      right: 40rpx;
+      bottom: 40rpx;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .swiper-container .dots .dot{
+      margin: 0 8rpx;
+      width: 34rpx;
+      height: 6rpx;
+      background: rgba(0,0,0,.4);
+      transition: all .6s;
+    }
+    .swiper-container .dots .dot.active{
+      /* width: 24rpx; */
+      background: #fff;
+    }

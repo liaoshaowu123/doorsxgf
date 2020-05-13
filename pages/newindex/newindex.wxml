@@ -14,20 +14,28 @@
     </navigator>
   </view>
 
-    <!-- 搜索 -->
-  
-
+  <!-- 搜索 -->
   <view class="hbar">
   <!-- wx:for="{{productList}}" wx:key="id" -->
   <!-- productList hbar -->
   <text class="htext {{hbarId==index?'hactive':''}}" wx:for="{{productList}}" wx:index="{{index}}" wx:key="id" bindtap="changeHId" data-index="{{index}}" >{{item.name}}</text>
   </view>
+  
+<view class="swiper-container">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" 
+        bindchange="changeSwiper"
         style="height: 375rpx;padding: 16rpx 20rpx;margin: 10rpx 0;text-align: center;"> 
       <swiper-item wx:for='{{bannerList}}' wx:key="id"> 
           <image src="{{imgUrl+item.imgUrl}}" class="slide-image"/> 
       </swiper-item> 
   </swiper>
+  <view class="dots">
+        <block wx:for="{{bannerList}}" wx:key="this">
+        <!-- catchtap="changeTouch" -->
+            <view class="dot{{index == swiperCurrent ? ' active' : ''}}"  data-id="{{index}}"></view>
+        </block>
+  </view>
+</view>
   
   <view class="textImg" wx:for="{{messageList}}" wx:for-item="items" wx:key="id">
     <text>{{items.name}}</text>
@@ -36,7 +44,8 @@
   <view class="sibox" wx:for="{{lcList}}" wx:for-item="items" wx:key="id">
     <view class="sihead">
       <text class="title">铝材供应商</text>
-      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text>
+      
+      <view class="row_a"> <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text> </view>
       <!-- <i class="more"></i> -->
     </view>
     <view>
@@ -52,7 +61,7 @@
   <view class="pbox" wx:for="{{pjList}}" wx:for-item="items" wx:key="id">
     <view class="phead">
       <text class="title">配件供应商</text>
-      <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text>
+      <view class="row_a"> <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text> </view>
     </view>
     <view class="pimg-box">
       <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}" wx:key="id"></image>
