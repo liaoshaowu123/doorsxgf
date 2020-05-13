@@ -8,9 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: '2020-09-01',
+    date: '2020-01-01',
     start:'2018-09-01',
-    end:'2018-09-04',
     img:'',
     imgUl:'',
     depositUrl:'',
@@ -124,12 +123,26 @@ getMakmentInfo(orderId){
    */
   onLoad: function (options) {
     let this_ = this;
+    let start = options.start;
+// 日期，在原有日期基础上，增加days天数，默认增加1天
+  debugger
+    var date = new Date(start);
+    date.setDate(date.getDate());
+    var month = date.getMonth() + 1;
+    if (month.length < 2) {
+      month = '0' + month;
+    }
+    var day = date.getDate() + 3;
+    let end =  date.getFullYear() + '-' +month + '-' + day;
     if(options.type == 2){
       this_.getMakmentInfo(options.orderId)
     }
+
     this.setData({
       orderId:options.orderId,
-      type:options.type||1
+      type:options.type||1,
+      start:end,
+      date:end
     })
   },
 

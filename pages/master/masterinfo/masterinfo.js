@@ -19,6 +19,7 @@ Page({
   onLoad: function (options) {
     if (!options.id) { return };
     id = options.id;
+    this.setData({type:options.type})
     this.onMake(options.id);
   },
   /**

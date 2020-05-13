@@ -8,7 +8,7 @@
       <view>{{item.userName}}</view> 
       <view>绑定时间:{{item.createDate}}</view>
     </view>
-    <view>已下单</view>
+    <!-- <view>已下单</view> -->
   </view>
 
 </view>
