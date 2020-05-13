@@ -485,7 +485,7 @@ height: 975.542px; */
   /* display: inherit; */
 }
 .contain {
-  padding: 50rpx 20rpx;
+  padding: 50rpx 30rpx;
 }
 .b {
   font-weight:bold;
