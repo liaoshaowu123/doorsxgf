@@ -82,7 +82,7 @@
   </view>
 </view>
 <!-- 配件 -->
-<view class='box-title mar-t90'>选择配件品牌</view>
+<view class='box-title mar-t88'>选择配件品牌</view>
   <view class='list row_s list2'>
   <view class="pjlist" wx:for='{{pjlist}}' >
   <view class='{{index==pjIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangePj'>{{item.name}}</view>
@@ -124,7 +124,7 @@
   </view>
 </view>
 <!-- 防护栏 -->
-<view class='box-title mar-t90'>选择防护栏</view>
+<view class='box-title mar-t88'>选择防护栏</view>
 <view class='list row_s list2'>
   <view class="fhllist" wx:for='{{fhllist}}' >
   <view class='{{index==fhlIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeFhl'>{{item.name}}</view>
@@ -161,7 +161,7 @@
   </view> -->
 </view>
 <!-- 玻璃 -->
-<view class='box-title mar-t90'>选择玻璃</view>
+<view class='box-title mar-t88'>选择玻璃</view>
 <view class='list row_s list3'>
   <view class="bllist" wx:for='{{bllist}}'>
     <view class='{{index==blIndex?"list-box2 row_c":"list-box row_c"}}' data-index='{{index}}' catchtap='onChangeBl'>{{item.name}}</view>
@@ -200,7 +200,7 @@
 </view>
 
 <!-- 安装公司 -->
-<view class='box-title mar-t90'>选择安装公司</view>
+<view class='box-title mar-t88'>选择安装公司</view>
 <view class='list row_s list2'>
   <view class="azbox"> 
     <view class='list-box1 row_c'>{{azinfo.name}}</view>
@@ -262,7 +262,7 @@
 <view class="htmb">
   <text catchtap="onConta">合同模板</text>
 </view>
-<view style="height:160rpx;"></view>
+<view style="height:100rpx;"></view>
 <view class='submit row_s' wx:if="{{true}}">
   <view class='submit-price row_s'>原价<text class="total_pricesc">{{total_pricesc}}</text></view>
   <view class="buybox">
