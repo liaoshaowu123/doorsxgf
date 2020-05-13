@@ -49,6 +49,9 @@ Page({
        
       }else{
         let parentId = options.scene;
+        if(!parentId){
+          return
+        }
         this.setParent(options.scene);
       }
       
