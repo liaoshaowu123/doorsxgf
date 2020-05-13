@@ -45,7 +45,12 @@
     <view class="sihead">
       <text class="title">铝材供应商</text>
       
-      <view class="row_a"> <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text> </view>
+      <view class="row_a"> 
+        <block wx:for="{{items.mcAppSupplierBrands}}" wx:key="id"> 
+          <text class="sbar"></text>
+          <text class="sitem" >{{item.name}}</text> 
+        </block> 
+      </view>
       <!-- <i class="more"></i> -->
     </view>
     <view>
@@ -61,7 +66,12 @@
   <view class="pbox" wx:for="{{pjList}}" wx:for-item="items" wx:key="id">
     <view class="phead">
       <text class="title">配件供应商</text>
-      <view class="row_a"> <text class="sitem" wx:for="{{items.mcAppSupplierBrands}}" wx:key="id">{{item.name}}</text> </view>
+      <view class="row_a"> 
+        <block wx:for="{{items.mcAppSupplierBrands}}" wx:key="id"> 
+          <text class="sbar"></text>
+          <text class="sitem" >{{item.name}}</text> 
+        </block> 
+      </view>
     </view>
     <view class="pimg-box">
       <image src="{{imgUrl+item.imgUrl}}" wx:for="{{items.mcAppSupplierImgs}}" wx:key="id"></image>
