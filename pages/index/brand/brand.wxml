@@ -265,6 +265,7 @@
 <view style="height:100rpx;"></view>
 <view class='submit row_s' wx:if="{{true}}">
   <view class='submit-price row_s'>原价<text class="total_pricesc">{{total_pricesc}}</text></view>
+  <view class="hbar"></view>
   <view class="buybox">
     <view class="total_price">团购价<text class="b tp">{{total_price}}</text></view>
     <view class='btn row_c' catchtap='onClick'>立即购买</view>
