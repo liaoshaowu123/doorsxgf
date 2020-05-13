@@ -31,23 +31,23 @@ Page({
     areaList: [],
     userId:"",
   },
-  changeTouch:function(e){
-    console.log(e)
-    console.log(e.currentTarget.dataset.id)
-    let t = this;
-    t.setData({
-      swiperCurrent: e.currentTarget.dataset.id
-    });
-  },
-  // changeSwiper:function(e){
-  //   console.log(e);
-  //   console.log(e.detail.source)
-  //   let t = this, { source, current} = e.detail;
-  //   console.log(source,current);
+  // changeTouch:function(e){
+  //   console.log(e)
+  //   console.log(e.currentTarget.dataset.id)
+  //   let t = this;
   //   t.setData({
-  //     swiperCurrent: current,
-  //   })
+  //     swiperCurrent: e.currentTarget.dataset.id
+  //   });
   // },
+  changeSwiper:function(e){
+    console.log(e);
+    console.log(e.detail.source)
+    let t = this, { source, current} = e.detail;
+    console.log(source,current);
+    t.setData({
+      swiperCurrent: current,
+    })
+  },
   changeHId:function(e){
     let t = this, d = t.data, productList = d.productList, index = e.currentTarget.dataset.index;
     this.setData({
