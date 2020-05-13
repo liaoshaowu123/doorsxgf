@@ -2,7 +2,7 @@
 .page{
   width: 100%;
   position: relative;
-  background: #ea4e61;
+  background: #e6212a;
   padding: 100%;
   
 }
@@ -12,15 +12,24 @@
   left: 0;
   width: 750rpx;
   height: 1220rpx;
+  /* height: 100%; */
   z-index: 10;
 }
 .code{
-  position: absolute;
+  /* position: absolute;
   top: 464rpx;
   left: 155rpx;
   width: 440rpx;
   height: 440rpx;
-   z-index: 11;
+   z-index: 11; */
+
+position: absolute;
+top: 704rpx;
+left: 105rpx;
+width: 270rpx;
+height: 270rpx;
+z-index: 11;
+
 }
 .tip1{
   position: absolute;
