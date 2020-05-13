@@ -24,6 +24,9 @@ Page({
   onLoad: function (options) {
     if (!options.id){return};
     id = options.id;
+    this.setData({
+      tyes:options.type
+    })
     isPay = true;
   },
   /**
