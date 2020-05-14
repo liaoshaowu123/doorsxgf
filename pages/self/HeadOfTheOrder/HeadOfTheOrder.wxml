@@ -18,7 +18,7 @@
   </view>
   <view class="pad bor_b">
     <view>订单状态： <text>{{item.statuss}}</text></view>
-    <view catchtap="qxOrder" data-id="{{item.id}}" style="{{type!=1&&'display:none'}}" wx:if="{{item.qx && item.orderStatus != 14}}">取消订单</view>
+    <view catchtap="qxOrder" data-id="{{item.id}}" style="{{type!=1&&'display:none'}}" wx:if="{{item.qx && item.orderStatus != 14 && item.orderStatus < 5 && item.orderStatus != 1 && item.orderStatus != 3}}">取消订单</view>
   </view>
   <view class="pad bor_b">
     <view>

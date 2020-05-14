@@ -80,7 +80,7 @@
   <view class="paragraph"></view>
   <view class="sibox" wx:for="{{azList}}" wx:for-item="items" wx:key="id">
     <view class="sihead">
-      <text class="title">专业安装公司</text>
+      <text class="title">安装供应商</text>
       <text class="company">{{items.name}}</text>
     </view>
     <view>

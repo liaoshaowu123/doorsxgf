@@ -49,12 +49,15 @@ Page({
        
       }else{
         let parentId = options.scene;
+        if(!parentId){
+          return
+        }
         this.setParent(options.scene);
       }
       
     }
 
-    if (wx.getStorageSync('userType')==1){
+    if (wx.getStorageSync('userType')==1 || wx.getStorageSync('userType')==2 || wx.getStorageSync('userType')==3){
       this.setData({
         isMaster: true,
       })
@@ -315,7 +318,7 @@ Page({
         city: wx.getStorageSync('city')
       })
     }
-    this.checkUserInfo();
+   // this.checkUserInfo();
     this.getList();
     this.getRelatList();
   },

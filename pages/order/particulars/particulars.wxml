@@ -25,7 +25,7 @@
         <view class="picker" >预约时间</view>
       </picker> -->
       <!-- <view class="picker" wx:if="{{item.pment}}" style="border:0;">时间:{{item.pment}}</view> -->
-      <navigator class="picker" wx:if="{{index==indexds&&index==7&&(lv!='2'||lv=='3')}}" url="subscribe/subscribe?orderId={{mcOrder.id}}">预约安装</navigator>
+      <navigator class="picker" wx:if="{{index==indexds&&index==7&&lv!='2'&&lv!='3'}}" url="subscribe/subscribe?orderId={{mcOrder.id}}&start={{item.createDate}}">预约安装</navigator>
       <navigator class="picker" wx:if="{{indexds>=index&&index==8}}" url="subscribe/subscribe?orderId={{mcOrder.id}}&type=2">查看详情</navigator>
       <navigator class="picker" wx:if="{{index==indexds&&(index==9||index==11)&&(lv=='2'||lv=='3')&&!item.imgUrl}}" url="up/up?orderId={{mcOrder.id}}&orderStatus={{mcOrder.orderStatus}}&id={{item.id}}">点击上传</navigator>
      <navigator class="picker" wx:if="{{index==(indexds+1)&&(index==12)&&(lv=='2'||lv=='3')&&mcOpOrders[11].imgUrl}}" url="up/up?orderId={{mcOrder.id}}&orderStatus={{mcOrder.orderStatus}}&id={{item.id}}">点击上传</navigator>

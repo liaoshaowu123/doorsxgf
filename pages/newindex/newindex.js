@@ -31,6 +31,18 @@ Page({
     areaList: [],
     userId:"",
   },
+  setParent(parentId){
+    wx.login({
+      success: function (res) {
+        ljrqe.post('user/wxLoginCode.do', {
+          Code: res.code,
+          parentId: parentId
+        }).then(r => {
+          console.log(r)
+        })
+      }
+    })
+  },
   // changeTouch:function(e){
   //   console.log(e)
   //   console.log(e.currentTarget.dataset.id)
@@ -146,19 +158,45 @@ Page({
     // return
     console.log(options)
     console.log(options.scene)
-    if (!!options.scene) {
-      if (options.scene == wx.getStorageSync('userId')) {
-
-      } else {
-        let parentId = options.scene;
-        this.setParent(options.scene);
-      }
-
-    }
-
     if (wx.getStorageSync('userType') == 1) {
       this.setData({
         isMaster: true,
+      })
+    }
+        if (!!options.scene){
+      if (options.scene == wx.getStorageSync('userId')){
+       
+      }else{
+        let parentId = options.scene;
+        if(!parentId){
+       
+          return
+        }
+        this.setParent(options.scene);
+      }
+      
+    }else{
+      wx.login({
+        success: function (ress) {
+          wx.request({
+            header: { 'content-type': 'application/x-www-form-urlencoded' },
+            url: Config.resUrl + 'user/wxLoginCode.do',
+            method: 'post',
+            data: {
+              Code: ress.code,
+            },
+            success: function (re) {
+              console.log(re)
+              if (re.data.code == 1) {
+                wx.showToast({
+                  title: re.data.msg,
+                  icon: 'none'
+                })
+              }
+              wx.setStorageSync('userId', re.data.data.id)
+            }
+          })
+        }
       })
     }
     let this_ = this;

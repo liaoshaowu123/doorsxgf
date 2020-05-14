@@ -39,7 +39,7 @@
         <view class='fa-title'>面积:</view>
         <view class='fa-ipt' >{{item.mcOrderVeranda.width*item.mcOrderVeranda.length/1000000}}m2</view>
       </view> -->
-        <textarea class='fa-bz' placeholder='输入备注' data-index='{{index}}' bindblur='onIputRemaker' value='{{item.mcOrderVeranda.detail}}'></textarea>
+        <textarea class='fa-bz' placeholder='输入备注' data-index='{{index}}' bindblur='onIputRemaker' disabled="{{type==2}}" value='{{item.mcOrderVeranda.detail}}'></textarea>
     </view>
   </view>
 
@@ -56,6 +56,6 @@
 </view> -->
 
 <!-- btn -->
-<view class='submit col'>
-   <button class='btn row_c' catchtap='onClick'>{{txt}}</button>
+<view class='submit col' wx:if="{{type!=2}}">
+   <button class='btn row_c'  catchtap='onClick'>{{txt}}</button>
 </view>
