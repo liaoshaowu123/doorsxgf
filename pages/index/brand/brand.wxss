@@ -151,11 +151,11 @@ page{
   /* opacity: 0.8 */
 }
 .debox-xl1{
-  width: 100rpx;
+  width: 200rpx;
   height: 34rpx;
 	background-color: #494343;
 	border-radius: 40rpx;
-  padding: 0 48rpx;
+  padding: 0 24rpx;
   font-family: PingFang-SC-Medium;
 	font-size: 24rpx;
 	font-weight: bold;
@@ -166,11 +166,11 @@ page{
   
 }
 .debox-xl2{
-  width: 100rpx;
+  width: 200rpx;
   height: 34rpx;
 	background-color: #cccccc;
 	border-radius: 40rpx;
-  padding: 0 48rpx;
+  padding: 0 24rpx;
   font-family: PingFang-SC-Medium;
 	font-size: 24rpx;
 	font-weight: normal;
