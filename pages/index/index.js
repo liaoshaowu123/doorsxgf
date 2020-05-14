@@ -241,7 +241,7 @@ Page({
    * 获取列表
    */
   getList(){
-    this.getBannerList();
+    //this.getBannerList();
     
     if(citycode==-1){return}
     // wx.showLoading({
