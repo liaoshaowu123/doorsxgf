@@ -98,7 +98,7 @@ Page({
       }
       ljrqe.post('brandOrderV1/saveMOpOrder', data).then(res => {
         wx.navigateBack({
-          delta: 1,
+          delta: 2,
           })
       })   
 }, 

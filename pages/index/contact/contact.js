@@ -10,7 +10,7 @@ Page({
   data: {
     info:{},
     priceIndex:0,
-    lfprice:0.01,
+    lfprice:300,
     orderid:-1,
     isSelect:false,
     isWx: false,
@@ -25,7 +25,7 @@ Page({
     //console.log(SnapData.order)
     this.setData({
       info:SnapData.order,
-      lfprice:SnapData.lfprice
+      //lfprice:SnapData.lfprice
     })
   },
 
@@ -78,6 +78,7 @@ Page({
     let time = `${info.m}月${info.d}日${info.h}点`;
     let str = JSON.stringify(SnapData.order.falist);
     str.substr(2, str.length - 2);
+    
     let data = {
       // areaId: SnapData.order.house.areaId,
       money: SnapData.order.total_price,//订单总金额
@@ -198,8 +199,8 @@ Page({
             showCancel: true,
             success: function(res) {
               if(res.confirm){
-                wx.switchTab({
-                  url: '/pages/order/order',
+                wx.navigateTo({
+                  url: '/pages/order/order',  
                 })
               }
             },

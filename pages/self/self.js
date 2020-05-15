@@ -104,6 +104,9 @@ Page({
         plotName:res.data.plotName
       }
       
+      wx.setStorageSync('userId', res.data.id);
+      wx.setStorageSync('userType', res.data.userLevel);
+
       if (!res.data.name) {
         data.isscope = true;
         data.nickname = '点击授权';

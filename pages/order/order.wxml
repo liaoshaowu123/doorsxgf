@@ -1,8 +1,9 @@
+<wxs module="filters" src="../self/HeadOfTheOrder/fil.wxs"></wxs>
 <view class='list'>
   <view class='box col' wx:for='{{list}}'>    
     <view class='box-h row_b'>
       <view class='name'>{{item.plotName}}{{item.houseNo}}</view>
-      <view class='status'>订单状态：<text class='price'>{{item.statuss}}</text></view>
+      <!-- <view class='status'>订单状态：<text class='price'>{{item.statuss}}</text></view> -->
     </view>
 
     <view class='box-h row_b'>
@@ -11,12 +12,16 @@
     </view>
 
     <view class='box-h row_b'>
+      <view class='status'>订单状态：<text class='price'>{{item.statuss}}</text></view>
+    </view>
+
+    <view class='box-h row_b'>
       <view class='time'>下单时间：{{item.createDate}}</view>
     </view>
     <view class='box-h row_s'>
       <view class='price1'>已付： <text class='priceb'>{{item.paid||0}}元</text></view>
       <view class="wbar"></view>
-      <view class='price1'>未支付： <text class='price'>{{item.money-item.paid||0}}元</text>  </view>
+      <view class='price1'>未支付： <text class='price'>{{filters.toFix(item.money-item.paid)||0}}元</text>  </view>
     </view>
 
     <view class='box-b row_b'>

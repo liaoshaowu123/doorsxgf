@@ -93,7 +93,7 @@ Page({
        // this_.addMcOp()
 
        wx.navigateBack({
-        delta: 1,
+        delta: 2,
         })
       }
     })   
@@ -110,7 +110,7 @@ Page({
     ljrqe.post('mcoporder/add', data).then(res => {
       if(res.code == 0){
         wx.navigateBack({
-          delta: 1,
+          delta: 2,
           })
       }
     })

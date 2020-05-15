@@ -11,7 +11,7 @@ class SnapData {
 SnapData.cityChange=false;
 SnapData.order={};
 //SnapData.lfprice=300;
-SnapData.lfprice=0.01;
+//SnapData.lfpric=0.01;
 
 SnapData.emojiList = [{ 'title': '微笑', 'url': 'weixiao.gif' },
 { 'title': '嘻嘻', 'url': 'xixi.gif' },

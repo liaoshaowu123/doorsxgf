@@ -259,7 +259,7 @@ Page({
         })
         wx.hideLoading()
         wx.navigateBack({
-          delta: 1,
+          delta: 2,
           })
       })
     });

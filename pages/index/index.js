@@ -39,6 +39,7 @@ Page({
     console.log(options)
     console.log(options.scene)
     //banner
+
     var array = this.data.arr
     for (let i = 1; i < 3; i++) {
       array.push("/imgages/" + i + ".png")
@@ -318,6 +319,11 @@ Page({
         city: wx.getStorageSync('city')
       })
     }
+    if (wx.getStorageSync('userType')==1 || wx.getStorageSync('userType')==2 || wx.getStorageSync('userType')==3){
+      this.setData({
+        isMaster: true,
+      })
+    }
    // this.checkUserInfo();
     this.getList();
     this.getRelatList();
@@ -341,7 +347,7 @@ Page({
     let userId = wx.getStorageSync('userId');
     wx.showModal({
       title: '提示',
-      content: 'xx团长邀请您',
+      content: '团长邀请您修改服务关系',
       success (res) {
         if (res.confirm) {
           this_.updateMessage(0,userId);

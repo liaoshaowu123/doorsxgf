@@ -27,7 +27,7 @@
       <text style="flex:1;text-align:center;font-size:28rpx;">{{strs[Index2]}}</text>
   </view>
 </view>
-<view class="button">提交</view>
+<view class="button" catchtap="submitPJ">提交</view>
 <!-- <view class='head'>
   <view class='name'>{{info.name}}</view>
   <view class='box-h row_b'>

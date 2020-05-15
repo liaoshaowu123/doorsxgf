@@ -13,6 +13,7 @@ Page({
     info: {},
     strs: ['很差','一般','满意','非常满意','无可挑剔'],
     id: 0,
+    orderId:''
   },
   onSelect1:function(e){
     this.setData({
@@ -41,7 +42,8 @@ Page({
         house: options.house,
         num: options.num,
         time: options.time,
-      }
+      },
+      orderId: options.orderId
     })
     this.getStr(options.id);
   },
@@ -81,6 +83,22 @@ Page({
         str: res.data.comment,
         xxIndex:res.data.star-1
       })
+    })
+  },
+
+  submitPJ(){
+    let this_ = this;
+    let orderId = this.data.orderId;
+    let data = {
+      orderId:orderId,
+      productEvaluate:'',
+      groupServiceEvaluate:'',
+      installEvaluate:'',
+    };
+    ljrqe.post('orderEvaluation/save', data).then(res => {
+      wx.navigateBack({
+        delta: 2,
+        })
     })
   },
 

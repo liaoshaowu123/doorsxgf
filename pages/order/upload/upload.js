@@ -127,7 +127,7 @@ Page({
     let data = {
       id: this.data.info.id,
       payType: 0,
-      payAmount: Math.round((this.data.info.money - 0.01) * 100) / 100,
+      payAmount: Math.round((this.data.info.money - 300) * 100) / 100,
     };
     ljrqe.post('mcOrder/save', data).then(res => {
       //console.log(res)
