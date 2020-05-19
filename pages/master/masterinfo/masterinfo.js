@@ -112,6 +112,7 @@ Page({
    */
   onClick() {
     console.log('点击了')
+    wx.showNavigationBarLoading();
     if (this.data.info.orderStatus == 0 || this.data.info.orderStatus==2){
       let list = [];
       for (let i = 0; i < this.data.info.verandaList.length; i++) {
@@ -138,6 +139,7 @@ Page({
           title: res.msg,
         })
         this_.onMake(id);
+        wx.hideLoading()
       })
     }
     if (this.data.info.orderStatus == 3) {

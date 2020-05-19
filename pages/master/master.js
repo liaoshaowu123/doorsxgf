@@ -84,9 +84,12 @@ Page({
    * 查看合同
    */
   onClick(e) {
-    let id = e.currentTarget.dataset.id;
+    // let id = e.currentTarget.dataset.id;
+    // wx.navigateTo({
+    //   url: 'contract/contract?id=' + id,
+    // })
     wx.navigateTo({
-      url: 'contract/contract?id=' + id,
+      url: '/pages/index/contact/contract/contract',
     })
   },
 

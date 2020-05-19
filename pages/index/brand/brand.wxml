@@ -1,3 +1,4 @@
+ <wxs module="filters" src="../../../pages/self/HeadOfTheOrder/fil.wxs"></wxs>
 <view class='title-box col'>
   <view class='box-title'>方案基础信息：</view>
   <view class='title1 row_s'>
@@ -73,7 +74,7 @@
       <view class='botbox-title'>
         <text class="b f11">铝材总价：</text>
         <text class="s">{{info.lvcai}} X {{lcdjPrice}} = </text>
-        <text class="money">{{lcPrice}}</text>
+        <text class="money">{{filters.toFix(info.lvcai * lcdjPrice)}}</text>
         <text class="b">元</text>
       </view>
       <!-- <view class='botbox-title'>市场总价：{{info.lvcai}} X {{lcdjPricesc}} = <text class="money">{{lcPricesc}}</text>元</view>

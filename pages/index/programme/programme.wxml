@@ -20,7 +20,7 @@
     <view class='hp-box'>
       <view class='img-boxs row_c'>
         <view class='img-box'>
-          <image class='img' mode='widthFix' src='{{imgUrl+item.list[item.type].image}}' data-img='{{imgUrl+item.list[item.type].image}}' catchtap='onLookPic'></image>
+          <image class='img' mode='widthFix' src='{{imgUrl+item.list[item.type ].image}}' data-img='{{imgUrl+item.list[item.type].image}}' catchtap='onLookPic'></image>
           <!-- <view class='right row_c'>{{item.list[item.type].length}}</view>
           <view class='bottom row_c'>{{item.list[item.type].width}}</view> -->
         </view>
@@ -34,7 +34,7 @@
       </view>
     </view>
   </view>
-</view>
+</view>  
 
 <view class='bot-btn row_c'>
   <view class='btn row_c' catchtap='onClick'>下一步</view>
