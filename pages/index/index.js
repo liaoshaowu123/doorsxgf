@@ -308,7 +308,7 @@ Page({
       url: '/pages/master/master',
     })
   },
-
+  
   onShow(){
     // return
     console.log(SnapData.cityChange);

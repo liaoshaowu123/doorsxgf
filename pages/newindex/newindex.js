@@ -82,10 +82,16 @@ Page({
     
   },
   getList(){
-    let t = this, d = t.data, citycode = d.citycode;
-    console.log("getList-citycode:", citycode)
+    let cityCode = '';
+    let t = this
+    if(wx.getStorageSync('citycode')){
+      cityCode = wx.getStorageSync('citycode');
+    }else{
+      d = t.data, cityCode = d.citycode;
+    }
+    console.log("getList-citycode:", cityCode)
     ljrqe.post('appIndex/list',{
-      cityCode: citycode
+      cityCode: cityCode
     }).then(res => {
       let list = res.data;
       this.setData(res.data);
@@ -209,12 +215,48 @@ Page({
   onReady: function () {
 
   },
+  setCity(){
+    this.setData({
+      city:wx.getStorageSync('city')
+    })
+  },
+  changeCity(r){
+    let this_=this;
+    wx.showModal({
+      title: '提示',
+      content: `定位城市${r.city}与当前选择城市${r.oldcity}不符，是否立即切换至${r.city}?`,
+      showCancel: true,
+      success: function(res) {
+        if(res.confirm){
+          this_.setData({
+            city: r.city
+          })
+          wx.setStorageSync('citycode', r.citycode);
+          wx.setStorageSync('city', r.city);
+          citycode = r.citycode;
+          this_.getList();
+        }else{
+          this_.setData({
+            city: wx.getStorageSync('city')
+          })
 
+          citycode = wx.getStorageSync('citycode');
+          this_.getList();
+        }
+      },
+      fail: function(res) {
+        console.log(res)
+        
+      },
+      complete: function(res) {},
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
     this.getList();
+    this.setCity();
   },
 
   /**
