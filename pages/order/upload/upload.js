@@ -97,7 +97,7 @@ Page({
             icon: 'none'
           })
           setTimeout(()=>{
-            wx.switchTab({
+            wx.navigateTo({
               url: '/pages/order/order',
             })
           },1000)

@@ -125,7 +125,6 @@ getMakmentInfo(orderId){
     let this_ = this;
     let start = options.start;
 // 日期，在原有日期基础上，增加days天数，默认增加1天
-  debugger
     var date = new Date(start);
     date.setDate(date.getDate());
     var month = date.getMonth() + 1;
@@ -135,7 +134,7 @@ getMakmentInfo(orderId){
     var day = date.getDate() + 3;
     let end =  date.getFullYear() + '-' +month + '-' + day;
     if(options.type == 2){
-      this_.getMakmentInfo(options.orderId)
+      this_.getMakmentInfo(options.orderId) 
     }
 
     this.setData({

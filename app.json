@@ -5,7 +5,6 @@
     "pages/index/index",
     "pages/master/contract/contract",
     "pages/order/particulars/subscribe/subscribe",
-    
     "pages/self/ModifyRelations/ModifyRelations",
     "pages/self/meteam/meteam",
     "pages/self/HeadOfTheOrder/HeadOfTheOrder",
@@ -103,7 +102,7 @@
   },
   "plugins": {
     "live-player-plugin": {
-      "version": "1.0.9",
+      "version": "1.0.11",
       "provider": "wx2b03c6e691cd7370"
     }
   },

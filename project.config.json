@@ -24,11 +24,12 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": false
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wx98d4ed372ba62e57",
+	"appid": "wxca2afad49ec4e062",
 	"projectname": "doors",
 	"debugOptions": {
 		"hidedInDevtools": []

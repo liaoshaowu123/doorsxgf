@@ -1,4 +1,4 @@
-var homeUrl = 'https://xgf.askjhb.com' //'https://xgf.angshengkeji.cn' //'http://test.hnqinghuang.com'  'http://xingongfu.ksweishang.com'
+var homeUrl = 'https://xgf.angshengkeji.cn' //'https://xgf.askjhb.com'  //'http://test.hnqinghuang.com'  'http://xingongfu.ksweishang.com'
 class Config {
   constructor() {
   }

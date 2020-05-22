@@ -60,7 +60,7 @@
 <view class="pay-box col_c" wx:if='{{isSelect}}'>
   <view class="pay-title">请选择您的支付方式</view>
   <view class="pay-btn row_c" catchtap="onWxPay">微信支付</view>
-  <!-- <navigator url='/pages/order/upload/upload?id={{orderid}}'  catchtap="onClose" class='pay-btn row_c'>上传支付凭证</navigator> -->
+  <navigator url='/pages/order/upload/upload?id={{orderid}}'  catchtap="onClose" class='pay-btn row_c'>上传支付凭证</navigator>
 </view>
 
 <view class="wx-boxs" wx:if='{{isWx}}'>
