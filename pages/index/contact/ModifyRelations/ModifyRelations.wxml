@@ -1,0 +1,21 @@
+<view class="s">
+  <view class="z">
+    <view>
+      搜索
+    </view>
+   
+  </view>
+  <view class="i">
+    <input bindconfirm="search" type="text" confirm-type='search' placeholder="请输入团长的姓名或手机号码"></input>
+    <text class="iconsousuo iconfont"></text>
+  </view>
+  <view class="l">
+    <view class="u" wx:for="{{userList}}">
+      <view>
+        <image src="{{imgUrl}}{{item.photo}}"></image>
+        <text>{{item.name}}</text>
+        <view catchtap="modify" data-tzName="{{item.name}}" data-lcUserId="{{item.id}}" data-tzPhone="{{item.mobile}}">确定修改</view>
+      </view> 
+    </view>
+  </view>
+</view>

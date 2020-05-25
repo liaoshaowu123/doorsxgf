@@ -5,7 +5,7 @@
   <view class="user row_s" style="display: block;text-align:center">
     <view class="s1"><image class='img' src='{{avatar_url}}'></image><view class='name' catchtap="x">{{nickname}}</view></view>
     <view class="s2">
-      <view style="  display: flex;align-items: center;justify-content: center;">{{userType==0?'普通用户':userType==1?'量尺师傅':userType==2?'团长':userType==3?'店长':userType==4?'代理商':userType==5?'推广专员':''}}<text style="font-size:20rpx;font-weight:100;display:{{!plotName?'none':''}};margin-left:5rpx;">  | {{plotName}}</text></view>   
+      <view style="  display: flex;align-items: center;justify-content: center;">{{userType==0?'普通用户':userType==1?'量尺师傅':userType==2?'团长':userType==3?'门店':userType==4?'代理商':userType==5?'推广专员':''}}<text style="font-size:20rpx;font-weight:100;display:{{!plotName?'none':''}};margin-left:5rpx;">  | {{plotName}}</text></view>   
     </view>
     <!-- <view class="user-right col" style="margin-left: 0rpx;">
       

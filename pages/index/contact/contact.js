@@ -15,6 +15,24 @@ Page({
     isSelect:false,
     isWx: false,
     payinfo:{},
+    areaId:'',
+    tzName:'',
+    tzPhone:'',
+    lcUserId:''
+  },
+
+  getTzInFo(areaId){
+    let this_ = this;
+    let data = {
+      plotId:areaId
+    }
+    ljrqe.post('recommend/getLeaderList', data).then(res => {
+      this_.setData({
+        tzName:res.data[0].name,
+        tzPhone:res.data[0].mobile,
+        lcUserId:res.data[0].id
+      })
+    })
   },
 
   /**
@@ -25,8 +43,10 @@ Page({
     //console.log(SnapData.order)
     this.setData({
       info:SnapData.order,
+      areaId:options.id
       //lfprice:SnapData.lfprice
     })
+    this.getTzInFo(options.id)
   },
 
   /**

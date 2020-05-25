@@ -33,8 +33,19 @@
     <view class='title row_c'>手机:</view>
     <input type='number' class='box-box1' name='tel'></input>
   </view>
-</view>
 
+  <view class='box row_s'>
+    <view class='title row_c'>团长姓名:</view>
+    <input type='text' class='box-box1' name='tzname' disabled='disabled' value="{{tzName}}"></input>
+  </view>
+
+  <view class='box row_s'>
+    <view class='title row_c'>团长手机:</view>
+    <input type='text' class='box-box1' name='tzphone' disabled='disabled' value="{{tzPhone}}"></input>
+  </view>
+  <input type='text' class='box-box1' name='lcUserId' hidden="true" value="{{lcUserId}}"></input>
+</view>
+<navigator url='ModifyRelations/ModifyRelations?areaId={{info.house.areaId}}'>修改服务团长</navigator>
 <view class='inv'>
   <view class='inv-box row_b' data-index='0' catchtap='onSelect'>
     <view class='inv-title'>预约量房收费{{lfprice}}元</view>

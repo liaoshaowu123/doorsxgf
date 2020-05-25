@@ -283,9 +283,10 @@ Page({
     SnapData.order.blId = this.data.bllist[this.data.blIndex].id;
     SnapData.order.anId = this.data.azinfo.id;
     SnapData.order.total_price=this.data.total_price;
+    let this_ = this;
     // console.log(SnapData.order.pjId);
     wx.navigateTo({
-      url: '/pages/index/contact/contact',
+      url: '/pages/index/contact/contact?id='+this_.data.info.house.id,
     })
   },
 
