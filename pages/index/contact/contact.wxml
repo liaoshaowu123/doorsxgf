@@ -35,17 +35,17 @@
   </view>
 
   <view class='box row_s'>
-    <view class='title row_c'>团长姓名:</view>
-    <input type='text' class='box-box1' name='tzname' disabled='disabled' value="{{tzName}}"></input>
+    <view class='title row_c' style="padding-left:40rpx">服务团长姓名:</view>
+    <view class='title row_c'>{{tzName}}</view>
   </view>
 
   <view class='box row_s'>
-    <view class='title row_c'>团长手机:</view>
-    <input type='text' class='box-box1' name='tzphone' disabled='disabled' value="{{tzPhone}}"></input>
+    <view class='title row_c' style="padding-left:40rpx">服务团长手机:</view>
+    <view class='title row_c' >{{tzPhone}}</view>
   </view>
   <input type='text' class='box-box1' name='lcUserId' hidden="true" value="{{lcUserId}}"></input>
 </view>
-<navigator url='ModifyRelations/ModifyRelations?areaId={{info.house.areaId}}'>修改服务团长</navigator>
+<navigator class="row_c " url='ModifyRelations/ModifyRelations?areaId={{info.house.areaId}}' style="padding-top:20rpx"><text class="xgtz">修改服务团长</text></navigator>
 <view class='inv'>
   <view class='inv-box row_b' data-index='0' catchtap='onSelect'>
     <view class='inv-title'>预约量房收费{{lfprice}}元</view>

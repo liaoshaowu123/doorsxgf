@@ -16,7 +16,7 @@ Page({
     isWx: false,
     payinfo:{},
     areaId:'',
-    tzName:'',
+    tzName:'该小区暂无团长请手动选择',
     tzPhone:'',
     lcUserId:''
   },
@@ -90,6 +90,10 @@ Page({
       this.showModal('请填写联系人名称!');
       return;
     }
+    if (!info.lcUserId) {
+      this.showModal('请选择服务团长!');
+      return;
+    }
     if (info.tel.length != 11) {
       this.showModal('请填写正确的手机号!');
       return;
@@ -120,6 +124,7 @@ Page({
       plan: str,
       companyId: SnapData.order.anId,
       payType: this.data.priceIndex == 1 ? 0 : 1,
+      lcUserId:this_.data.lcUserId
     };
     console.log(data);
 

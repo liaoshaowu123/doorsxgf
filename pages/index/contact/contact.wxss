@@ -230,3 +230,17 @@ page{
   margin: 60rpx 0 20rpx;
   text-decoration:underline;
 }
+
+.xgtz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #666666;
+  border-radius: 10rpx;
+  padding: 2rpx 20rpx;
+  color: #666666;
+}
+
+.xgtz:active {
+  background: rgba(0, 0, 0, .2);
+}
