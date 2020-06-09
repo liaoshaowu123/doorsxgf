@@ -1,4 +1,4 @@
-var homeUrl = 'https://xgf.askjhb.com' //'https://xgf.angshengkeji.cn' //'http://test.hnqinghuang.com'  'http://xingongfu.ksweishang.com'
+var homeUrl =  'https://xgf.angshengkeji.cn'  //'https://xgf.askjhb.com' 'https://xgf.askjhb.com' 'https://xgf.angshengkeji.cn'  //'http://test.hnqinghuang.com'  'http://xingongfu.ksweishang.com'
 class Config {
   constructor() {
   }
@@ -8,4 +8,4 @@ Config.imgUrl = homeUrl;
 Config.topicData={};
 Config.orderStatusArry = ['未复尺','验收完成','团长已接单','已评价','已量房','窗户生产中','玻璃生产中','配件备货已完成','玻璃生产已完成',
 '窗户生产已完成','业主预约安装','安装已接单','已接货','安装已完成','已取消'];
-export { Config };
+export { Config }; 

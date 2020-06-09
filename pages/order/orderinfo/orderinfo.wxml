@@ -45,7 +45,7 @@
 <!-- btn -->
 <view class='submit row_b' style="display:{{tyes==10?'none':''}}" wx:if='{{info.paid<info.money}}'>
    <button class='btn row_c' catchtap='onClick'>{{txt}}</button>
-   <button class='btn row_c' catchtap='onPayend'>支付尾款</button>
+   <button class='btn row_c' catchtap='onPayend' data-id="my">支付尾款</button>
 </view>
 
 <view class='submit row_c' wx:else>
@@ -71,6 +71,7 @@
   </view>
   <view class="wx-tip">根据个人微信限额额度可进行多次支付</view>
   <button class='btn1 row_c' form-type="submit">确认微信支付</button>
+  <navigator class='btn1 row_c' url='/pages/order/upload/upload?id={{orderid}}'  catchtap="onClose">上传支付凭证</navigator>
   </form>
   
   <view class="wx-txt row_b" style="margin-top:40rpx">总金额:￥{{payinfo.totalMoney}}</view>

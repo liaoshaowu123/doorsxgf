@@ -138,10 +138,10 @@ Page({
             if (this_.data.priceIndex==1){
               this_.setData({
                 orderid: res.data.orderId,
-                isSelect: true,
+                isSelect: false,
 
               })
-              //this_.onWxPay();
+              this_.onWxPay();
             }else{
               this_.onPay(res);
             }
